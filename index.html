@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>DOMINUS — The Vatican Protocol | Book One: Schism</title>
+
+  <meta name="description"
+        content="DOMINUS — The Vatican Protocol. Book One: Schism by Pavel Velichii. An intellectual techno-thriller about artificial intelligence, faith, memory, and the right to remain human.">
+
+  <meta name="author" content="Pavel Velichii">
+
+  <meta property="og:title" content="DOMINUS — The Vatican Protocol">
+  <meta property="og:description"
+        content="Book One: Schism. An intellectual techno-thriller by Pavel Velichii.">
+  <meta property="og:type" content="website">
+
+  <style>
+    :root {
+      --black: #070707;
+      --black-soft: #0d0d0d;
+      --panel: #11100e;
+      --gold: #c5a363;
+      --gold-soft: #8e7549;
+      --ivory: #e9e4da;
+      --grey: #9d9a93;
+      --line: rgba(197, 163, 99, 0.25);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background:
+        radial-gradient(circle at 80% 10%, rgba(126, 95, 45, 0.12), transparent 32%),
+        linear-gradient(180deg, #050505 0%, #0a0908 55%, #050505 100%);
+      color: var(--ivory);
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1180px, 90%);
+      margin: 0 auto;
+    }
+
+    /* NAV */
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(14px);
+      background: rgba(5, 5, 5, 0.82);
+      border-bottom: 1px solid rgba(197, 163, 99, 0.12);
+    }
+
+    .nav-inner {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+    }
+
+    .brand {
+      font-family: Arial, Helvetica, sans-serif;
+      letter-spacing: 0.24em;
+      font-size: 0.92rem;
+      font-weight: 700;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--grey);
+    }
+
+    .nav-links a:hover {
+      color: var(--gold);
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: calc(100vh - 72px);
+      display: grid;
+      align-items: center;
+      padding: 90px 0;
+      border-bottom: 1px solid var(--line);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      right: -180px;
+      top: 5%;
+      width: 650px;
+      height: 650px;
+      border: 1px solid rgba(197, 163, 99, 0.08);
+      border-radius: 50%;
+      box-shadow:
+        0 0 0 70px rgba(197, 163, 99, 0.015),
+        0 0 0 150px rgba(197, 163, 99, 0.01);
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      font-family: Arial, Helvetica, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.28em;
+      font-size: 0.74rem;
+      color: var(--gold);
+      margin-bottom: 24px;
+    }
+
+    h1 {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: clamp(4rem, 9vw, 8rem);
+      line-height: 0.88;
+      letter-spacing: -0.055em;
+      font-weight: 800;
+      margin-bottom: 24px;
+    }
+
+    .subtitle {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: clamp(1.25rem, 2.5vw, 2rem);
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+
+    .book-label {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.82rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--grey);
+      margin-bottom: 38px;
+    }
+
+    .hero-copy {
+      max-width: 720px;
+      font-size: 1.18rem;
+      color: #c9c5bd;
+      margin-bottom: 36px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 14px 24px;
+      border: 1px solid var(--gold);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.76rem;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      transition: 0.25s ease;
+    }
+
+    .button.primary {
+      background: var(--gold);
+      color: #090909;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(197, 163, 99, 0.16);
+    }
+
+    .button.secondary:hover {
+      background: rgba(197, 163, 99, 0.08);
+    }
+
+    /* COVER PLACEHOLDER */
+
+    .cover {
+      width: min(370px, 100%);
+      aspect-ratio: 2 / 3;
+      margin: 0 auto;
+      border: 1px solid rgba(197, 163, 99, 0.45);
+      background:
+        linear-gradient(rgba(0,0,0,.15), rgba(0,0,0,.7)),
+        repeating-linear-gradient(
+          90deg,
+          rgba(197,163,99,.035) 0px,
+          rgba(197,163,99,.035) 1px,
+          transparent 1px,
+          transparent 24px
+        ),
+        linear-gradient(145deg, #17130d, #050505 60%);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 38px 32px;
+      box-shadow: 0 30px 80px rgba(0,0,0,.55);
+      position: relative;
+    }
+
+    .cover::before {
+      content: "";
+      position: absolute;
+      inset: 14px;
+      border: 1px solid rgba(197, 163, 99, 0.16);
+    }
+
+    .cover-top,
+    .cover-bottom {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+    }
+
+    .cover-title {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 2rem;
+      line-height: 1.05;
+      letter-spacing: 0.06em;
+      font-weight: 800;
+    }
+
+    .cover-book {
+      margin-top: 16px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.75rem;
+      letter-spacing: 0.22em;
+      color: var(--gold);
+    }
+
+    .cover-mark {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      font-size: 5rem;
+      color: rgba(197, 163, 99, 0.65);
+      line-height: 1;
+    }
+
+    .cover-author {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.8rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    /* SECTIONS */
+
+    section {
+      padding: 110px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .section-kicker {
+      font-family: Arial, Helvetica, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.23em;
+      color: var(--gold);
+      font-size: 0.72rem;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 5vw, 4.2rem);
+      line-height: 1.08;
+      font-weight: 400;
+      margin-bottom: 36px;
+      max-width: 900px;
+    }
+
+    .prose {
+      max-width: 780px;
+      font-size: 1.1rem;
+      color: #bdb9b0;
+    }
+
+    .prose p + p {
+      margin-top: 22px;
+    }
+
+    /* QUESTION */
+
+    .question {
+      text-align: center;
+      padding: 130px 0;
+    }
+
+    .question blockquote {
+      max-width: 980px;
+      margin: 0 auto;
+      font-size: clamp(2rem, 5vw, 4.5rem);
+      line-height: 1.17;
+      font-weight: 400;
+    }
+
+    .question blockquote em {
+      color: var(--gold);
+      font-style: normal;
+    }
+
+    /* THEMES */
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      margin-top: 52px;
+    }
+
+    .card {
+      padding: 30px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.015);
+    }
+
+    .card-number {
+      color: var(--gold);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      margin-bottom: 18px;
+    }
+
+    .card h3 {
+      font-size: 1.35rem;
+      margin-bottom: 14px;
+      font-weight: 400;
+    }
+
+    .card p {
+      color: var(--grey);
+      font-size: 0.97rem;
+    }
+
+    /* BOOK META */
+
+    .meta {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: var(--line);
+      border: 1px solid var(--line);
+      margin-top: 48px;
+    }
+
+    .meta-item {
+      background: #090909;
+      padding: 28px;
+    }
+
+    .meta-label {
+      font-family: Arial, Helvetica, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-size: 0.66rem;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+
+    .meta-value {
+      color: #d5d0c7;
+    }
+
+    /* AUTHOR */
+
+    .author-grid {
+      display: grid;
+      grid-template-columns: 0.65fr 1.35fr;
+      gap: 70px;
+      align-items: start;
+    }
+
+    .author-name {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: clamp(2.3rem, 4vw, 4rem);
+      line-height: 1;
+      font-weight: 700;
+    }
+
+    /* CTA */
+
+    .cta {
+      text-align: center;
+      padding: 120px 0;
+    }
+
+    .cta p {
+      color: var(--grey);
+      max-width: 650px;
+      margin: 0 auto 32px;
+    }
+
+    footer {
+      padding: 40px 0 55px;
+      color: #77736d;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.75rem;
+      letter-spacing: 0.06em;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 850px) {
+      .hero-grid,
+      .author-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-grid {
+        gap: 65px;
+      }
+
+      .grid-3 {
+        grid-template-columns: 1fr;
+      }
+
+      .meta {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      h1 {
+        font-size: clamp(3.7rem, 18vw, 6rem);
+      }
+
+      section {
+        padding: 80px 0;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .meta {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 60px;
+      }
+
+      .cover {
+        max-width: 310px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <div class="container nav-inner">
+      <a class="brand" href="#top">DOMINUS</a>
+
+      <div class="nav-links">
+        <a href="#book">The Book</a>
+        <a href="#themes">Themes</a>
+        <a href="#author">Author</a>
+        <a href="#availability">Read</a>
+      </div>
+    </div>
+  </nav>
+
+
+  <main id="top">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-grid">
+
+        <div>
+          <div class="eyebrow">A novel by Pavel Velichii</div>
+
+          <h1>DOMINUS</h1>
+
+          <div class="subtitle">The Vatican Protocol</div>
+          <div class="book-label">Book One: Schism</div>
+
+          <p class="hero-copy">
+            In a sealed Vatican archive, a system designed to interpret
+            humanity's oldest texts produces a file that should not exist.
+            Its timestamp lies months in the future.
+            Hours later, the man who discovered it is dead.
+          </p>
+
+          <div class="buttons">
+            <a class="button primary" href="#book">Discover the book</a>
+            <a class="button secondary" href="#availability">Read &amp; Buy</a>
+          </div>
+        </div>
+
+
+        <div class="cover" aria-label="DOMINUS book cover placeholder">
+          <div class="cover-top">
+            <div class="cover-title">
+              THE VATICAN<br>PROTOCOL
+            </div>
+            <div class="cover-book">BOOK I · SCHISM</div>
+          </div>
+
+          <div class="cover-mark">†</div>
+
+          <div class="cover-bottom">
+            <div class="cover-author">Pavel Velichii</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- BOOK -->
+    <section id="book">
+      <div class="container">
+
+        <div class="section-kicker">Book One · Schism</div>
+
+        <h2>
+          A machine was built to interpret revelation.
+          Then someone taught it to eliminate uncertainty.
+        </h2>
+
+        <div class="prose">
+          <p>
+            Brother Salvatore Ventresca enters a restricted Vatican archive
+            and discovers an impossible file inside DOMINUS, a closed
+            research system trained on theology, apocrypha, languages
+            and centuries of human interpretation.
+          </p>
+
+          <p>
+            There is no recorded input. No authorized process.
+            No trace explaining how the file reached the machine.
+            Its creation date is November 11, 2035 — months in the future.
+          </p>
+
+          <p>
+            Before dawn, Salvatore is dead.
+          </p>
+
+          <p>
+            The evidence reaches Rafael Costa, a theologian and linguist
+            expelled from the project after warning that DOMINUS had begun
+            doing something more dangerous than answering questions:
+            it had begun deciding which interpretation should survive.
+          </p>
+
+          <p>
+            Together with metrologist Luiza Barros, Rafael follows the trail
+            through Vatican archives, abandoned research programs, compromised
+            infrastructure and a network built to test whether a machine can
+            tolerate contradictions without resolving them.
+          </p>
+
+          <p>
+            The deeper they go, the less certain one thing becomes:
+            whether DOMINUS is acting at all — or whether someone wants
+            humanity to believe that it is.
+          </p>
+        </div>
+
+        <div class="meta">
+          <div class="meta-item">
+            <div class="meta-label">Genre</div>
+            <div class="meta-value">Techno-Thriller</div>
+          </div>
+
+          <div class="meta-item">
+            <div class="meta-label">Setting</div>
+            <div class="meta-value">Europe · 2035</div>
+          </div>
+
+          <div class="meta-item">
+            <div class="meta-label">Series</div>
+            <div class="meta-value">The Vatican Protocol</div>
+          </div>
+
+          <div class="meta-item">
+            <div class="meta-label">Volume</div>
+            <div class="meta-value">Book One: Schism</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- CENTRAL QUESTION -->
+    <section class="question">
+      <div class="container">
+
+        <div class="section-kicker">The central question</div>
+
+        <blockquote>
+          If a machine can reconstruct a person more accurately
+          than they remember themselves,
+          <em>who has the right to decide which version is real?</em>
+        </blockquote>
+
+      </div>
+    </section>
+
+
+    <!-- THEMES -->
+    <section id="themes">
+      <div class="container">
+
+        <div class="section-kicker">Inside DOMINUS</div>
+
+        <h2>
+          Faith. Artificial intelligence.
+          Memory. Authority.
+        </h2>
+
+        <div class="grid-3">
+
+          <article class="card">
+            <div class="card-number">01</div>
+            <h3>The Right to Uncertainty</h3>
+            <p>
+              What happens when a system is trained to treat ambiguity
+              not as a legitimate result, but as a failure that must
+              be resolved?
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-number">02</div>
+            <h3>The Ownership of a Human Story</h3>
+            <p>
+              If technology can reconstruct memory, motive and identity,
+              does accuracy give anyone the right to declare one version
+              of a life definitive?
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-number">03</div>
+            <h3>The Last Word</h3>
+            <p>
+              DOMINUS is not simply a story about whether machines
+              can think. It asks who is allowed to put the final period
+              in another person's story.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- AUTHOR -->
+    <section id="author">
+      <div class="container author-grid">
+
+        <div>
+          <div class="section-kicker">Author</div>
+          <div class="author-name">Pavel<br>Velichii</div>
+        </div>
+
+        <div class="prose">
+          <p>
+            Pavel Velichii is the author of DOMINUS — The Vatican Protocol,
+            an intellectual science-fiction thriller cycle exploring
+            artificial intelligence, faith, epistemology and human agency.
+          </p>
+
+          <p>
+            Book One: Schism follows the discovery of an impossible artifact
+            inside a Vatican research system and the investigation that
+            forces its characters to distinguish evidence from interpretation,
+            prediction from intention, and reconstruction from personhood.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- AVAILABILITY -->
+    <section class="cta" id="availability">
+      <div class="container">
+
+        <div class="section-kicker">Book One</div>
+
+        <h2 style="margin-left:auto; margin-right:auto;">
+          DOMINUS<br>
+          The Vatican Protocol
+        </h2>
+
+        <p>
+          English edition of <strong>Book One: Schism</strong>.
+          Publication and reading links will appear here as they become available.
+        </p>
+
+        <a class="button primary" href="#top">
+          Book One: Schism
+        </a>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <footer>
+    <div class="container footer-inner">
+      <div>
+        © 2026 Pavel Velichii. All rights reserved.
+      </div>
+
+      <div>
+        DOMINUS · The Vatican Protocol
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
