@@ -34,3 +34,10 @@ Status: Files complete and archives readable, but publication-ready QA not yet c
 - EPUB title needs per-volume specificity. EPUBCheck and Kindle Previewer NOT independently run; spot-check print page text geometry only, not full print proof.
 - Separate full private report was generated in author conversation: DOMINUS_FR_IT_FULL_QA_2026-11-13.md. No copyrighted books or manuscripts uploaded here.
 - REMAINS HOLD until author approves the master chronology, source/translation sentence-level audit, independent EPUB and print preflight.
+
+## Four ebook metadata release candidates prepared — 2026-11-13
+- Four new private candidate EPUBs generated from user-supplied FR/IT Vol1/Vol2 EPUB. Only EPUB/content.opf dc:title field changed to distinct title per volume; entire story text, chronology, cover and other files are byte-for-byte unchanged within repacked archive. Original source ZIPs untouched.
+- Entire print-interior page geometry scanned programmatically, no text spans beyond MediaBox; intentionally blank pages exist and need Print Previewer visual inspection.
+- Print full-cover widths exactly match KDP 5.5x8.5, B&W WHITE-paper spine formulas: FR1 11.9706 in (320p), FR2 11.9616 (316p), IT1 11.9571 (314p), IT2 11.9436 (308p). Cream paper would mismatch. Height 8.75 in with bleed.
+- Parsed all EPUB XML/XHTML without syntax errors, ZIP CRC passed, mimetype stored/uncompressed and first. Not a substitute for epubcheck.
+- Private conversation deliverable is DOMINUS_FR_IT_4BOOKS_RELEASE_CANDIDATES_2026-11-13.zip containing 4 candidate EPUBs and RELEASE_AUDIT.md / JSON manifests, NOT full copyrighted print assets. Status remains EDITORIAL HOLD (canon dates EN vs FR/IT divergence, native line edit, EPUBCheck, Kindle/Print Previewer, AI disclosure, rights and author final signoff).
