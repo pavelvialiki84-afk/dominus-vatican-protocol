@@ -50,3 +50,10 @@ Status: Files complete and archives readable, but publication-ready QA not yet c
 - Additional IT Chapter 3 year clarity fixes: '29 -> 2029 and '31 -> 2031, matching exact corresponding French years.
 - 62 XHTML head <title> entries revised from generic chNNN.xhtml to actual chapter heading (FR1 15; FR2 16; IT1 15; IT2 16). Every modified EPUB passes CRC and XML parse tests; fictional plot chronology intentionally unchanged.
 - Status: WORKING EDITORIAL CANDIDATE, RELEASE HOLD. EN published Book One remains on a conflicting timeline in ch14–15; master chronology not author-approved and EN Book Two not available for comparison. Full human literary line edit, philological verification, independent EPUBCheck/Kindle Previewer and print QA remain mandatory.
+
+## Editorial packaging update — Nov 13 2026, 22:xx CET
+- Four private EPUB candidates generated in current conversation package `DOMINUS_FR_IT_PREPUBLICATION_EDITED_2026-11-13.zip`. Originals remain unchanged. 12 files in package, including 4 EPUBs, release report, manifest, change journal and consistency registries.
+- Safe semantic EPUB fixes only: eight Russian-language original-quote blocks (FR1/IT1) reclassified from `latin` to `foreign-quote` with lang=ru; four vernacular-language blocks previously mislabeled Latin (one per volume) reclassified to `foreign-quote`. Visual alignment and italics retained, prose unchanged.
+- All four new EPUBs: ZIP CRC pass; XML/XHTML parse pass; zero missing local linked resources; first `mimetype` stored/uncompressed; full visible reading text identical to previous editorial candidates.
+- Editorial chronology decision: FR/IT coherent working timeline 25 Aug -> 14 Sep -> 20 Sep 2035 across chapters 14–16. This is NOT verified against authoritative RU master or published EN Book One (3 Sep -> 24 Oct branch). No narrative dates silently rewritten.
+- Not a final human copyedit of all sentences; no verified EPUBCheck, Kindle Previewer or Print Previewer. Printed PDFs not rebuilt. KDP release HOLD remains mandatory until source/canon author approval and editorial/technical QA.
