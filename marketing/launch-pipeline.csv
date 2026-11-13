@@ -1,0 +1,9 @@
+date,market,channel,action,priority,status,owner,success_measure,evidence
+2026-11-13,DE,Amazon KDP,Verify German Kindle ASIN and Live status,P0,MONITORING,automation,Verified product detail and correct language,KDP submission confirmed
+2026-11-13,DE,Website,Replace Amazon search link with verified direct buy link,P0,WAITING_FOR_ASIN,automation,Direct Amazon.de verified link,German landing page live
+2026-11-13,DE,Amazon,Review listing title Band 1 Schisma and series mapping,P0,WAITING_FOR_ASIN,author,Accurate product details,Submitted title currently DOMINUS Das Vatikan-Protokoll
+2026-11-13,Global,SEO,Reconnect Search Console property permission,P0,BLOCKED_OWNER_VERIFICATION,author,Connected verified property,OpenSEO siteUnverifiedUser
+2026-11-13,EN,Website,Restore meaningful English sample or fix preview label,P1,IN_PROGRESS,assistant,200 page meaningful copy,OpenSEO site audit
+2026-11-13,DE,Author Central,Claim German Kindle and complete bilingual biography,P1,WAITING_FOR_ASIN,author,Book visible under author profile,none
+2026-11-13,DE,Organic,Prepare newsletter and reviewer outreach copy,P1,DRAFT,assistant,Approved reusable campaign,none
+2026-11-13,DE,Amazon Ads,Test paid campaign only after approved budget,P2,NOT_APPROVED,author,Positive unit economics,none
