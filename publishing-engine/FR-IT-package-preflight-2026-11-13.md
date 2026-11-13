@@ -41,3 +41,12 @@ Status: Files complete and archives readable, but publication-ready QA not yet c
 - Print full-cover widths exactly match KDP 5.5x8.5, B&W WHITE-paper spine formulas: FR1 11.9706 in (320p), FR2 11.9616 (316p), IT1 11.9571 (314p), IT2 11.9436 (308p). Cream paper would mismatch. Height 8.75 in with bleed.
 - Parsed all EPUB XML/XHTML without syntax errors, ZIP CRC passed, mimetype stored/uncompressed and first. Not a substitute for epubcheck.
 - Private conversation deliverable is DOMINUS_FR_IT_4BOOKS_RELEASE_CANDIDATES_2026-11-13.zip containing 4 candidate EPUBs and RELEASE_AUDIT.md / JSON manifests, NOT full copyrighted print assets. Status remains EDITORIAL HOLD (canon dates EN vs FR/IT divergence, native line edit, EPUBCheck, Kindle/Print Previewer, AI disclosure, rights and author final signoff).
+
+## Editorial parallel-alignment deliverable — 2026-11-13
+- A new private release-candidate ZIP `DOMINUS_FR_IT_EDITED_ALIGNMENT_PACKAGE_2026-11-13.zip` is available as a conversation attachment only. DO NOT push it or copyrighted text to public GitHub.
+- Machine-parsed all 31 chapters in FR and IT; exactly 10,823 corresponding non-empty text paragraphs; every paired chapter has equal paragraph count. This is structural alignment, NOT verified semantic equivalence or a substitute for native-editor proofreading.
+- Registered 224 Latin-styled blocks in four editions; FR and IT counts per chapter identical; 8 instances of Cyrillic text use class `latin`; need editorial formatting review.
+- 127 literal numeric formatting flags reduced to 13 after normalizing French/Italian time formats. Corrected confirmed IT discrepancy in Chapter 23: Montserrat night spans October 11–12, not only October 12.
+- Additional IT Chapter 3 year clarity fixes: '29 -> 2029 and '31 -> 2031, matching exact corresponding French years.
+- 62 XHTML head <title> entries revised from generic chNNN.xhtml to actual chapter heading (FR1 15; FR2 16; IT1 15; IT2 16). Every modified EPUB passes CRC and XML parse tests; fictional plot chronology intentionally unchanged.
+- Status: WORKING EDITORIAL CANDIDATE, RELEASE HOLD. EN published Book One remains on a conflicting timeline in ch14–15; master chronology not author-approved and EN Book Two not available for comparison. Full human literary line edit, philological verification, independent EPUBCheck/Kindle Previewer and print QA remain mandatory.
