@@ -26,3 +26,11 @@ Status: Files complete and archives readable, but publication-ready QA not yet c
 - Extracted PDF text can merge words even where visual render is correct: 'Non sumDeus', 'Audi vocemmeam' are not demonstrated EPUB typos (EPUB has spaced Latin). Do not perform blind corrections.
 - EPUBCheck and Kindle/KDP preview not independently performed. Native literary/canon comparison not completed; publication remains HOLD.
 - Private detailed report created in current conversation as DOMINUS_FR_IT_углубленный_аудит_2026-11-13.md. Do not upload manuscripts to public repository.
+
+## Follow-up deep audit results, 13 November 2026 — current release gate
+- FR and IT align at Volume 1 chapter 14.1 (25 August) and chapter 15.1 (14 September), and Volume 2 chapter 16.1 (20 September). The currently supplied/published EN_KDP EPUB starts chapter 14.1 on 3 September and 15.1 on 24 October 2035: confirmed incompatible chronological branches. German chronology memo already notes same difference. No timeline automatically changed.
+- Complete programmatic EPUB text-level chapter inventory found all story chapters FR/IT (Vol 1: 1-15, Vol 2: 16-31) and consistent FR-to-IT chapter-length ratios; these do not establish semantic translation fidelity.
+- Latin centered/italic styling in XHTML/CSS is confirmed for standard div.latin blocks; do not incorrectly report missing centering. Selected Latin passages in Volume 1 chapter 3 and 5 put translated meaning in a subsequent dialogue rather than immediately next styled paragraph; assess editorial conventions and drama before intervention.
+- EPUB title needs per-volume specificity. EPUBCheck and Kindle Previewer NOT independently run; spot-check print page text geometry only, not full print proof.
+- Separate full private report was generated in author conversation: DOMINUS_FR_IT_FULL_QA_2026-11-13.md. No copyrighted books or manuscripts uploaded here.
+- REMAINS HOLD until author approves the master chronology, source/translation sentence-level audit, independent EPUB and print preflight.
