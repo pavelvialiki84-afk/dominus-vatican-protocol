@@ -69,3 +69,20 @@ No attribution without actual click or purchase reporting.
 1. Connect at least one social channel to Metricool; preferred Instagram and Facebook when existing brand accounts are ready.
 2. Optionally connect GA4 to Windsor.ai for site visitors beyond search impressions; link store outbound clicks with consent-compliant analytics.
 3. Confirm Canva approved cover and brand fonts/colors, and author approve a content strategy before posting.
+
+## Social channel launch and organic auto-publication authorization — 2026-11-13 22:51 UTC
+Author explicitly requested official DOMINUS Instagram/other social pages and automatic posting. This supersedes only the organic social publication review requirement; all other brand, canon, no paid ads, no unsolicited DMs and no disclosure of unpublished materials restrictions remain.
+
+### Proposed channel architecture
+- Public name: DOMINUS — The Vatican Protocol. Suggested handle @dominus.vatican.protocol subject to actual availability and platform length/format rules (not verified).
+- Instagram (Creator/Business): ~3 feed posts/week; Facebook Page ~3/week (often same core creative); Threads 2–3/week; TikTok 2 short videos/week; YouTube 1–2 Shorts/week when licensed video exists. These are targets, not queue entries.
+- Channel registration must be completed by the author in each provider's native UI and verified; never create accounts or pretend ownership without author authorization and real registration.
+- Account setup: brand/category, official website, consistent avatar, book metadata, contact email chosen by author, country/legal disclosures as needed. Never disclose personal contact without approval.
+
+### AutoPost guardrails
+- Metricool blogId 8094045, connection settings https://app.metricool.com/brands/connections?blogId=8094045 . LAST CHECK 2026-11-13: no network connected, so zero posts queued/published.
+- When account(s) connected and verified, weekly automation may create organic, scheduled, autoPublish posts via Metricool subject to platform format and media requirements. Only publish to provider connections confirmed to belong to DOMINUS.
+- Content: real live retailer / official site URLs, published EN book, confirmed DE book only when live, FR/IT only as pre-launch pending editorial release. No fabricated book quotes, fake social proof or invented reader feedback, undisclosed AI-made photoreal people, trademark/logo misuse, paid promotion, DMs or speculative launch dates.
+- Requires public media URL hosted somewhere accessible to Metricool. Canva design URLs may NOT be direct image file URLs and must not be passed as media unless verified as media files; use a supported authorized content-storage/upload workflow.
+- On a successful scheduling tool result, record post ID, network, planner URL, language, date and source creative. On failure, do not claim publication.
+- Native accounts, social-platform authorization, and at least one ready creative remain blocking dependencies. Two previously existing ChatGPT automations updated; no new automation slots due 5-task plan limit.
