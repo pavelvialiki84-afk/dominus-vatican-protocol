@@ -49,3 +49,9 @@ MONTHLY: evaluate conversion and royalty per sale, revise copy/categories only w
 [ ] Restore Search Console verified owner/permission and select property in OpenSEO.
 [ ] Verify genuine English sample content; the current page may be empty.
 [ ] Establish weekly sales data input from KDP.
+
+## Automated integration links (2026-11-13)
+- Production controls and editorial gates: `../publishing-engine/README.md` (relative GitHub link).
+- Quality monitor: `../.github/workflows/dominus-site-health.yml` and `../publishing-engine/site_health.py`. GitHub Actions scheduled daily; GitHub runner status must be verified separately.
+- KPI input: `../publishing-engine/kpi-dashboard-template.csv`; all private sales/royalty cells remain blank until KDP exports are supplied.
+- Existing ChatGPT Automation checks Amazon.de each day and provides weekly evidence-based progress. No automatic social posts, outreach or ad spending.
