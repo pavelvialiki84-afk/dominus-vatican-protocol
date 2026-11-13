@@ -15,3 +15,10 @@ The table is NOT the full text of Russian Book One. It cannot prove every beat a
 - The FR/IT timeline 25 Aug / 14 Sep / 20 Sep differs in Chapter 14 from RU Book Two table 3 Sep / 14 Sep / 20 Sep. Earlier reports claiming FR/IT Chapter 15 24 Oct should be independently revisited: RU table specifies Sep 14. No blind global date replacement; establish exact scene and in-story causality from original RU Book One.
 - Do not change any book or publish based solely on this editorial table. First retrieve RU Book One if located, verify which edition is final, then produce scene-level canon reconciliation.
 - Copyright manuscripts stay out of this public repo.
+
+## Update: published Russian Book One located online (2026-11-13)
+- Verified public listing by Pavel Velichii / Павел Великий: https://author.today/work/656684 titled "DOMINUS. Ватиканский протокол. Книга 1: Раскол", publication date 22 Sept 2026; author page says full-text free access and chapter 1–15 available in https://author.today/reader/656684 . Chapter 14 link https://author.today/reader/656684/6287032 and chapter 15 link https://author.today/reader/656684/6287033 .
+- Google Play Books also lists RU Book One https://play.google.com/store/books/details?id=NZ0PEgAAQBAJ (466-page ebook). This is a valid public reference but may have a distinct distribution snapshot; compare before treating as identical.
+- Web reading endpoint currently exposed chapter list but NOT chapter body in available browsing tool. Thus SOURCE LOCATED, CONTENT NOT EXTRACTED; do not falsely claim full paragraph-level compare or rewrite chronology.
+- RU Book Two separately available as private DOCX and has been used for chapter 16–31 structural alignment and correcting Chapter 31 location in private FR/IT release candidates; see report attachment DOMINUS_RU_FR_IT_CANON_ALIGNED_V2_2026-11-13.zip.
+- Before changing FR/IT ch14 25 Aug -> 3 Sep, obtain exact RU chapter 14 body from authorized full-text access and verify dependencies. Link discovery alone does not confer a validated master text.
