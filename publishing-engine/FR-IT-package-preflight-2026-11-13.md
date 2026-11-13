@@ -57,3 +57,9 @@ Status: Files complete and archives readable, but publication-ready QA not yet c
 - All four new EPUBs: ZIP CRC pass; XML/XHTML parse pass; zero missing local linked resources; first `mimetype` stored/uncompressed; full visible reading text identical to previous editorial candidates.
 - Editorial chronology decision: FR/IT coherent working timeline 25 Aug -> 14 Sep -> 20 Sep 2035 across chapters 14–16. This is NOT verified against authoritative RU master or published EN Book One (3 Sep -> 24 Oct branch). No narrative dates silently rewritten.
 - Not a final human copyedit of all sentences; no verified EPUBCheck, Kindle Previewer or Print Previewer. Printed PDFs not rebuilt. KDP release HOLD remains mandatory until source/canon author approval and editorial/technical QA.
+
+## Final tool-available technical gate 2026-11-13
+- Reexamined last author candidate archive; discovered and corrected 24 additional non-chapter HTML `<title>` placeholders (6 per EPUB), contrary to prior assumption that all title metadata had been corrected. Corrected files repackaged privately as `DOMINUS_FR_IT_TECHNICALLY_REFINED_2026-11-13.zip` (user attachment); NO literary narrative change.
+- Full EPUB hyperlink + anchor audit: FR1 70 references, FR2 73, IT1 70, IT2 73. Zero dangling links/fragments, duplicate IDs or XML parse errors; ZIP tests pass.
+- Programmatic original PDF page-by-page physical page-boundary text scan: FR1 320, FR2 316, IT1 314, IT2 308 pages (396x612 pt), no text bounding-box beyond MediaBox. This is NOT a visual print proof.
+- Explicit HOLD: No source-authoritative RU manuscript available to resolve differing EN versus FR/IT ch14–15 timelines, no independently installed EPUBCheck, no Kindle/Print Previewer, and full native-language human literary correction not completed. Avoid calling these release-certified.
