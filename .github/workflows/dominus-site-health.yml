@@ -1,0 +1,27 @@
+name: DOMINUS Site Quality Monitor
+on:
+  schedule:
+    - cron: '15 7 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  public-site-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check DOMINUS public site, metadata, and sitemap
+        run: python3 publishing-engine/site_health.py
+      - name: Preserve read-only audit result
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: dominus-site-health
+          path: publishing-engine/reports/site-health-latest.json
+          retention-days: 30
