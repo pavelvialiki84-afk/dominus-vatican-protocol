@@ -19,3 +19,11 @@
 14. Reassess split of premium vs commercial efforts with evidence and author-approved investment.
 ## Definition of done
 A stage is done only after output exists, tool confirms the write, and public/account-dependent outcomes are independently checked.
+
+## Italian and French editions — 2026-11-13 author update
+- Author reports that Italian and French versions of DOMINUS are ready. Treat this as manuscripts/translations ready for QA, not as KDP-publication or public availability confirmation.
+- IT: confirm exact title, translator status, book/volume scope and files; verify source-to-target chapter coverage, proper names, series labels, localized metadata, and quality of Italian prose before KDP submission.
+- FR: same independent full review for French including idiomatic style, typographic conventions, terminology, theological and historical precision, and book/volume completeness.
+- For each language, run five editorial passes and EPUB/cover/Kindle Previewer checks; correctly disclose any AI-generated translation under KDP rules.
+- Prepare localized landing pages only with verified descriptions and honest availability flags; do not advertise store product links without verified per-language ASIN.
+- Publishing, paid ads and external outreach require author's explicit go-ahead.
