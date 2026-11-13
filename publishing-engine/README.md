@@ -45,3 +45,10 @@ Coral Hart / PlotProse: market-first genre selection, reader-promise/trope mappi
 - kpi-dashboard-template.csv: aggregate metrics by week and market.
 - 90-day-roadmap.md: accountable delivery sequence.
 - Existing marketing/README.md remains live launch control for DOMINUS.
+
+## Integrated operational connectors (2026-11-13)
+- GitHub Actions workflow: `.github/workflows/dominus-site-health.yml`. Daily 07:15 UTC + manual workflow_dispatch. Runs Python stdlib checker in `publishing-engine/site_health.py` for homepage, German landing, English book info and public sitemap. Read-only access; writes JSON audit artifact within GitHub Actions, with a nonzero exit when issues found. Workflow execution status must be checked separately (a committed workflow is not proof of successful Actions run).
+- ChatGPT Automation: existing task "DOMINUS — Amazon и продажи" enabled daily 09:00 Europe/Berlin; checks German Kindle ASIN, public website, weekly strategy. This is a separate automation from GitHub Actions; no account API data connected.
+- OpenSEO project: `dec7741d-359a-4fab-bccc-13eaa27db7d2` and custom section `publishing-engine-2`, updated with operating guidelines. Google Search Console remains siteUnverifiedUser until owner resolves it.
+- Dashboard source: `publishing-engine/kpi-dashboard-template.csv`; unverified cells intentionally empty. Populate only from authorized KDP exports and consented analytics.
+- Marketing operating plan: `marketing/README.md`.
