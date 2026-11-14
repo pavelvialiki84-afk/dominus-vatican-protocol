@@ -1,0 +1,30 @@
+name: Import DOMINUS cinematic illustrations
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - .github/workflows/import-dominus-art.yml
+permissions:
+  contents: write
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download temporary Canva imagery into permanent repository assets
+        shell: bash
+        run: |
+          mkdir -p assets/illustrations
+          curl --fail --location --silent --show-error --retry 2 'https://media.canva.com/v2/image-resize/format:PNG/height:112/quality:100/uri:ifs%3A%2F%2FM%2F7633ddec-ea95-41d0-aea1-3bb00d232341/watermark:F/width:200?csig=AAAAAAAAAAAAAAAAAAAAACocKg_xofbNAHTAGor7FG1QMGajxyHfwwGkqtd-u9En&exp=1794697301&osig=AAAAAAAAAAAAAAAAAAAAAANb3J_Nc243dhJBorZ1Z9bivM1PGxiPbLPzFKb-vp7H&signer=media-rpc&token=AAIAAU0AJDc2MzNkZGVjLWVhOTUtNDFkMC1hZWExLTNiYjAwZDIzMjM0MQAAAAABodxLjAjL5Ui6ON7GjAPcA-4-Q941SElVcIBVBy--VZyayMvUwQ&x-canva-quality=thumbnail' -o assets/illustrations/keyhole-illustration.png
+          test $(wc -c < assets/illustrations/keyhole-illustration.png) -gt 1000
+          curl --fail --location --silent --show-error --retry 2 'https://media.canva.com/v2/image-resize/format:PNG/height:112/quality:100/uri:ifs%3A%2F%2FM%2F2c3c7b90-1593-4556-a7d7-0d824d81de81/watermark:F/width:200?csig=AAAAAAAAAAAAAAAAAAAAAKrSGql6UB56EepVZPfsFYlhhvIuOhN73tZ2S-pQXo5_&exp=1794697339&osig=AAAAAAAAAAAAAAAAAAAAAIYiCGEHgdAfBSiPFzKDB14VdxvMMYPSVXxXw7k5wZeA&signer=media-rpc&token=AAIAAU0AJDJjM2M3YjkwLTE1OTMtNDU1Ni1hN2Q3LTBkODI0ZDgxZGU4MQAAAAABodxMIHiLvwjhAgDJq_e1cEPHCebfeuTndSKm2uMN8IUiyuXxIA&x-canva-quality=thumbnail' -o assets/illustrations/archive-illustration.png
+          test $(wc -c < assets/illustrations/archive-illustration.png) -gt 1000
+          curl --fail --location --silent --show-error --retry 2 'https://media.canva.com/v2/image-resize/format:PNG/height:112/quality:100/uri:ifs%3A%2F%2FM%2F7751b738-3b09-4d8e-9c7c-4573565c1340/watermark:F/width:200?csig=AAAAAAAAAAAAAAAAAAAAAItsugIT_oLu4qiCRTUd4k2gXsZ_fuPzCdHLWkJj5gBE&exp=1794698141&osig=AAAAAAAAAAAAAAAAAAAAACEaPtKPYDQdDc0ntjKdurZG5oTHXYUhoVid3OqDQDAw&signer=media-rpc&token=AAIAAU0AJDc3NTFiNzM4LTNiMDktNGQ4ZS05YzdjLTQ1NzM1NjVjMTM0MAAAAAABodxYXUgit4EmDV_lz4yb00UhmWBuj13eOFknkACWbk228PRR2g&x-canva-quality=thumbnail' -o assets/illustrations/ai-faith-illustration.png
+          test $(wc -c < assets/illustrations/ai-faith-illustration.png) -gt 1000
+          
+      - name: Commit media
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add assets/illustrations/
+          if ! git diff --cached --quiet; then git commit -m 'Archive DOMINUS cinematic artwork'; git push; fi
