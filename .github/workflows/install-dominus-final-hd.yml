@@ -73,6 +73,14 @@ jobs:
               html=html.replace(old_tag,new_tag)
               html=html.replace(root+"cover.png",root+target)
               path.write_text(html,encoding="utf-8")
+
+              author_path=Path("autor-de.html" if lang=="de" else "auteur-fr.html")
+              profile=author_path.read_text(encoding="utf-8")
+              profile=profile.replace(source,target)
+              profile=profile.replace('class="author-cover source-preview"','class="author-cover"')
+              profile=profile.replace(f'<img src="{target}" alt=',f'<img src="{target}" alt=')
+              profile=profile.replace('width="125" height="200"','width="1000" height="1600"')
+              author_path.write_text(profile,encoding="utf-8")
           PY
       - name: Commit verified originals and localized cover markup
         shell: bash
@@ -83,7 +91,7 @@ jobs:
           fi
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add assets/illustrations/*-realistic.webp assets/illustrations/dominus-cover-*-hd.webp dominus-band1-de.html dominus-volume1-fr.html
+          git add assets/illustrations/*-realistic.webp assets/illustrations/dominus-cover-*-hd.webp dominus-band1-de.html dominus-volume1-fr.html autor-de.html auteur-fr.html
           if ! git diff --cached --quiet; then
             git commit -m 'Publish genuine HD portraits, six-panel scenes and official DE FR covers'
             git pull --rebase origin main
