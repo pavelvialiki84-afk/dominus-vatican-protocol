@@ -1,0 +1,45 @@
+name: DOMINUS optimized web media
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/optimize-web-media.yml'
+      - 'cover.png'
+      - 'assets/photos/vatican-night.jpg'
+      - 'assets/photos/vatican-library.jpg'
+      - 'assets/dominus-original-score.wav'
+permissions:
+  contents: write
+jobs:
+  optimize:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install FFmpeg
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg
+      - name: Build right-sized posters, backgrounds and MP3
+        shell: bash
+        run: |
+          set -euo pipefail
+          ffmpeg -hide_banner -loglevel error -y -i cover.png -vf "scale=600:-2:flags=lanczos" -frames:v 1 -q:v 4 assets/cover-en-600.jpg
+          ffmpeg -hide_banner -loglevel error -y -i assets/photos/vatican-night.jpg -vf "scale=1400:-2:flags=lanczos" -frames:v 1 -c:v libwebp -quality 76 assets/hero-vatican.webp
+          ffmpeg -hide_banner -loglevel error -y -i assets/photos/vatican-library.jpg -vf "scale=900:-2:flags=lanczos" -frames:v 1 -c:v libwebp -quality 74 assets/vatican-library.webp
+          ffmpeg -hide_banner -loglevel error -y -i assets/dominus-original-score.wav -vn -c:a libmp3lame -b:a 72k assets/dominus-score.mp3
+          for p in assets/cover-en-600.jpg assets/hero-vatican.webp assets/vatican-library.webp assets/dominus-score.mp3; do
+            test -s "$p"
+            ls -lh "$p"
+          done
+      - name: Commit optimized site media
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/cover-en-600.jpg assets/hero-vatican.webp assets/vatican-library.webp assets/dominus-score.mp3
+          if ! git diff --cached --quiet; then
+            git commit -m "Generate optimized media for DOMINUS hero, covers and soundtrack"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
