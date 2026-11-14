@@ -8,7 +8,7 @@ from html.parser import HTMLParser
 from xml.etree import ElementTree as ET
 
 BASE = "https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/"
-PAGES = ["", "dominus-band1-de.html", "dominus-sample-en.html"]
+PAGES = ["", "dominus-band1-de.html", "dominus-sample-en.html", "read.html"]
 SITEMAP = BASE + "sitemap.xml"
 
 class Page(HTMLParser):
