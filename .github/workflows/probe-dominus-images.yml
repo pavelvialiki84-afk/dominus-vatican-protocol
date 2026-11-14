@@ -1,0 +1,32 @@
+name: Probe original Canva image resolution for DOMINUS
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - .github/workflows/probe-dominus-images.yml
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Check licensed original artwork access
+        run: |
+          printf 'TEST rafael-thumb\n'
+          curl -LsSf --max-time 18 -w 'HTTP %{http_code}; bytes %{size_download}\n' 'https://media.canva.com/v2/image-resize/format:PNG/height:200/quality:100/uri:ifs%3A%2F%2FM%2Fab2b94ea-8e07-4b52-b964-198d8df2e950/watermark:F/width:160?csig=AAAAAAAAAAAAAAAAAAAAAIuNXGl8JCLDcCG813NGjWKJPNGCUwM8B_LZo3dXwDi5&exp=1794704966&osig=AAAAAAAAAAAAAAAAAAAAAKXgsc3udphNUCm-T-C1263UIRAQ5p21BprqWxig1i-_&signer=media-rpc&token=AAIAAU0AJGFiMmI5NGVhLThlMDctNGI1Mi1iOTY0LTE5OGQ4ZGYyZTk1MAAAAAABodzAgXDhXd9XRUo2_HpG-j2zg8QfZJfmbc4O2THAcrgDcKqiIg&x-canva-quality=thumbnail' -o /tmp/rafael-thumb.img || true
+          if [ -s /tmp/rafael-thumb.img ]; then file /tmp/rafael-thumb.img; identify -format 'SIZE %wx%h\n' /tmp/rafael-thumb.img || true; fi
+          printf 'TEST rafael-large\n'
+          curl -LsSf --max-time 18 -w 'HTTP %{http_code}; bytes %{size_download}\n' 'https://media.canva.com/v2/image-resize/format:PNG/height:1000/quality:100/uri:ifs%3A%2F%2FM%2Fab2b94ea-8e07-4b52-b964-198d8df2e950/watermark:F/width:800?csig=AAAAAAAAAAAAAAAAAAAAAIuNXGl8JCLDcCG813NGjWKJPNGCUwM8B_LZo3dXwDi5&exp=1794704966&osig=AAAAAAAAAAAAAAAAAAAAAKXgsc3udphNUCm-T-C1263UIRAQ5p21BprqWxig1i-_&signer=media-rpc&token=AAIAAU0AJGFiMmI5NGVhLThlMDctNGI1Mi1iOTY0LTE5OGQ4ZGYyZTk1MAAAAAABodzAgXDhXd9XRUo2_HpG-j2zg8QfZJfmbc4O2THAcrgDcKqiIg&x-canva-quality=thumbnail' -o /tmp/rafael-large.img || true
+          if [ -s /tmp/rafael-large.img ]; then file /tmp/rafael-large.img; identify -format 'SIZE %wx%h\n' /tmp/rafael-large.img || true; fi
+          printf 'TEST rafael-no-resize\n'
+          curl -LsSf --max-time 18 -w 'HTTP %{http_code}; bytes %{size_download}\n' 'https://media.canva.com/v2/image-resize/format:PNG/quality:100/uri:ifs%3A%2F%2FM%2Fab2b94ea-8e07-4b52-b964-198d8df2e950/watermark:F?csig=AAAAAAAAAAAAAAAAAAAAAIuNXGl8JCLDcCG813NGjWKJPNGCUwM8B_LZo3dXwDi5&exp=1794704966&osig=AAAAAAAAAAAAAAAAAAAAAKXgsc3udphNUCm-T-C1263UIRAQ5p21BprqWxig1i-_&signer=media-rpc&token=AAIAAU0AJGFiMmI5NGVhLThlMDctNGI1Mi1iOTY0LTE5OGQ4ZGYyZTk1MAAAAAABodzAgXDhXd9XRUo2_HpG-j2zg8QfZJfmbc4O2THAcrgDcKqiIg&x-canva-quality=thumbnail' -o /tmp/rafael-no-resize.img || true
+          if [ -s /tmp/rafael-no-resize.img ]; then file /tmp/rafael-no-resize.img; identify -format 'SIZE %wx%h\n' /tmp/rafael-no-resize.img || true; fi
+          printf 'TEST archive-thumb\n'
+          curl -LsSf --max-time 18 -w 'HTTP %{http_code}; bytes %{size_download}\n' 'https://media.canva.com/v2/image-resize/format:PNG/height:112/quality:100/uri:ifs%3A%2F%2FM%2F884f0ecc-ecae-479e-986c-e2244a15f178/watermark:F/width:200?csig=AAAAAAAAAAAAAAAAAAAAAKvDmxMt1SfLN13lhaKXzYYSKa59iJw8wsopAVq8yThH&exp=1794702026&osig=AAAAAAAAAAAAAAAAAAAAAGoCe9fMqBhkBXpi_zSyqZBS1XrceBFyvPZkCgVFOgmG&signer=media-rpc&token=AAIAAU0AJDg4NGYwZWNjLWVjYWUtNDc5ZS05ODZjLWUyMjQ0YTE1ZjE3OAAAAAABodyTpRB2Fvmip4MsG5Q7JXP5vqziILOjNcwMgBk4oFwrFmUs-g&x-canva-quality=thumbnail' -o /tmp/archive-thumb.img || true
+          if [ -s /tmp/archive-thumb.img ]; then file /tmp/archive-thumb.img; identify -format 'SIZE %wx%h\n' /tmp/archive-thumb.img || true; fi
+          printf 'TEST archive-large\n'
+          curl -LsSf --max-time 18 -w 'HTTP %{http_code}; bytes %{size_download}\n' 'https://media.canva.com/v2/image-resize/format:PNG/height:900/quality:100/uri:ifs%3A%2F%2FM%2F884f0ecc-ecae-479e-986c-e2244a15f178/watermark:F/width:1600?csig=AAAAAAAAAAAAAAAAAAAAAKvDmxMt1SfLN13lhaKXzYYSKa59iJw8wsopAVq8yThH&exp=1794702026&osig=AAAAAAAAAAAAAAAAAAAAAGoCe9fMqBhkBXpi_zSyqZBS1XrceBFyvPZkCgVFOgmG&signer=media-rpc&token=AAIAAU0AJDg4NGYwZWNjLWVjYWUtNDc5ZS05ODZjLWUyMjQ0YTE1ZjE3OAAAAAABodyTpRB2Fvmip4MsG5Q7JXP5vqziILOjNcwMgBk4oFwrFmUs-g&x-canva-quality=thumbnail' -o /tmp/archive-large.img || true
+          if [ -s /tmp/archive-large.img ]; then file /tmp/archive-large.img; identify -format 'SIZE %wx%h\n' /tmp/archive-large.img || true; fi
+          printf 'TEST archive-no-resize\n'
+          curl -LsSf --max-time 18 -w 'HTTP %{http_code}; bytes %{size_download}\n' 'https://media.canva.com/v2/image-resize/format:PNG/quality:100/uri:ifs%3A%2F%2FM%2F884f0ecc-ecae-479e-986c-e2244a15f178/watermark:F?csig=AAAAAAAAAAAAAAAAAAAAAKvDmxMt1SfLN13lhaKXzYYSKa59iJw8wsopAVq8yThH&exp=1794702026&osig=AAAAAAAAAAAAAAAAAAAAAGoCe9fMqBhkBXpi_zSyqZBS1XrceBFyvPZkCgVFOgmG&signer=media-rpc&token=AAIAAU0AJDg4NGYwZWNjLWVjYWUtNDc5ZS05ODZjLWUyMjQ0YTE1ZjE3OAAAAAABodyTpRB2Fvmip4MsG5Q7JXP5vqziILOjNcwMgBk4oFwrFmUs-g&x-canva-quality=thumbnail' -o /tmp/archive-no-resize.img || true
+          if [ -s /tmp/archive-no-resize.img ]; then file /tmp/archive-no-resize.img; identify -format 'SIZE %wx%h\n' /tmp/archive-no-resize.img || true; fi
