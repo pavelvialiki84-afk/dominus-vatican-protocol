@@ -254,3 +254,8 @@
 .book-cover-frame .cover-preview-label{display:none}
 .book-cover-frame.source-preview .cover-preview-label{display:block;color:#e9d4a9;font:700 10px/1.4 Arial,sans-serif;letter-spacing:.15em;text-transform:uppercase;text-align:center;padding:0 8px}
 .book-cover-frame:not(.source-preview) .book-cover-image{width:100%;height:100%;object-fit:contain}
+
+/* Author pages show the actual DE/FR edition art, never a mislabeled English cover. */
+.author-aside .author-cover.source-preview{width:125px;height:200px;aspect-ratio:5/8;margin:18px auto 24px;border:1px solid #aa865a;box-shadow:0 14px 25px #000a}
+.author-aside .author-cover.source-preview img{display:block;width:125px;height:200px;object-fit:contain}
+.author-aside:has(.author-cover.source-preview){background:radial-gradient(circle at 50% 40%,#232834,#0b0e12 65%);min-height:300px}
