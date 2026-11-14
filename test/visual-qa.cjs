@@ -19,7 +19,7 @@ for(const filename of pages){
     });
     if(result.documentWidth>width+3)bad.push('Horizontal overflow '+result.documentWidth);
     if(result.gallery.length!==6)bad.push('Expected 6 gallery items, got '+result.gallery.length);
-    if(result.cast.length!==3||result.dossiers.length!==3)bad.push('Character count mismatch');
+    if(result.cast.length!==0||result.dossiers.length!==3)bad.push('Duplicate cast strip or character count mismatch');
     for(const [selector,rects] of [['gallery',result.gallery],['cast',result.cast],['dossiers',result.dossiers]]){
       for(let i=0;i<rects.length;i++){
         let a=rects[i];if(a.width<35||a.height<35)bad.push(selector+' card too small '+i);
@@ -39,8 +39,7 @@ for(const filename of pages){
     if(width<=680 && !result.mobileBuy)bad.push('Mobile purchase CTA missing');
     const expectedPortraits=['portrait-salvatore-realistic.webp','portrait-rafael-realistic.webp','portrait-luiza-realistic.webp'];
     const actualPortraits=result.portraitSources.map(u=>u?.split('/').pop());
-    const expectedDouble=[...expectedPortraits,...expectedPortraits];
-    if(JSON.stringify(actualPortraits)!==JSON.stringify(expectedDouble))bad.push('Character portrait mismatch: '+actualPortraits.join(','));
+    if(JSON.stringify(actualPortraits)!==JSON.stringify(expectedPortraits))bad.push('Character portrait mismatch: '+actualPortraits.join(','));
     const expectedScenes=['scene-corridor-realistic.webp','scene-archive-realistic.webp','scene-ai-realistic.webp'];
     const actualScenes=result.sceneSources.map(u=>u?.split('/').pop());
     if(JSON.stringify(actualScenes)!==JSON.stringify(expectedScenes))bad.push('Wrong images in gallery slots 4-6');
