@@ -87,6 +87,11 @@
    if(img.complete)update();
    else img.addEventListener('load',update,{once:true});
  });
+ document.querySelectorAll('.book-cover-frame .book-cover-image').forEach(img=>{
+   const frame=img.closest('.book-cover-frame');
+   const sync=()=>frame?.classList.toggle('source-preview',img.naturalWidth>0 && img.naturalWidth<500);
+   if(img.complete)sync();else img.addEventListener('load',sync,{once:true});
+ });
  document.querySelectorAll('a[data-outbound="amazon"]').forEach(link=>{
    link.addEventListener('click',()=>{
      const u=new URL(link.href);
