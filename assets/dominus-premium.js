@@ -77,6 +77,16 @@
    if(document.hidden){soundtrack.pause();stopTrailer();}
    else if(!userPaused)void startSound();
  });
+ // Avoid enlarging Canva previews beyond their source pixels.
+ // The same cards automatically return to full-bleed presentation when
+ // the original HD versions are published under these URLs.
+ document.querySelectorAll('.gallery > figure.illustrated img, .cast-film img, .dossier-portrait img').forEach(img=>{
+   const holder=img.closest('figure.illustrated, .cast-film figure, .dossier-portrait');
+   const threshold=img.closest('.gallery')?600:480;
+   const update=()=>{if(holder && img.naturalWidth>0)holder.classList.toggle('source-preview',img.naturalWidth<threshold);};
+   if(img.complete)update();
+   else img.addEventListener('load',update,{once:true});
+ });
  document.querySelectorAll('a[data-outbound="amazon"]').forEach(link=>{
    link.addEventListener('click',()=>{
      const u=new URL(link.href);
