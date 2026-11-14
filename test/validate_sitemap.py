@@ -31,4 +31,19 @@ for language,(filename,url) in PAGES.items():
     assert canonical==[url],f"{filename}: incorrect canonical"
     alternates={(a.get("hreflang"),a.get("href")) for a in parser.links if a.get("rel")=="alternate"}
     assert alternates==expected,f"{filename}: hreflang links differ from sitemap"
-print("PASS: XML valid; 3 canonicals and 12 reciprocal hreflang links confirmed.")
+AUTHOR = {"en":("author.html",ROOT+"author.html"),
+          "de":("autor-de.html",ROOT+"autor-de.html"),
+          "fr":("auteur-fr.html",ROOT+"auteur-fr.html")}
+auth_expected = {(language,url) for language,(_,url) in AUTHOR.items()} | {("x-default",ROOT+"author.html")}
+for language,(filename,url) in AUTHOR.items():
+    assert url in found, f"Author URL missing: {url}"
+    entry=found[url]
+    actual={(node.attrib.get("hreflang"),node.attrib.get("href")) for node in entry.findall("x:link",NS)}
+    assert actual==auth_expected, f"Wrong author hreflang in sitemap for {language}"
+    parser=HeadLinks()
+    parser.feed(Path(filename).read_text(encoding="utf-8"))
+    canonical=[tag.get("href") for tag in parser.links if tag.get("rel")=="canonical"]
+    assert canonical==[url], f"Wrong canonical in {filename}"
+    alts={(tag.get("hreflang"),tag.get("href")) for tag in parser.links if tag.get("rel")=="alternate"}
+    assert alts==auth_expected, f"Wrong alternate pages in {filename}"
+print("PASS: sitemap 6 canonical EN/DE/FR pages and 24 reciprocal hreflang links verified.")
