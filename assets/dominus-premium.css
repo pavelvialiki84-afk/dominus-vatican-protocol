@@ -246,3 +246,11 @@
 .author-editions span{font:400 16px/1.5 Georgia,serif;color:#dedbd5}
 @media(max-width:760px){.author-layout{grid-template-columns:minmax(0,1fr)}.author-aside{max-width:250px}.author-editions{grid-template-columns:minmax(0,1fr)}.author-page .author-hero{min-height:410px}.author-page .author-hero .shell{padding:65px 0}}
 @media(prefers-reduced-motion:reduce){.author-editions a:hover{transform:none}}
+
+/* The official DE/FR cover remains crisp while only the 125px publishing preview exists.
+   A 1000px full-cover WebP automatically releases the framed image to full scale. */
+.book-cover-frame.source-preview{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;background:radial-gradient(ellipse at 50% 35%,#31303a,#10141a 55%,#070a10);box-shadow:inset 0 0 0 1px #a17b4435,7px 9px 0 #161a21,17px 20px 37px #000a}
+.book-cover-frame.source-preview .book-cover-image{display:block;position:relative!important;flex:0 0 auto;width:125px!important;height:200px!important;max-height:200px!important;aspect-ratio:5/8!important;object-fit:contain!important;border:1px solid #b9956080;box-shadow:0 14px 32px #000c}
+.book-cover-frame .cover-preview-label{display:none}
+.book-cover-frame.source-preview .cover-preview-label{display:block;color:#e9d4a9;font:700 10px/1.4 Arial,sans-serif;letter-spacing:.15em;text-transform:uppercase;text-align:center;padding:0 8px}
+.book-cover-frame:not(.source-preview) .book-cover-image{width:100%;height:100%;object-fit:contain}
