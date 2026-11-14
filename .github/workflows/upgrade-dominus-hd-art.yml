@@ -1,0 +1,77 @@
+name: Upgrade DOMINUS six illustrations to true HD
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'assets/source/DOMINUS_six_realistic_original_artworks.zip'
+      - '.github/workflows/upgrade-dominus-hd-art.yml'
+permissions:
+  contents: write
+jobs:
+  update-images:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Detect uploaded original archive
+        id: input
+        shell: bash
+        run: |
+          if [ -s assets/source/DOMINUS_six_realistic_original_artworks.zip ]; then
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "::notice::Upload assets/source/DOMINUS_six_realistic_original_artworks.zip to upgrade site images to native HD. No preview upscaling will be performed."
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Install Pillow
+        if: steps.input.outputs.ready == 'true'
+        run: python3 -m pip install --user Pillow
+      - name: Validate originals and generate optimized responsive HD artwork
+        if: steps.input.outputs.ready == 'true'
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          from zipfile import ZipFile
+          from io import BytesIO
+          from PIL import Image
+          src=Path("assets/source/DOMINUS_six_realistic_original_artworks.zip")
+          out=Path("assets/illustrations")
+          out.mkdir(exist_ok=True,parents=True)
+          mapping={
+            "Salvatore_Ventresca.png":("portrait-salvatore-realistic.webp", 900),
+            "Rafael_Costa.png":("portrait-rafael-realistic.webp", 900),
+            "Luiza_Barros.png":("portrait-luiza-realistic.webp", 900),
+            "Scene_04_Corridor.png":("scene-corridor-realistic.webp", 1400),
+            "Scene_05_Secret_Archive.png":("scene-archive-realistic.webp", 1400),
+            "Scene_06_AI_and_Faith.png":("scene-ai-realistic.webp", 1400)
+          }
+          with ZipFile(src) as z:
+            names=set(z.namelist())
+            if names!=set(mapping):
+              raise ValueError(f"Unexpected ZIP contents: {names ^ set(mapping)}")
+            for name,(target,width) in mapping.items():
+              image=Image.open(BytesIO(z.read(name)))
+              image.load()
+              if image.width < 1100 or image.height < 900:
+                raise ValueError(f"{name} is not the original high-resolution image: {image.size}")
+              if image.mode != 'RGB':
+                image=image.convert('RGB')
+              image.thumbnail((width, 2500),Image.Resampling.LANCZOS)
+              file=out/target
+              image.save(file,format="WEBP",quality=83,method=6)
+              test=Image.open(file)
+              assert test.width>=800 if 'portrait' in target else test.width>=1200
+              print(f"{name}: {image.size} => {file} ({file.stat().st_size:,} bytes)")
+          PY
+      - name: Publish HD versions to GitHub Pages
+        if: steps.input.outputs.ready == 'true'
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add assets/illustrations/*-realistic.webp
+          if ! git diff --cached --quiet; then
+            git commit -m 'Replace six tiny artwork previews with genuine optimized HD originals'
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
