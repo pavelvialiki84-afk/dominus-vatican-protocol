@@ -15,7 +15,7 @@ for(const filename of pages){
       const box=el=>{const b=el.getBoundingClientRect();return {x:b.x,y:b.y,width:b.width,height:b.height,right:b.right,bottom:b.bottom}};
       const select=s=>Array.from(document.querySelectorAll(s)).map(box);
       const images=Array.from(document.querySelectorAll('.gallery img,.cast-film img,.dossier-portrait img,.book-cover-image'));
-      return {viewport:innerWidth,documentWidth:document.documentElement.scrollWidth,gallery:select('.gallery > .visual'),cast:select('.cast-film > figure'),dossiers:select('.character-grid > article'),brokenImages:images.filter(i=>!i.complete||i.naturalWidth===0).map(i=>i.getAttribute('src')),imageSizes:images.map(i=>({src:i.getAttribute('src'),width:i.naturalWidth,height:i.naturalHeight})),bookCover:select('.book-cover-image'),heroBuy:Array.from(document.querySelectorAll('.hero .buttons a')).map(a=>a.getAttribute('href')),mobileBuy:document.querySelector('.mobile-buy-link')?.getAttribute('href'),navLanguages:Array.from(document.querySelectorAll('nav.lang a')).map(a=>a.getAttribute('href')),canonical:document.querySelector('link[rel="canonical"]')?.href,styles: getComputedStyle(document.querySelector('.gallery')).gridTemplateColumns};
+      return {viewport:innerWidth,documentWidth:document.documentElement.scrollWidth,gallery:select('.gallery > .visual'),cast:select('.cast-film > figure'),dossiers:select('.character-grid > article'),brokenImages:images.filter(i=>!i.complete||i.naturalWidth===0).map(i=>i.getAttribute('src')),imageSizes:images.map(i=>({src:i.getAttribute('src'),width:i.naturalWidth,height:i.naturalHeight})),bookCover:select('.book-cover-image'),portraitSources:Array.from(document.querySelectorAll('.cast-film img,.dossier-portrait img')).map(i=>i.getAttribute('src')),sceneSources:Array.from(document.querySelectorAll('.gallery > .visual.illustrated img')).map(i=>i.getAttribute('src')),heroBuy:Array.from(document.querySelectorAll('.hero .buttons a')).map(a=>a.getAttribute('href')),mobileBuy:document.querySelector('.mobile-buy-link')?.getAttribute('href'),navLanguages:Array.from(document.querySelectorAll('nav.lang a')).map(a=>a.getAttribute('href')),canonical:document.querySelector('link[rel="canonical"]')?.href,styles: getComputedStyle(document.querySelector('.gallery')).gridTemplateColumns};
     });
     if(result.documentWidth>width+3)bad.push('Horizontal overflow '+result.documentWidth);
     if(result.gallery.length!==6)bad.push('Expected 6 gallery items, got '+result.gallery.length);
@@ -37,6 +37,13 @@ for(const filename of pages){
     if(filename==='dominus-band1-de.html' && !result.heroBuy.some(h=>h.includes('amazon.de/dp/B0HRM5NLBY')))bad.push('German Kindle direct CTA missing');
     if(filename==='dominus-volume1-fr.html' && !result.heroBuy.includes('#edition'))bad.push('French unverified edition must lead to formats instead of invented ASIN');
     if(width<=680 && !result.mobileBuy)bad.push('Mobile purchase CTA missing');
+    const expectedPortraits=['portrait-salvatore-realistic.webp','portrait-rafael-realistic.webp','portrait-luiza-realistic.webp'];
+    const actualPortraits=result.portraitSources.map(u=>u?.split('/').pop());
+    const expectedDouble=[...expectedPortraits,...expectedPortraits];
+    if(JSON.stringify(actualPortraits)!==JSON.stringify(expectedDouble))bad.push('Character portrait mismatch: '+actualPortraits.join(','));
+    const expectedScenes=['scene-corridor-realistic.webp','scene-archive-realistic.webp','scene-ai-realistic.webp'];
+    const actualScenes=result.sceneSources.map(u=>u?.split('/').pop());
+    if(JSON.stringify(actualScenes)!==JSON.stringify(expectedScenes))bad.push('Wrong images in gallery slots 4-6');
     if(result.brokenImages.length)bad.push('Missing artwork: '+result.brokenImages.join(','));
     if(filename!=='index.html' && (result.bookCover.length!==1 || Math.abs(result.bookCover[0].width/result.bookCover[0].height-0.625)>.04))bad.push('Book cover is broken, cropped, or missing');
     if(width===375||width===1440)await page.screenshot({path:'test/screenshots/'+filename.replace('.html','')+'-'+width+'.png',fullPage:true,timeout:20000});
