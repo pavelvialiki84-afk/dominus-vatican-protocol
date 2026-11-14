@@ -1,0 +1,57 @@
+name: Import realistic DOMINUS site art
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/import-realistic-dominus.yml'
+permissions:
+  contents: write
+jobs:
+  import:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download freshly generated illustrations from Canva
+        run: |
+          set -euo pipefail
+          mkdir -p assets/illustrations
+          curl --fail --location --retry 2 --silent --show-error 'https://media.canva.com/v2/image-resize/format:PNG/height:200/quality:100/uri:ifs%3A%2F%2FM%2F4ea11893-c3db-4b18-bd6d-c9d5865e0028/watermark:F/width:160?csig=AAAAAAAAAAAAAAAAAAAAADsz-DTRVDnwH0lGvD9xmujANvSOgAr9X1rAU78T8XFm&exp=1794704198&osig=AAAAAAAAAAAAAAAAAAAAAP_ewk_3lqrpBC-dEjnQXNPNcSEFKhijMa_2s1dFbiA0&signer=media-rpc&token=AAIAAU0AJDRlYTExODkzLWMzZGItNGIxOC1iZDZkLWM5ZDU4NjVlMDAyOAAAAAABody0yXCKXBTNF84cqycubPh_63wcFxurQg3sMx-tvTfx0p4_OA&x-canva-quality=thumbnail' -o /tmp/dominus-0.png
+          test $(wc -c < /tmp/dominus-0.png) -gt 4000
+          curl --fail --location --retry 2 --silent --show-error 'https://media.canva.com/v2/image-resize/format:PNG/height:200/quality:100/uri:ifs%3A%2F%2FM%2Fab2b94ea-8e07-4b52-b964-198d8df2e950/watermark:F/width:160?csig=AAAAAAAAAAAAAAAAAAAAAIuNXGl8JCLDcCG813NGjWKJPNGCUwM8B_LZo3dXwDi5&exp=1794704966&osig=AAAAAAAAAAAAAAAAAAAAAKXgsc3udphNUCm-T-C1263UIRAQ5p21BprqWxig1i-_&signer=media-rpc&token=AAIAAU0AJGFiMmI5NGVhLThlMDctNGI1Mi1iOTY0LTE5OGQ4ZGYyZTk1MAAAAAABodzAgXDhXd9XRUo2_HpG-j2zg8QfZJfmbc4O2THAcrgDcKqiIg&x-canva-quality=thumbnail' -o /tmp/dominus-1.png
+          test $(wc -c < /tmp/dominus-1.png) -gt 4000
+          curl --fail --location --retry 2 --silent --show-error 'https://media.canva.com/v2/image-resize/format:PNG/height:200/quality:100/uri:ifs%3A%2F%2FM%2F1667af2c-3ccb-4669-87db-f3b734ca2e06/watermark:F/width:160?csig=AAAAAAAAAAAAAAAAAAAAADbXjx7prfAAYeQ-67VtesiVyt1lLHHjJQ-pxXPhu7IR&exp=1794702128&osig=AAAAAAAAAAAAAAAAAAAAAPyH1Ho8MMMazi1PbdewiausPeXFOLFD-G_1NsBSV9-B&signer=media-rpc&token=AAIAAU0AJDE2NjdhZjJjLTNjY2ItNDY2OS04N2RiLWYzYjczNGNhMmUwNgAAAAABodyVM4ALNW8GnwjEqJI2d1QIc8GnGBe739sqDm7zJOEhx-UXHw&x-canva-quality=thumbnail' -o /tmp/dominus-2.png
+          test $(wc -c < /tmp/dominus-2.png) -gt 4000
+          curl --fail --location --retry 2 --silent --show-error 'https://media.canva.com/v2/image-resize/format:PNG/height:112/quality:100/uri:ifs%3A%2F%2FM%2F884f0ecc-ecae-479e-986c-e2244a15f178/watermark:F/width:200?csig=AAAAAAAAAAAAAAAAAAAAAKvDmxMt1SfLN13lhaKXzYYSKa59iJw8wsopAVq8yThH&exp=1794702026&osig=AAAAAAAAAAAAAAAAAAAAAGoCe9fMqBhkBXpi_zSyqZBS1XrceBFyvPZkCgVFOgmG&signer=media-rpc&token=AAIAAU0AJDg4NGYwZWNjLWVjYWUtNDc5ZS05ODZjLWUyMjQ0YTE1ZjE3OAAAAAABodyTpRB2Fvmip4MsG5Q7JXP5vqziILOjNcwMgBk4oFwrFmUs-g&x-canva-quality=thumbnail' -o /tmp/dominus-3.png
+          test $(wc -c < /tmp/dominus-3.png) -gt 4000
+          curl --fail --location --retry 2 --silent --show-error 'https://media.canva.com/v2/image-resize/format:PNG/height:112/quality:100/uri:ifs%3A%2F%2FM%2Fb8277ad3-2311-4a99-8ec9-862acd3cb2a1/watermark:F/width:200?csig=AAAAAAAAAAAAAAAAAAAAAMuv0tMVUqeqbm39pqYBJxc-NmvEPUDCbf5-NLJT4-c0&exp=1794701836&osig=AAAAAAAAAAAAAAAAAAAAAHmvEsQY3bMx5SRySceLfeChnPPCRr_ZnMKpUwyG0o4K&signer=media-rpc&token=AAIAAU0AJGI4Mjc3YWQzLTIzMTEtNGE5OS04ZWM5LTg2MmFjZDNjYjJhMQAAAAABodyQvuAT-yyHxm7JFZC0JElts1V907NORklfESxsWcn9DhTV_g&x-canva-quality=thumbnail' -o /tmp/dominus-4.png
+          test $(wc -c < /tmp/dominus-4.png) -gt 4000
+          curl --fail --location --retry 2 --silent --show-error 'https://media.canva.com/v2/image-resize/format:PNG/height:112/quality:100/uri:ifs%3A%2F%2FM%2F9726621b-9ce3-4464-9b93-2771b190c918/watermark:F/width:200?csig=AAAAAAAAAAAAAAAAAAAAAIuQv7D2-IzbzTIyaJgdNLxgZU4V-uQkPmBRrtxFHysd&exp=1794704188&osig=AAAAAAAAAAAAAAAAAAAAAOq2XT5xJhPotkW9nMZ6_w2_EZQOGMccr8q5niMb1kuM&signer=media-rpc&token=AAIAAU0AJDk3MjY2MjFiLTljZTMtNDQ2NC05YjkzLTI3NzFiMTkwYzkxOAAAAAABody0omCWuamguObK8UiHkZTtdOXyH4Iof_tx8DHtWr96vgJqlg&x-canva-quality=thumbnail' -o /tmp/dominus-5.png
+          test $(wc -c < /tmp/dominus-5.png) -gt 4000
+      - name: Store web-ready versions without distorted stretching
+        run: |
+          python3 -m pip install --user --quiet Pillow
+          python3 - <<'PY'
+          from PIL import Image, ImageFilter
+          from pathlib import Path
+          targets=["portrait-salvatore-realistic.webp","portrait-rafael-realistic.webp","portrait-luiza-realistic.webp","scene-archive-realistic.webp","scene-corridor-realistic.webp","scene-ai-realistic.webp"]
+          for i,target in enumerate(targets):
+              image=Image.open('/tmp/dominus-'+str(i)+'.png').convert('RGB')
+              native=image.size
+              if i<3:
+                  image.thumbnail((320,400),Image.Resampling.LANCZOS)
+              else:
+                  image.thumbnail((420,250),Image.Resampling.LANCZOS)
+              # Retain the actual retrieved pixels; no invented detail from upscaling.
+              image.save(Path('assets/illustrations')/target,'WEBP',quality=90,method=6)
+              print(target, native, '=>', image.size)
+          PY
+      - name: Commit the six realistic scene and character images
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add assets/illustrations/*realistic.webp
+          if ! git diff --cached --quiet; then
+            git commit -m 'Replace legacy DOMINUS art with realistic character and scene previews'
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
