@@ -1,24 +1,27 @@
-# DOMINUS genuine high-resolution artwork input
+# DOMINUS — source artwork release
 
-This folder is the handoff point for the six author-approved original DOMINUS illustrations.
+The public website has EN/DE/FR and uses six identical filenames in `assets/illustrations/`. The current files are Canva preview thumbnails (160×200 portraits / 200×112 scenes).
 
-## Upgrade the published site without distorting images
+## Recommended quick upgrade: upload just 1.3 MB
 
-1. Open this directory on GitHub.
-2. Choose **Add file → Upload files**.
-3. Upload the existing archive named exactly **DOMINUS_six_realistic_original_artworks.zip** (six full-resolution PNGs, ~16.6 MB).
-4. Commit the upload to **main**.
+1. Download `DOMINUS_HD_web_optimized.zip` (prepared from the six original PNG images, not upscaled previews).
+2. Open this folder on GitHub and select **Add file → Upload files**.
+3. Upload the ZIP with its **exact** name to `assets/source/DOMINUS_HD_web_optimized.zip`.
+4. Commit to the `main` branch.
 
-GitHub Actions automatically validates that the ZIP contains:
-- Salvatore_Ventresca.png
-- Rafael_Costa.png
-- Luiza_Barros.png
-- Scene_04_Corridor.png
-- Scene_05_Secret_Archive.png
-- Scene_06_AI_and_Faith.png
+GitHub Actions runs **Publish DOMINUS genuine HD web artwork**, verifies the six contents, installs 900-pixel-wide original portraits and 1400-pixel-wide scene images, then starts GitHub Pages deployment and visual quality checks. The site automatically switches from preview sizing to large artwork when those images load.
 
-It converts the original 1122px portrait PNGs to genuine 900px WebP portraits and the 1672px scenery PNGs to 1400px WebP backgrounds, replacing the six small preview assets already used by EN/DE/FR pages. It then publishes the optimized website files and activates responsive screenshot QA.
+### Alternative original-source release
 
-**Important:** GitHub repositories are public. Uploading the archive here makes the original PNGs publicly accessible. These are fictional AI-generated concept illustrations, not historical Vatican photographs or a statement of institutional affiliation. If source-art secrecy is important, upload the six original files to a private secure storage workflow instead of this public folder.
+To keep the source conversion on GitHub, upload the full `DOMINUS_six_realistic_original_artworks.zip` (16.6 MB) to this same folder. The distinct workflow **Upgrade DOMINUS six illustrations to true HD** will validate and generate HD web formats automatically.
 
-Do not place anything in this folder unless you own or have permission to distribute its contents.
+### Expected web files
+
+- `portrait-salvatore-realistic.webp`
+- `portrait-rafael-realistic.webp`
+- `portrait-luiza-realistic.webp`
+- `scene-corridor-realistic.webp`
+- `scene-archive-realistic.webp`
+- `scene-ai-realistic.webp`
+
+**Public-art notice:** this GitHub repository is public. Uploading either ZIP makes that ZIP and its history publicly accessible. Only upload if these original fictional AI-generated visuals may be redistributed publicly. Do not confuse imagined Vatican scenes with documentary photography or institutional endorsement.
