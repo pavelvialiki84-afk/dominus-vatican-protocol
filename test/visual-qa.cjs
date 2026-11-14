@@ -11,11 +11,11 @@ for(const filename of pages){
     const response=await page.goto(base+filename,{waitUntil:'domcontentloaded',timeout:15000});
     if(!response||response.status()!==200)bad.push('HTTP status is not 200');
     const result=await page.evaluate(async()=>{
-      await Promise.all(Array.from(document.querySelectorAll('.gallery img,.cast-film img,.dossier-portrait img')).map(async img=>{img.loading='eager';try{await img.decode();}catch(_e){}}));
+      await Promise.all(Array.from(document.querySelectorAll('.gallery img,.cast-film img,.dossier-portrait img,.book-cover-image')).map(async img=>{img.loading='eager';try{await img.decode();}catch(_e){}}));
       const box=el=>{const b=el.getBoundingClientRect();return {x:b.x,y:b.y,width:b.width,height:b.height,right:b.right,bottom:b.bottom}};
       const select=s=>Array.from(document.querySelectorAll(s)).map(box);
-      const images=Array.from(document.querySelectorAll('.gallery img,.cast-film img,.dossier-portrait img'));
-      return {viewport:innerWidth,documentWidth:document.documentElement.scrollWidth,gallery:select('.gallery > .visual'),cast:select('.cast-film > figure'),dossiers:select('.character-grid > article'),brokenImages:images.filter(i=>!i.complete||i.naturalWidth===0).map(i=>i.getAttribute('src')),imageSizes:images.map(i=>({src:i.getAttribute('src'),width:i.naturalWidth,height:i.naturalHeight})),styles: getComputedStyle(document.querySelector('.gallery')).gridTemplateColumns};
+      const images=Array.from(document.querySelectorAll('.gallery img,.cast-film img,.dossier-portrait img,.book-cover-image'));
+      return {viewport:innerWidth,documentWidth:document.documentElement.scrollWidth,gallery:select('.gallery > .visual'),cast:select('.cast-film > figure'),dossiers:select('.character-grid > article'),brokenImages:images.filter(i=>!i.complete||i.naturalWidth===0).map(i=>i.getAttribute('src')),imageSizes:images.map(i=>({src:i.getAttribute('src'),width:i.naturalWidth,height:i.naturalHeight})),bookCover:select('.book-cover-image'),styles: getComputedStyle(document.querySelector('.gallery')).gridTemplateColumns};
     });
     if(result.documentWidth>width+3)bad.push('Horizontal overflow '+result.documentWidth);
     if(result.gallery.length!==6)bad.push('Expected 6 gallery items, got '+result.gallery.length);
@@ -31,6 +31,7 @@ for(const filename of pages){
       }
     }
     if(result.brokenImages.length)bad.push('Missing artwork: '+result.brokenImages.join(','));
+    if(filename!=='index.html' && (result.bookCover.length!==1 || Math.abs(result.bookCover[0].width/result.bookCover[0].height-0.625)>.04))bad.push('Book cover is broken, cropped, or missing');
     if(width===375||width===1440)await page.screenshot({path:'test/screenshots/'+filename.replace('.html','')+'-'+width+'.png',fullPage:true,timeout:20000});
     console.log(JSON.stringify({page:filename,width,status:bad.length?'FAIL':'PASS',columns:result.styles,galleryCount:result.gallery.length,documentWidth:result.documentWidth,brokenImages:result.brokenImages,issues:bad}));
     failures+=bad.length;
