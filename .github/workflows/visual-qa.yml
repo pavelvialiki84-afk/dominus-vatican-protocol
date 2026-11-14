@@ -6,6 +6,10 @@ on:
       - 'assets/dominus-premium.css'
       - 'assets/illustrations/**-realistic.webp'
       - 'index.html'
+      - 'test/author-qa.cjs'
+      - 'auteur-fr.html'
+      - 'autor-de.html'
+      - 'author.html'
       - 'dominus-band1-de.html'
       - 'dominus-volume1-fr.html'
       - 'test/visual-qa.cjs'
@@ -37,6 +41,7 @@ jobs:
         run: |
           mkdir -p test/screenshots
           node test/visual-qa.cjs
+          node test/author-qa.cjs
       - name: Preserve screenshots for review
         if: always()
         uses: actions/upload-artifact@v4
