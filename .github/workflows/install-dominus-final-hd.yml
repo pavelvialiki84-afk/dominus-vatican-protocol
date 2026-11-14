@@ -77,6 +77,10 @@ jobs:
       - name: Commit verified originals and localized cover markup
         shell: bash
         run: |
+          if [ ! -f assets/source/DOMINUS_SITE_HD_RELEASE.zip ]; then
+            echo 'HD package not uploaded yet; no assets to commit.'
+            exit 0
+          fi
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add assets/illustrations/*-realistic.webp assets/illustrations/dominus-cover-*-hd.webp dominus-band1-de.html dominus-volume1-fr.html
