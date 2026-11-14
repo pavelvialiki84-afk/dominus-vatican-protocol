@@ -1,0 +1,18 @@
+key,english,fr_FR,it_IT,status,review_note
+series,The Vatican Protocol,Le Protocole du Vatican,Il Protocollo Vaticano,provisional,Verify final book-market title
+volume,Book One: Schism,Livre I : Schisme,Libro primo: Scisma,provisional,No confusion with second volume
+character_salvatore,Brother Salvatore Ventresca,frère Salvatore Ventresca,fra Salvatore Ventresca,provisional,Not Father unless source specifies ordination
+character_rafael,Rafael Costa,Rafael Costa,Rafael Costa,source_fixed,Match source spelling
+character_luiza,Luiza Barros,Luiza Barros,Luiza Barros,source_fixed,Luiza not Luisa
+archive,Vatican Apostolic Archive,Archives apostoliques du Vatican,Archivio Apostolico Vaticano,provisional,Confirm exact official institutional name and contextual period
+location,restricted vault,salle sécurisée,deposito riservato,provisional,Not an official room name
+technology,one-way optical data diode,diode de données optique unidirectionnelle,diodo ottico unidirezionale per i dati,technical_review_required,Keep no return channel
+profession,metrologist,métrologue,metrologa,provisional,Measurements not weather
+concept_testimony,testimony,témoignage,testimonianza,provisional,Distinguish record from witness
+concept_truth,truth,vérité,verità,provisional,Preserve epistemological ambiguity
+concept_last_word,last word,dernier mot,ultima parola,provisional,Ethical/legal authority
+system,DOMINUS,DOMINUS,DOMINUS,fixed,Do not translate
+indicator,OCCUPATO,OCCUPATO,OCCUPATO,fixed,Literal device interface per source
+latin_heading,CAPUT XXIII,CAPUT XXIII,CAPUT XXIII,fixed,Do not translate Latin heading
+latin_veritas,Veritas ex algorithmo.,Veritas ex algorithmo.,Veritas ex algorithmo.,fixed,Latin separate centered italic and translation next line
+latin_translation_veritas,Truth from the algorithm.,La vérité vient de l'algorithme.,La verità nasce dall'algoritmo.,provisional,Meaning choice subject to philology review
