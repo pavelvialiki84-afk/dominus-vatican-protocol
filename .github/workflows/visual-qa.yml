@@ -8,6 +8,8 @@ on:
       - 'dominus-band1-de.html'
       - 'dominus-volume1-fr.html'
       - 'test/visual-qa.cjs'
+      - 'test/validate_sitemap.py'
+      - 'sitemap.xml'
       - '.github/workflows/visual-qa.yml'
 permissions:
   contents: read
@@ -23,6 +25,8 @@ jobs:
         run: |
           npm install --no-save playwright@1.56.1
           npx playwright install --with-deps chromium
+      - name: Verify canonical and hreflang sitemap consistency
+        run: python3 test/validate_sitemap.py
       - name: Serve site locally
         run: |
           python3 -m http.server 8765 --bind 127.0.0.1 > /tmp/dominus-http.log 2>&1 &
