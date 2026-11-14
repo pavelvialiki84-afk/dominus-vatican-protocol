@@ -1,0 +1,33 @@
+name: Optimize DOMINUS historical photographs
+on:
+  push:
+    paths:
+      - .github/workflows/import-historic-photos.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fetch historical photographs from Wikimedia Commons
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p assets/photos
+          curl --fail --location --retry 3 --user-agent 'DOMINUSBookSite/1.0 (historical photo attribution; static GitHub Pages)' 'https://upload.wikimedia.org/wikipedia/commons/3/31/Saint_Peter%27s_Basilica_in_Rome_at_night.jpg' -o assets/photos/vatican-night.jpg
+          curl --fail --location --retry 3 --user-agent 'DOMINUSBookSite/1.0 (historical photo attribution; static GitHub Pages)' 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Roma._Biblioteca_Vaticana_-_Anderson._LCCN91783868.jpg/960px-Roma._Biblioteca_Vaticana_-_Anderson._LCCN91783868.jpg' -o assets/photos/vatican-library.jpg
+          file assets/photos/*.jpg
+          test $(wc -c < assets/photos/vatican-night.jpg) -gt 40000
+          test $(wc -c < assets/photos/vatican-library.jpg) -gt 40000
+      - name: Commit optimized local photo resources
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/photos
+          if ! git diff --cached --quiet; then
+            git commit -m "Host properly attributed Wikimedia historical photos locally"
+            git push
+          fi
