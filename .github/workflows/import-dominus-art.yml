@@ -22,6 +22,14 @@ jobs:
           curl --fail --location --silent --show-error --retry 2 'https://media.canva.com/v2/image-resize/format:PNG/height:112/quality:100/uri:ifs%3A%2F%2FM%2F7751b738-3b09-4d8e-9c7c-4573565c1340/watermark:F/width:200?csig=AAAAAAAAAAAAAAAAAAAAAItsugIT_oLu4qiCRTUd4k2gXsZ_fuPzCdHLWkJj5gBE&exp=1794698141&osig=AAAAAAAAAAAAAAAAAAAAACEaPtKPYDQdDc0ntjKdurZG5oTHXYUhoVid3OqDQDAw&signer=media-rpc&token=AAIAAU0AJDc3NTFiNzM4LTNiMDktNGQ4ZS05YzdjLTQ1NzM1NjVjMTM0MAAAAAABodxYXUgit4EmDV_lz4yb00UhmWBuj13eOFknkACWbk228PRR2g&x-canva-quality=thumbnail' -o assets/illustrations/ai-faith-illustration.png
           test $(wc -c < assets/illustrations/ai-faith-illustration.png) -gt 1000
           
+      - name: Download official DE and FR front-cover thumbnails
+        shell: bash
+        run: |
+          mkdir -p assets/illustrations
+          curl --fail --location --silent --show-error --retry 2 'https://media.canva.com/v2/image-resize/format:JPG/height:200/quality:75/uri:ifs%3A%2F%2FM%2F5a616a9b-9856-4469-b026-b2697641636e/watermark:F/width:125?csig=AAAAAAAAAAAAAAAAAAAAAHRejVwLLT9W0Hz77iFAgpOHaRrxQ3eMmqgUDj7mLKac&exp=1794698165&osig=AAAAAAAAAAAAAAAAAAAAAH_NSb7KuCoN4ypxBebWTMoE5BKDvPZ8tGX0qPpJUxzC&signer=media-rpc&token=AAIAAU0AJDVhNjE2YTliLTk4NTYtNDQ2OS1iMDI2LWIyNjk3NjQxNjM2ZQAAAAABodxYuwjJO6t5Xe88z5coMgvZz9grqJe3X6Qvb2N3_XCc20Juwg&x-canva-quality=thumbnail' -o assets/illustrations/dominus-cover-de.jpg
+          test $(wc -c < assets/illustrations/dominus-cover-de.jpg) -gt 1000
+          curl --fail --location --silent --show-error --retry 2 'https://media.canva.com/v2/image-resize/format:JPG/height:200/quality:75/uri:ifs%3A%2F%2FM%2F7119d992-56e5-43a0-b7eb-b19cc0f480be/watermark:F/width:125?csig=AAAAAAAAAAAAAAAAAAAAACoPb98Y2stSluHr21mKlpRAbPIM7eKFnvYbPy83X7jf&exp=1794697825&osig=AAAAAAAAAAAAAAAAAAAAAPegqnHxGLYWwYecFdp0Qj0KieA_PMLXfmDBRCaf7DhQ&signer=media-rpc&token=AAIAAU0AJDcxMTlkOTkyLTU2ZTUtNDNhMC1iN2ViLWIxOWNjMGY0ODBiZQAAAAABodxTiujV_SV3-iU7lRwsee30VKElyEdm6DCAsXv-ZT2fjRwziA&x-canva-quality=thumbnail' -o assets/illustrations/dominus-cover-fr.jpg
+          test $(wc -c < assets/illustrations/dominus-cover-fr.jpg) -gt 1000
       - name: Commit media
         run: |
           git config user.name 'github-actions[bot]'
