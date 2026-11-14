@@ -30,6 +30,16 @@ jobs:
           test $(wc -c < assets/illustrations/dominus-cover-de.jpg) -gt 1000
           curl --fail --location --silent --show-error --retry 2 'https://media.canva.com/v2/image-resize/format:JPG/height:200/quality:75/uri:ifs%3A%2F%2FM%2F7119d992-56e5-43a0-b7eb-b19cc0f480be/watermark:F/width:125?csig=AAAAAAAAAAAAAAAAAAAAACoPb98Y2stSluHr21mKlpRAbPIM7eKFnvYbPy83X7jf&exp=1794697825&osig=AAAAAAAAAAAAAAAAAAAAAPegqnHxGLYWwYecFdp0Qj0KieA_PMLXfmDBRCaf7DhQ&signer=media-rpc&token=AAIAAU0AJDcxMTlkOTkyLTU2ZTUtNDNhMC1iN2ViLWIxOWNjMGY0ODBiZQAAAAABodxTiujV_SV3-iU7lRwsee30VKElyEdm6DCAsXv-ZT2fjRwziA&x-canva-quality=thumbnail' -o assets/illustrations/dominus-cover-fr.jpg
           test $(wc -c < assets/illustrations/dominus-cover-fr.jpg) -gt 1000
+      - name: Download fictional portrait artwork
+        shell: bash
+        run: |
+          mkdir -p assets/illustrations
+          curl --fail --location --silent --show-error --retry 2 'https://media.canva.com/v2/image-resize/format:JPG/height:200/quality:75/uri:ifs%3A%2F%2FM%2F2bf7da79-a868-4493-9316-556a2c740d19/watermark:F/width:132?csig=AAAAAAAAAAAAAAAAAAAAAMTypxGZ8LK_DXUdw6zhIvnTksPUmMp3AaTfXpOPuBqZ&exp=1794696787&osig=AAAAAAAAAAAAAAAAAAAAABWgxBEU6QlGdk-tLZTspgUKJ7R4CZMRhkVVK4qCD93q&signer=media-rpc&token=AAIAAU0AJDJiZjdkYTc5LWE4NjgtNDQ5My05MzE2LTU1NmEyYzc0MGQxOQAAAAABodxDtDiTAXgzWkbBZDs0EvLer0ShtIK3ba5HtR18aEgcF-MxkQ&x-canva-quality=thumbnail' -o assets/illustrations/portrait-salvatore.jpg
+          test $(wc -c < assets/illustrations/portrait-salvatore.jpg) -gt 1000
+          curl --fail --location --silent --show-error --retry 2 'https://media.canva.com/v2/image-resize/format:JPG/height:200/quality:75/uri:ifs%3A%2F%2FM%2F23c0d0a9-6307-471c-ad75-a23e82e340a5/watermark:F/width:133?csig=AAAAAAAAAAAAAAAAAAAAAEGjDVl_BsxtECAf3rSowYTJo3mMK3MyJTeDG6yOJ7U0&exp=1794696701&osig=AAAAAAAAAAAAAAAAAAAAAJjRmNP8Y30ph0kYZ9ff5X2FrX9YYKJSsXrFQekPY_X2&signer=media-rpc&token=AAIAAU0AJDIzYzBkMGE5LTYzMDctNDcxYy1hZDc1LWEyM2U4MmUzNDBhNQAAAAABodxCZEhp37Pgy6FXYWoPcC2RW9jPhQT_64rYG2OsWky2YNJsWA&x-canva-quality=thumbnail' -o assets/illustrations/portrait-rafael.jpg
+          test $(wc -c < assets/illustrations/portrait-rafael.jpg) -gt 1000
+          curl --fail --location --silent --show-error --retry 2 'https://media.canva.com/v2/image-resize/format:JPG/height:200/quality:75/uri:ifs%3A%2F%2FM%2F3019cb1f-f9d8-4314-b0f3-182501e99a86/watermark:F/width:132?csig=AAAAAAAAAAAAAAAAAAAAABDTVIs7JFT4bCxz9McLaLTrVD0lr_Z6xc6XTU9pdas2&exp=1794698031&osig=AAAAAAAAAAAAAAAAAAAAAG5Od6JQ48uKMqwQCo9mCu_93CR5MVa4KeIzCU69hpxs&signer=media-rpc&token=AAIAAU0AJDMwMTljYjFmLWY5ZDgtNDMxNC1iMGYzLTE4MjUwMWU5OWE4NgAAAAABodxWr5gFj1BWS_8dvFfPjlCNDcorxerwgPjDBMh_lTF3AlefAA&x-canva-quality=thumbnail' -o assets/illustrations/portrait-luiza.jpg
+          test $(wc -c < assets/illustrations/portrait-luiza.jpg) -gt 1000
       - name: Commit media
         run: |
           git config user.name 'github-actions[bot]'
