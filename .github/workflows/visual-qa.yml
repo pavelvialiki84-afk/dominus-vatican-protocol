@@ -1,0 +1,41 @@
+name: DOMINUS Visual QA – 3 languages 6 viewports
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'assets/dominus-premium.css'
+      - 'index.html'
+      - 'dominus-band1-de.html'
+      - 'dominus-volume1-fr.html'
+      - 'test/visual-qa.cjs'
+      - '.github/workflows/visual-qa.yml'
+permissions:
+  contents: read
+jobs:
+  visual-qa:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install browser
+        run: |
+          npm install --no-save playwright@1.56.1
+          npx playwright install --with-deps chromium
+      - name: Serve site locally
+        run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 > /tmp/dominus-http.log 2>&1 &
+          sleep 3
+          curl --fail http://127.0.0.1:8765/dominus-band1-de.html > /dev/null
+      - name: Assert geometry and image loading
+        run: |
+          mkdir -p test/screenshots
+          node test/visual-qa.cjs
+      - name: Preserve screenshots for review
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: dominus-visual-qa-screenshots
+          path: test/screenshots/
+          retention-days: 7
