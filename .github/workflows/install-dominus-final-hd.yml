@@ -71,6 +71,7 @@ jobs:
               if html.count(old_tag)!=1 and new_tag not in html:
                   raise ValueError(f"Cover dimension metadata mismatch in {filename}")
               html=html.replace(old_tag,new_tag)
+              html=html.replace('content="'+root+'assets/hero-vatican.webp"','content="'+root+target+'"')
               html=html.replace(root+"cover.png",root+target)
               path.write_text(html,encoding="utf-8")
 
