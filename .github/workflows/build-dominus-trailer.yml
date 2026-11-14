@@ -5,6 +5,7 @@ on:
     paths:
       - '.github/workflows/build-dominus-trailer.yml'
       - 'cover.png'
+      - 'scripts/generate_dominus_score.py'
 permissions:
   contents: write
 jobs:
@@ -17,22 +18,27 @@ jobs:
         run: |
           sudo apt-get update -qq
           sudo apt-get install -y -qq ffmpeg
-      - name: Render silent 12-second MP4 from book artwork
+      - name: Compose original orchestral, choral and electronic score
+        run: |
+          python3 scripts/generate_dominus_score.py
+          test -s assets/dominus-original-score.wav
+      - name: Render 12-second music-backed MP4 from book artwork
         shell: bash
         run: |
           set -euo pipefail
           mkdir -p assets
           ffmpeg -hide_banner -loglevel error -y -loop 1 -framerate 24 -i cover.png \
             -vf "scale=1100:1600:force_original_aspect_ratio=increase,crop=1000:600,zoompan=z='min(zoom+0.0007,1.20)':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d=1:s=960x540:fps=24,eq=brightness=-0.045:saturation=0.90,format=yuv420p" \
-            -t 12 -c:v libx264 -preset fast -crf 25 -movflags +faststart -pix_fmt yuv420p assets/dominus-trailer.mp4
+            -i assets/dominus-original-score.wav -t 12 -c:v libx264 -preset fast -crf 25 -c:a aac -b:a 128k -ar 44100 -movflags +faststart -pix_fmt yuv420p -shortest assets/dominus-trailer.mp4
           test -s assets/dominus-trailer.mp4
           ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1 assets/dominus-trailer.mp4
+          ffprobe -v error -select_streams a:0 -show_entries stream=codec_name -of default=noprint_wrappers=1 assets/dominus-trailer.mp4 | grep -q aac
       - name: Commit generated media
         shell: bash
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/dominus-trailer.mp4
+          git add assets/dominus-trailer.mp4 assets/dominus-original-score.wav
           if ! git diff --cached --quiet; then
             git commit -m "Build accessible 12-second DOMINUS MP4 teaser"
             git push
