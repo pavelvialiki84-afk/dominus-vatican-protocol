@@ -37,3 +37,13 @@
 }
 @media(max-width:350px){.mobile-buy-name{font-size:12px}.mobile-buy-link{min-width:126px;padding:8px 10px}}
 @media(prefers-reduced-motion:reduce){.book,.visual img,.btn{transform:none!important}}
+
+/* Responsive illustrated character files */
+.dossier-portrait{position:relative;aspect-ratio:4/3;margin:18px -8px 22px;overflow:hidden;border:1px solid #9e764539;background:linear-gradient(135deg,#1d1b18,#0b1720)}
+.dossier-portrait img{width:100%;height:100%;display:block;object-fit:cover;object-position:50% 24%;filter:saturate(.77) contrast(1.08);transition:filter .28s ease,transform .5s}
+.character-card:hover .dossier-portrait img{filter:saturate(.92) contrast(1.05);transform:scale(1.025)}
+.dossier-portrait:after{content:'';position:absolute;inset:0;background:linear-gradient(transparent 55%,#090d15c5);pointer-events:none}
+.dossier-portrait .dossier-mark{position:absolute;right:13px;bottom:1px;margin:0;z-index:1;font-size:42px;color:#d3b0787a;text-shadow:0 3px 15px #000}
+.character-card{min-height:390px}
+@media(max-width:590px){.dossier-portrait{aspect-ratio:16/9}.character-card{min-height:unset}}
+@media(prefers-reduced-motion:reduce){.dossier-portrait img{transform:none!important}}
