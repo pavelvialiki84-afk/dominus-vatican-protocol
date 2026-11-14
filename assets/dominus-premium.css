@@ -47,3 +47,10 @@
 .character-card{min-height:390px}
 @media(max-width:590px){.dossier-portrait{aspect-ratio:16/9}.character-card{min-height:unset}}
 @media(prefers-reduced-motion:reduce){.dossier-portrait img{transform:none!important}}
+
+/* User-activated soundtrack: muted by default; never blocks the trailer replay. */
+.trailer .sound-toggle{position:absolute;z-index:4;left:20px;bottom:20px;display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:44px;padding:10px 15px;border:1px solid #d6b67d;border-radius:3px;background:#080a0bdc;color:#f5ead9;font:700 12px Arial,sans-serif;cursor:pointer;transition:background .2s,color .2s}
+.trailer .sound-toggle:hover{background:#d6b67d;color:#14110d}
+.trailer .sound-toggle[aria-pressed="true"]{background:#d6b67d;color:#14110d}
+.trailer .sound-toggle:focus-visible{outline:3px solid #fff;outline-offset:3px}
+@media(max-width:520px){.trailer .sound-toggle{left:10px;bottom:11px;min-height:42px;padding:8px 10px;font-size:11px}.trailer .replay{right:10px;bottom:11px;min-height:42px;padding:8px 10px;font-size:11px}}
