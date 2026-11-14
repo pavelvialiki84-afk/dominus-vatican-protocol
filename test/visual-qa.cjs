@@ -11,7 +11,7 @@ for(const filename of pages){
     const response=await page.goto(base+filename,{waitUntil:'domcontentloaded',timeout:15000});
     if(!response||response.status()!==200)bad.push('HTTP status is not 200');
     const result=await page.evaluate(async()=>{
-      await Promise.all(Array.from(document.images).map(img=>img.complete?Promise.resolve():new Promise(resolve=>{img.addEventListener('load',resolve,{once:true});img.addEventListener('error',resolve,{once:true});setTimeout(resolve,2000)})));
+      await Promise.all(Array.from(document.querySelectorAll('.gallery img,.cast-film img,.dossier-portrait img')).map(async img=>{img.loading='eager';try{await img.decode();}catch(_e){}}));
       const box=el=>{const b=el.getBoundingClientRect();return {x:b.x,y:b.y,width:b.width,height:b.height,right:b.right,bottom:b.bottom}};
       const select=s=>Array.from(document.querySelectorAll(s)).map(box);
       const images=Array.from(document.querySelectorAll('.gallery img,.cast-film img,.dossier-portrait img'));
