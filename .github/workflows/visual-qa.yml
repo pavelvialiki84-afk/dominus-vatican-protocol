@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - 'assets/dominus-premium.css'
+      - 'assets/illustrations/**-realistic.webp'
       - 'index.html'
       - 'dominus-band1-de.html'
       - 'dominus-volume1-fr.html'
