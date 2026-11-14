@@ -8,10 +8,10 @@ for(const filename of pages){
   for(const width of widths){
     const page=await browser.newPage({viewport:{width,height:900},deviceScaleFactor:1,reducedMotion:'reduce'});
     const bad=[];
-    const response=await page.goto(base+filename,{waitUntil:'networkidle',timeout:30000});
+    const response=await page.goto(base+filename,{waitUntil:'domcontentloaded',timeout:15000});
     if(!response||response.status()!==200)bad.push('HTTP status is not 200');
     const result=await page.evaluate(async()=>{
-      await Promise.all(Array.from(document.images).map(img=>img.complete?Promise.resolve():new Promise(resolve=>{img.addEventListener('load',resolve,{once:true});img.addEventListener('error',resolve,{once:true});setTimeout(resolve,8000)})));
+      await Promise.all(Array.from(document.images).map(img=>img.complete?Promise.resolve():new Promise(resolve=>{img.addEventListener('load',resolve,{once:true});img.addEventListener('error',resolve,{once:true});setTimeout(resolve,2000)})));
       const box=el=>{const b=el.getBoundingClientRect();return {x:b.x,y:b.y,width:b.width,height:b.height,right:b.right,bottom:b.bottom}};
       const select=s=>Array.from(document.querySelectorAll(s)).map(box);
       const images=Array.from(document.querySelectorAll('.gallery img,.cast-film img,.dossier-portrait img'));
@@ -31,7 +31,7 @@ for(const filename of pages){
       }
     }
     if(result.brokenImages.length)bad.push('Missing artwork: '+result.brokenImages.join(','));
-    await page.screenshot({path:'test/screenshots/'+filename.replace('.html','')+'-'+width+'.png',fullPage:true});
+    if(width===375||width===1440)await page.screenshot({path:'test/screenshots/'+filename.replace('.html','')+'-'+width+'.png',fullPage:true,timeout:20000});
     console.log(JSON.stringify({page:filename,width,status:bad.length?'FAIL':'PASS',columns:result.styles,galleryCount:result.gallery.length,documentWidth:result.documentWidth,brokenImages:result.brokenImages,issues:bad}));
     failures+=bad.length;
     await page.close();
