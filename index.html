@@ -509,6 +509,14 @@
         max-width: 310px;
       }
     }
+
+    /* Always-visible language selector */
+    .lang-switch {display:flex;align-items:center;gap:4px;flex-shrink:0;border:1px solid rgba(197,163,99,.45);border-radius:10px;padding:4px;background:rgba(5,5,5,.72);font:700 12px/1 Arial,Helvetica,sans-serif;letter-spacing:.07em}
+    .lang-switch a {display:inline-flex;align-items:center;justify-content:center;min-width:40px;min-height:36px;padding:7px 9px;border-radius:7px;color:#d5cabb;text-decoration:none;transition:background .2s}
+    .lang-switch a[aria-current="page"] {background:#c5a363;color:#090909}
+    .lang-switch a:hover:not([aria-current="page"]) {background:rgba(197,163,99,.2);color:#fff}
+    .lang-switch a:focus-visible {outline:2px solid #fff;outline-offset:2px}
+    @media(max-width:520px){.nav-inner{gap:10px;min-height:64px}.brand{font-size:.83rem;letter-spacing:.14em}.lang-switch a{min-width:36px;min-height:36px;padding:7px}}
   </style>
 </head>
 
@@ -524,6 +532,7 @@
         <a href="#author">Author</a>
         <a href="read.html">Read / Buy</a>
       </div>
+      <div class="lang-switch" role="navigation" aria-label="Language / Sprache / Langue"><a href="./" lang="en" aria-current="page">EN</a><a href="dominus-band1-de.html" lang="de">DE</a><a href="dominus-volume1-fr.html" lang="fr">FR</a></div>
     </div>
   </nav>
 
