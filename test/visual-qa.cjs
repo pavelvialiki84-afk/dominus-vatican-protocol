@@ -15,7 +15,7 @@ for(const filename of pages){
       const box=el=>{const b=el.getBoundingClientRect();return {x:b.x,y:b.y,width:b.width,height:b.height,right:b.right,bottom:b.bottom}};
       const select=s=>Array.from(document.querySelectorAll(s)).map(box);
       const images=Array.from(document.querySelectorAll('.gallery img,.cast-film img,.dossier-portrait img,.book-cover-image'));
-      return {viewport:innerWidth,documentWidth:document.documentElement.scrollWidth,gallery:select('.gallery > .visual'),cast:select('.cast-film > figure'),dossiers:select('.character-grid > article'),brokenImages:images.filter(i=>!i.complete||i.naturalWidth===0).map(i=>i.getAttribute('src')),imageSizes:images.map(i=>({src:i.getAttribute('src'),width:i.naturalWidth,height:i.naturalHeight})),bookCover:select('.book-cover-image'),styles: getComputedStyle(document.querySelector('.gallery')).gridTemplateColumns};
+      return {viewport:innerWidth,documentWidth:document.documentElement.scrollWidth,gallery:select('.gallery > .visual'),cast:select('.cast-film > figure'),dossiers:select('.character-grid > article'),brokenImages:images.filter(i=>!i.complete||i.naturalWidth===0).map(i=>i.getAttribute('src')),imageSizes:images.map(i=>({src:i.getAttribute('src'),width:i.naturalWidth,height:i.naturalHeight})),bookCover:select('.book-cover-image'),heroBuy:Array.from(document.querySelectorAll('.hero .buttons a')).map(a=>a.getAttribute('href')),mobileBuy:document.querySelector('.mobile-buy-link')?.getAttribute('href'),navLanguages:Array.from(document.querySelectorAll('nav.lang a')).map(a=>a.getAttribute('href')),canonical:document.querySelector('link[rel="canonical"]')?.href,styles: getComputedStyle(document.querySelector('.gallery')).gridTemplateColumns};
     });
     if(result.documentWidth>width+3)bad.push('Horizontal overflow '+result.documentWidth);
     if(result.gallery.length!==6)bad.push('Expected 6 gallery items, got '+result.gallery.length);
@@ -30,6 +30,13 @@ for(const filename of pages){
         }
       }
     }
+    if(result.heroBuy.length<2)bad.push('Hero missing sample/purchase actions');
+    if(result.navLanguages.length!==3)bad.push('Language navigation missing');
+    if(!result.canonical)bad.push('Missing canonical URL');
+    if(filename==='index.html' && !result.heroBuy.some(h=>h.includes('amazon.com/dp/B0HM4CLBZ2')))bad.push('English Kindle direct CTA missing');
+    if(filename==='dominus-band1-de.html' && !result.heroBuy.some(h=>h.includes('amazon.de/dp/B0HRM5NLBY')))bad.push('German Kindle direct CTA missing');
+    if(filename==='dominus-volume1-fr.html' && !result.heroBuy.includes('#edition'))bad.push('French unverified edition must lead to formats instead of invented ASIN');
+    if(width<=680 && !result.mobileBuy)bad.push('Mobile purchase CTA missing');
     if(result.brokenImages.length)bad.push('Missing artwork: '+result.brokenImages.join(','));
     if(filename!=='index.html' && (result.bookCover.length!==1 || Math.abs(result.bookCover[0].width/result.bookCover[0].height-0.625)>.04))bad.push('Book cover is broken, cropped, or missing');
     if(width===375||width===1440)await page.screenshot({path:'test/screenshots/'+filename.replace('.html','')+'-'+width+'.png',fullPage:true,timeout:20000});
