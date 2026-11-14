@@ -181,3 +181,50 @@
 .book-cover-frame .book-cover-image{display:block;position:static!important;width:100%;height:100%;max-width:100%;max-height:100%;object-fit:fill;object-position:center;transform:none!important;filter:none!important;border:0;margin:0;padding:0;aspect-ratio:5/8}
 @media(max-width:850px){.cover-scene{min-height:350px}.book-cover-frame{width:min(100%,210px)}}
 @media(max-width:400px){.cover-scene{min-height:320px}.book-cover-frame{width:min(100%,190px)}}
+
+/* Source-quality-aware progressive art presentation.
+   Existing tiny Canva previews stay within their native pixel width.
+   Uploading the authored HD WebP artwork automatically restores full-bleed layouts. */
+.gallery > .visual.illustrated.source-preview{background:radial-gradient(circle at 50% 30%,#2a2520,#111820 58%,#080b10)}
+.gallery > .visual.illustrated.source-preview img{
+ position:absolute;
+ display:block;
+ inset:auto;
+ width:min(72%,200px);
+ max-width:200px;
+ height:auto;
+ aspect-ratio:16/9;
+ top:43%;
+ left:50%;
+ transform:translate(-50%,-50%)!important;
+ object-fit:contain;
+ filter:none!important;
+ box-shadow:0 8px 30px #0009,0 0 0 1px #d4b16d40;
+}
+.cast-film figure.source-preview{background:linear-gradient(110deg,#181e27,#0b0e14)}
+.cast-film figure.source-preview img{
+ display:block;
+ width:min(100%,160px);
+ max-width:160px;
+ height:100%;
+ margin:0 auto;
+ object-fit:cover;
+ transform:none!important;
+ animation:none!important;
+ filter:none!important;
+}
+.dossier-portrait.source-preview{
+ display:flex;align-items:stretch;justify-content:center;
+ background:radial-gradient(circle at center,#262326,#0c121a);
+}
+.dossier-portrait.source-preview img{
+ display:block;
+ width:min(100%,160px);
+ max-width:160px;
+ height:100%;
+ flex:0 0 auto;
+ object-fit:cover;
+ object-position:center 22%;
+ filter:none!important;
+ transform:none!important;
+}
