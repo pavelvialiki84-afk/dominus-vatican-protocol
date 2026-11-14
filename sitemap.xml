@@ -1,8 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/</loc></url>
-  <url><loc>https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/dominus-band1-de.html</loc></url>
-  <url><loc>https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/read.html</loc></url>
-  <url><loc>https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/dominus-sample-en.html</loc></url>
-  <url><loc>https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/dominus-volume1-fr.html</loc></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/</loc>
+    <lastmod>2026-11-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/dominus-band1-de.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/dominus-volume1-fr.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/" />
+  </url>
+  <url>
+    <loc>https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/dominus-band1-de.html</loc>
+    <lastmod>2026-11-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/dominus-band1-de.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/dominus-volume1-fr.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/" />
+  </url>
+  <url>
+    <loc>https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/dominus-volume1-fr.html</loc>
+    <lastmod>2026-11-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/dominus-band1-de.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/dominus-volume1-fr.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/" />
+  </url>
+  <url><loc>https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/read.html</loc><lastmod>2026-11-14</lastmod></url>
 </urlset>
