@@ -1,11 +1,8 @@
 name: Import DOMINUS cinematic illustrations
 on:
   workflow_dispatch:
-  push:
-    paths:
-      - .github/workflows/import-dominus-art.yml
 permissions:
-  contents: write
+  contents: read
 jobs:
   import:
     runs-on: ubuntu-latest
