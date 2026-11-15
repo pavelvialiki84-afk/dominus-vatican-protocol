@@ -1,0 +1,12 @@
+{
+  "available": "Verkrijgbaar",
+  "soon": "Binnenkort",
+  "formats": {
+    "kindle": "Kindle",
+    "paperback": "Paperback",
+    "hardcover": "Hardcover"
+  },
+  "buy": "Kopen",
+  "volume": "Deel",
+  "noKindle": "Niet aangeboden"
+}
