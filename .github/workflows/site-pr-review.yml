@@ -1,0 +1,66 @@
+name: DOMINUS — pull request safety and visual review
+on:
+  pull_request:
+    paths:
+      - '**/*.html'
+      - 'assets/**'
+      - '.github/workflows/site-pr-review.yml'
+      - 'sitemap.xml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  static-and-visual:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install Chromium for preview only
+        run: |
+          npm install --no-save playwright@1.56.1
+          npx playwright install --with-deps chromium
+      - name: Run local preview (no deployment)
+        run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/dominus-preview.log 2>&1 &
+      - name: Verify navigation and generate review screenshots
+        run: |
+          mkdir -p qa-artifacts
+          node <<'JS'
+          const {chromium}=require('playwright');
+          const fs=require('fs');
+          const pages=['/','/editions.html','/dominus-band1-de.html','/dominus-volume1-fr.html','/dominus-volume1-it.html','/dominus-volumen1-es.html'];
+          (async()=>{
+            const browser=await chromium.launch({headless:true,args:['--no-sandbox']});
+            const errors=[];
+            for(const [mode,size] of Object.entries({desktop:{width:1440,height:900},mobile:{width:390,height:844}})){
+              const context=await browser.newContext({viewport:size,deviceScaleFactor:1,reducedMotion:'reduce'});
+              for(const path of pages){
+                const page=await context.newPage();
+                const response=await page.goto('http://127.0.0.1:8765'+path,{waitUntil:'networkidle'});
+                if(!response||response.status()>=400)errors.push(path+' '+(response&&response.status()));
+                const missing=await page.evaluate(async()=>{ const imgs=[...document.querySelectorAll('img')]; await Promise.all(imgs.map(async i=>{i.loading='eager';try{await i.decode()}catch(_){}}));return imgs.filter(i=>!i.complete||i.naturalWidth===0).map(i=>i.src); });
+                errors.push(...missing.map(u=>path+' image missing: '+u));
+                const bad=await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+5);
+                if(bad)errors.push(path+' horizontal overflow on '+mode);
+                const label=path==='/'?'home':path.replace(/[^a-z0-9]/gi,'-').replace(/^-|-$/g,'');
+                await page.screenshot({path:'qa-artifacts/'+label+'-'+mode+'.png',fullPage:true,animations:'disabled'});
+                await page.close();
+              }
+              await context.close();
+            }
+            await browser.close();
+            fs.writeFileSync('qa-artifacts/result.json',JSON.stringify({errors,checked:pages.length,viewports:2},null,2));
+            if(errors.length){console.error(errors.join('\n'));process.exitCode=1;}
+          })().catch(e=>{console.error(e);process.exitCode=1});
+          JS
+      - name: Preserve screenshots and results for author approval
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: dominus-stage0-review-screenshots
+          path: qa-artifacts/
+          if-no-files-found: warn
+          retention-days: 14
