@@ -1,28 +1,21 @@
-/* DOMINUS editions catalogue. Single source of truth: data/editions.json. */
-(()=>{"use strict";
-const root=document.querySelector("[data-editions-catalog]");
-if(!root)return;
-const langs=["en","de","fr","it","es","pt-br","nl","pl"];
-const marketLabels={en:"English",de:"Deutsch",fr:"Français",it:"Italiano",es:"Español","pt-br":"Português (Brasil)",nl:"Nederlands",pl:"Polski"};
-const make=(tag,className,text)=>{const n=document.createElement(tag);if(className)n.className=className;if(text!==undefined)n.textContent=text;return n};
-const money=(price,currency,language)=>price==null?"":new Intl.NumberFormat(language,{style:"currency",currency}).format(Number(price));
-Promise.all([fetch("data/editions.json").then(r=>{if(!r.ok)throw Error("Edition data unavailable");return r.json()}),Promise.all(langs.map(lang=>fetch("i18n/"+lang+".json").then(r=>r.json())))]).then(([catalogue,translations])=>{
-const strings=Object.fromEntries(langs.map((lang,i)=>[lang,translations[i]]));root.textContent="";
-for(const edition of catalogue.editions){
-const {language,volume,title,formats}=edition,t=strings[language];const article=make("article","edition-card");article.lang=language;
-const head=make("div","edition-top");head.append(make("span","edition-lang",marketLabels[language]),make("span","edition-country",t.volume+" "+volume));article.append(head);
-article.append(make("h2","",title),make("p","edition-author","Pavel Velichii"));
-const list=make("div","edition-formats");
-for(const [format,entry] of Object.entries(formats)){
-if(entry.status==="not_offered")continue;
-const line=make("div","edition-format"),info=make("div");info.append(make("strong","",t.formats[format]));
-const description=make("small","",entry.status==="live"&&entry.price!=null?money(entry.price,entry.currency,language)+" · "+t.available:t.soon);info.append(description);line.append(info);
-const store=entry.stores?.amazon;
-if(entry.status==="live"&&store){const link=make("a","",t.buy+" · Amazon");link.href=store;link.target="_blank";link.rel="noopener noreferrer";link.dataset.outbound="amazon";line.append(link)}
-else line.append(make("span","unavailable",t.soon));
-list.append(line);
+/* DOMINUS storefronts: the ONLY source is /data/editions.json */
+(()=>{'use strict';
+const lang=(document.documentElement.lang||'en').toLowerCase();const root=document.querySelector('[data-editions-catalog]');if(!root)return;
+const languages=['en','de','it','fr','es','pt-br','nl','pl'];const selected=languages.includes(lang)?lang:'en';const rootPath=location.pathname.match(/\/(en|de|it|fr|es|pt-br|nl|pl)\//)?'../':'';
+const money=(value,currency,l)=>value==null?'':new Intl.NumberFormat(l,{style:'currency',currency}).format(Number(value));
+const node=(tag,cls,content)=>{const n=document.createElement(tag);if(cls)n.className=cls;if(content!==undefined)n.textContent=content;return n};
+Promise.all([fetch(rootPath+'data/editions.json').then(r=>{if(!r.ok)throw new Error('Catalogue unavailable');return r.json()}),fetch(rootPath+'i18n/'+selected+'.json').then(r=>r.json())]).then(([data,t])=>{
+root.textContent='';const entries=data.editions.filter(e=>root.dataset.editionsCatalog==='all'||(e.language===selected&&(!root.dataset.volume||e.volume===Number(root.dataset.volume))));
+const grouped=new Map();for(const e of entries){const key=e.language+'-'+e.volume;if(!grouped.has(key))grouped.set(key,{language:e.language,volume:e.volume,title:e.title,entries:[]});grouped.get(key).entries.push(e)}
+for(const item of grouped.values()){
+const card=node('article','edition-card');const title=node('h2','',item.title);card.append(title);
+const seen=new Set();for(const e of item.entries){const key=e.format;if(seen.has(key))continue;seen.add(key);
+const opts=item.entries.filter(x=>x.format===key&&x.status==='live'&&x.url);
+const line=node('div','edition-format'),meta=node('div');meta.append(node('strong','',t.formats?.[key]||key));meta.append(node('small','',opts.length?money(opts[0].price,opts[0].currency,item.language):t.soon||'Coming soon'));line.append(meta);
+if(opts.length){for(const o of opts){const a=node('a','',t.buy+' · '+(o.store.startsWith('amazon-')?'Amazon':o.store==='google-play'?'Google Play Books':'Kobo'));a.href=o.url;a.rel='noopener noreferrer';a.target='_blank';line.append(a)}}
+else line.append(node('span','unavailable',t.soon||'Coming soon'));card.append(line);
 }
-article.append(list);root.append(article);
+root.append(card);
 }
-}).catch(err=>{root.replaceChildren(make("p","edition-error","The catalogue could not be loaded. Please refresh the page."));console.error("DOMINUS edition catalogue",err)});
+}).catch(()=>{root.textContent='TODO: catalogue temporarily unavailable';});
 })();
