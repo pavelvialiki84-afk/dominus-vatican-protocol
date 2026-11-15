@@ -1,0 +1,12 @@
+{
+  "available": "Disponível",
+  "soon": "Em breve",
+  "formats": {
+    "kindle": "Kindle",
+    "paperback": "Capa comum",
+    "hardcover": "Capa dura"
+  },
+  "buy": "Comprar",
+  "volume": "Volume",
+  "noKindle": "Não oferecido"
+}
