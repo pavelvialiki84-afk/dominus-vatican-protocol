@@ -1,12 +1,8 @@
 name: Upgrade DOMINUS six illustrations to true HD
 on:
   workflow_dispatch:
-  push:
-    paths:
-      - 'assets/source/DOMINUS_six_realistic_original_artworks.zip'
-      - '.github/workflows/upgrade-dominus-hd-art.yml'
 permissions:
-  contents: write
+  contents: read
 jobs:
   update-images:
     runs-on: ubuntu-24.04
@@ -73,5 +69,5 @@ jobs:
           if ! git diff --cached --quiet; then
             git commit -m 'Replace six tiny artwork previews with genuine optimized HD originals'
             git pull --rebase origin main
-            git push origin HEAD:main
+            echo 'Publishing disabled: review artifacts in a PR instead'
           fi
