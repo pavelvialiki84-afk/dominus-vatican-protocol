@@ -14,20 +14,21 @@
     "aliases": [
       {
         "address": "press@dominusbooks.com",
-        "status": "not-created"
+        "status": "verified-receiving"
       },
       {
         "address": "rights@dominusbooks.com",
-        "status": "not-created"
+        "status": "created-pending-delivery-verification"
       },
       {
         "address": "publishing@dominusbooks.com",
-        "status": "not-created"
+        "status": "created-pending-delivery-verification"
       },
       {
         "address": "readers@dominusbooks.com",
-        "status": "not-created"
+        "status": "created-pending-delivery-verification"
       }
-    ]
+    ],
+    "lastVerificationDate": "2026-11-15"
   }
 }
