@@ -5,8 +5,9 @@
     "verifiedVia": "Metricool connected brand dominus.vatican.protocol"
   },
   "facebook": {
-    "url": null,
-    "status": "awaiting-author-confirmed-page-url"
+    "url": "https://www.facebook.com/profile.php?id=61594883331502",
+    "status": "author-confirmed",
+    "verifiedVia": "Author supplied exact Facebook profile URL on 2026-11-15"
   },
   "email": {
     "primary": "contact@dominusbooks.com",
