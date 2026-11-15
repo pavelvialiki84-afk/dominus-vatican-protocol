@@ -1,11 +1,8 @@
 name: Import realistic DOMINUS site art
 on:
   workflow_dispatch:
-  push:
-    paths:
-      - '.github/workflows/import-realistic-dominus.yml'
 permissions:
-  contents: write
+  contents: read
 jobs:
   import:
     runs-on: ubuntu-24.04
@@ -53,5 +50,5 @@ jobs:
           if ! git diff --cached --quiet; then
             git commit -m 'Replace legacy DOMINUS art with realistic character and scene previews'
             git pull --rebase origin main
-            git push origin HEAD:main
+            echo 'Publishing disabled: review artifacts in a PR instead'
           fi
