@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/sitemap.xml
+Sitemap: https://dominusbooks.com/sitemap.xml
+

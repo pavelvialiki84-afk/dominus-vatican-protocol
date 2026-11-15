@@ -259,3 +259,26 @@
 .author-aside .author-cover.source-preview{width:125px;height:200px;aspect-ratio:5/8;margin:18px auto 24px;border:1px solid #aa865a;box-shadow:0 14px 25px #000a}
 .author-aside .author-cover.source-preview img{display:block;width:125px;height:200px;object-fit:contain}
 .author-aside:has(.author-cover.source-preview){background:radial-gradient(circle at 50% 40%,#232834,#0b0e12 65%);min-height:300px}
+
+
+/* Accessible navigation at narrow widths, including 320px phones. */
+.contact-email{overflow-wrap:anywhere;padding-bottom:24px}
+section[id]{scroll-margin-top:90px}
+@media(max-width:1050px){
+ header .bar{flex-wrap:wrap;gap:10px;padding-top:12px;padding-bottom:10px}
+ header .toplinks{display:flex;flex:1 0 100%;order:3;flex-wrap:wrap;gap:4px 18px;min-width:0}
+ header .toplinks a{display:inline-flex;align-items:center;min-height:44px;overflow-wrap:anywhere;max-width:100%}
+ header .lang{flex-wrap:wrap;max-width:100%}
+ header .lang a{min-height:44px}
+ section[id]{scroll-margin-top:190px}
+}
+@media(max-width:590px){
+ header{position:relative}
+ header .bar{justify-content:center}
+ header .brand{flex:1 0 100%;text-align:center}
+ header .lang{justify-content:center}
+ header .toplinks{justify-content:center;line-height:1.5}
+ section[id]{scroll-margin-top:16px}
+ .edition-format{flex-wrap:wrap}
+ .edition-format a,.unavailable{white-space:normal;overflow-wrap:anywhere}
+}

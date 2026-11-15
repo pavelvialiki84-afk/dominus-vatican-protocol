@@ -15,7 +15,7 @@ for(const filename of pages){
       const box=el=>{const b=el.getBoundingClientRect();return {x:b.x,y:b.y,width:b.width,height:b.height,right:b.right,bottom:b.bottom}};
       const select=s=>Array.from(document.querySelectorAll(s)).map(box);
       const images=Array.from(document.querySelectorAll('.gallery img,.cast-film img,.dossier-portrait img,.book-cover-image'));
-      return {viewport:innerWidth,documentWidth:document.documentElement.scrollWidth,gallery:select('.gallery > .visual'),cast:select('.cast-film > figure'),dossiers:select('.character-grid > article'),brokenImages:images.filter(i=>!i.complete||i.naturalWidth===0).map(i=>i.getAttribute('src')),imageSizes:images.map(i=>({src:i.getAttribute('src'),width:i.naturalWidth,height:i.naturalHeight})),bookCover:select('.book-cover-image'),portraitSources:Array.from(document.querySelectorAll('.cast-film img,.dossier-portrait img')).map(i=>i.getAttribute('src')),sceneSources:Array.from(document.querySelectorAll('.gallery > .visual.illustrated img')).map(i=>i.getAttribute('src')),heroBuy:Array.from(document.querySelectorAll('.hero .buttons a')).map(a=>a.getAttribute('href')),printBuy:Array.from(document.querySelectorAll('#edition .market a')).map(a=>a.getAttribute('href')),mobileBuy:document.querySelector('.mobile-buy-link')?.getAttribute('href'),navLanguages:Array.from(document.querySelectorAll('nav.lang a')).map(a=>a.getAttribute('href')),canonical:document.querySelector('link[rel="canonical"]')?.href,styles: getComputedStyle(document.querySelector('.gallery')).gridTemplateColumns};
+      return {viewport:innerWidth,documentWidth:document.documentElement.scrollWidth,gallery:select('.gallery > .visual'),cast:select('.cast-film > figure'),dossiers:select('.character-grid > article'),brokenImages:images.filter(i=>!i.complete||i.naturalWidth===0).map(i=>i.getAttribute('src')),imageSizes:images.map(i=>({src:i.getAttribute('src'),width:i.naturalWidth,height:i.naturalHeight})),bookCover:select('.book-cover-image'),portraitSources:Array.from(document.querySelectorAll('.cast-film img,.dossier-portrait img')).map(i=>i.getAttribute('src')),sceneSources:Array.from(document.querySelectorAll('.gallery > .visual.illustrated img')).map(i=>i.getAttribute('src')),heroBuy:Array.from(document.querySelectorAll('.hero .buttons a')).map(a=>a.getAttribute('href')),printBuy:Array.from(document.querySelectorAll('#edition .market a')).map(a=>a.getAttribute('href')),mobileBuy:document.querySelector('.mobile-buy-link')?.getAttribute('href'),navLanguages:Array.from(document.querySelectorAll('nav.lang a')).map(a=>a.getAttribute('href')),navVisible:Array.from(document.querySelectorAll('nav.toplinks a')).every(a=>getComputedStyle(a).display!=='none'&&a.getBoundingClientRect().height>0),email:!!document.querySelector('a[href="mailto:contact@dominusbooks.com"]'),canonical:document.querySelector('link[rel="canonical"]')?.href,styles: getComputedStyle(document.querySelector('.gallery')).gridTemplateColumns};
     });
     if(result.documentWidth>width+3)bad.push('Horizontal overflow '+result.documentWidth);
     if(result.gallery.length!==6)bad.push('Expected 6 gallery items, got '+result.gallery.length);
@@ -31,8 +31,10 @@ for(const filename of pages){
       }
     }
     if(result.heroBuy.length<2)bad.push('Hero missing sample/purchase actions');
-    if(result.navLanguages.length!==3)bad.push('Language navigation missing');
-    if(!result.canonical)bad.push('Missing canonical URL');
+    if(result.navLanguages.length!==5)bad.push('Language navigation missing');
+    if(!result.canonical?.startsWith('https://dominusbooks.com/'))bad.push('Wrong canonical domain');
+    if(!result.navVisible)bad.push('Section navigation is hidden');
+    if(!result.email)bad.push('Contact email link missing');
     if(filename==='index.html' && !result.heroBuy.some(h=>h.includes('amazon.com/dp/B0HM4CLBZ2')))bad.push('English Kindle direct CTA missing');
     if(filename==='dominus-band1-de.html' && !result.heroBuy.some(h=>h.includes('amazon.de/dp/B0HRM5NLBY')))bad.push('German Kindle direct CTA missing');
     if(filename==='dominus-band1-de.html' && !result.printBuy?.some(h=>h.includes('amazon.de/dp/B0HRQMHRW4')))bad.push('Published German paperback link missing');
@@ -57,3 +59,4 @@ await browser.close();
 if(failures){console.error('Responsive gallery audit failed, issues: '+failures);process.exit(1);}
 console.log('PASS: all 18 EN/DE/FR viewport/image/layout checks.');
 })().catch(e=>{console.error(e);process.exit(1)});
+
