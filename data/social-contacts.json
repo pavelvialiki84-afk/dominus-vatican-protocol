@@ -1,0 +1,33 @@
+{
+  "instagram": {
+    "url": "https://www.instagram.com/dominus.vatican.protocol/",
+    "status": "verified",
+    "verifiedVia": "Metricool connected brand dominus.vatican.protocol"
+  },
+  "facebook": {
+    "url": null,
+    "status": "awaiting-author-confirmed-page-url"
+  },
+  "email": {
+    "primary": "contact@dominusbooks.com",
+    "status": "connected",
+    "aliases": [
+      {
+        "address": "press@dominusbooks.com",
+        "status": "not-created"
+      },
+      {
+        "address": "rights@dominusbooks.com",
+        "status": "not-created"
+      },
+      {
+        "address": "publishing@dominusbooks.com",
+        "status": "not-created"
+      },
+      {
+        "address": "readers@dominusbooks.com",
+        "status": "not-created"
+      }
+    ]
+  }
+}
