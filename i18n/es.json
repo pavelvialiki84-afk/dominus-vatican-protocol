@@ -13,5 +13,22 @@
     "home": "Inicio",
     "books": "Libros"
   },
-  "todo": "Información próximamente"
+  "todo": "Información próximamente",
+  "reader": {
+    "newsletterTitle": "Únete al archivo",
+    "newsletterDescription": "Novedades de la serie y materiales exclusivos para lectores.",
+    "consentLabel": "Quiero acceder a Substack, donde podré decidir si facilito mi correo electrónico y me suscribo. Podré darme de baja en cualquier momento.",
+    "continueToSubstack": "Continuar a Substack",
+    "privacyAssurance": "Este sitio no recoge ni almacena direcciones de correo electrónico.",
+    "subscribe": "Suscribirme",
+    "resources": "Recursos para lectores",
+    "readingPath": "Volumen 1 → Protocolo de archivo 2008 → Volumen 2",
+    "dossierTitle": "Dosier exclusivo",
+    "dossierTodo": "TODO: PDF exclusivo pendiente de aprobación del autor.",
+    "chaptersTitle": "Capítulos para descargar",
+    "chaptersTodo": "TODO: archivos EPUB y PDF pendientes de aprobación.",
+    "privacyTitle": "Privacidad y boletín",
+    "privacyDescription": "Este sitio no recopila correos electrónicos. Al continuar irás a Substack, donde podrás consultar su política de privacidad y suscribirte. El editor debe activar la confirmación por correo.",
+    "impressumTodo": "Aviso legal: TODO — falta la dirección profesional de correspondencia."
+  }
 }

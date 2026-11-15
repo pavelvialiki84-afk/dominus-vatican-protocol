@@ -13,5 +13,22 @@
     "home": "Home",
     "books": "Books"
   },
-  "todo": "Details to be announced"
+  "todo": "Details to be announced",
+  "reader": {
+    "newsletterTitle": "Join the archive",
+    "newsletterDescription": "Receive new book announcements and exclusive reader materials.",
+    "consentLabel": "I understand that this link opens Substack, where I can choose whether to provide my email and subscribe. I can unsubscribe at any time.",
+    "continueToSubstack": "Continue to Substack",
+    "privacyAssurance": "No email is entered or stored on this website.",
+    "subscribe": "Subscribe",
+    "resources": "Reader resources",
+    "readingPath": "Book One → Archive Protocol 2008 → Book Two",
+    "dossierTitle": "Exclusive dossier",
+    "dossierTodo": "TODO: reader-only PDF will be released when approved by the author.",
+    "chaptersTitle": "First chapter downloads",
+    "chaptersTodo": "TODO: EPUB and PDF downloads will appear after approval.",
+    "privacyTitle": "Personal data & newsletter",
+    "privacyDescription": "The site does not collect email addresses. Selecting Continue sends you to Substack, where you can read its privacy terms and subscribe. Email verification must be activated by the publisher.",
+    "impressumTodo": "Publication address / legal notice: TODO — professional correspondence address to be provided."
+  }
 }

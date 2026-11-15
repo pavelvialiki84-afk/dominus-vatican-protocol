@@ -13,5 +13,22 @@
     "home": "Strona główna",
     "books": "Książki"
   },
-  "todo": "Szczegóły wkrótce"
+  "todo": "Szczegóły wkrótce",
+  "reader": {
+    "newsletterTitle": "Dołącz do archiwum",
+    "newsletterDescription": "Nowości o serii i materiały dostępne wyłącznie dla czytelników.",
+    "consentLabel": "Chcę przejść do Substack, gdzie zdecyduję, czy podać adres e-mail i zapisać się na newsletter. Mogę zrezygnować w dowolnym momencie.",
+    "continueToSubstack": "Przejdź do Substack",
+    "privacyAssurance": "Ta strona nie zbiera ani nie przechowuje adresów e-mail.",
+    "subscribe": "Zapisz się",
+    "resources": "Dla czytelników",
+    "readingPath": "Tom 1 → Protokół archiwalny 2008 → Tom 2",
+    "dossierTitle": "Ekskluzywne dossier",
+    "dossierTodo": "TODO: plik PDF zostanie dodany po zatwierdzeniu przez autora.",
+    "chaptersTitle": "Rozdziały do pobrania",
+    "chaptersTodo": "TODO: pliki EPUB i PDF zostaną dodane po zatwierdzeniu.",
+    "privacyTitle": "Prywatność i newsletter",
+    "privacyDescription": "Ta strona nie gromadzi adresów e-mail. Po przejściu do Substack można zapoznać się z zasadami prywatności i zapisać na newsletter. Wydawca musi włączyć potwierdzanie adresu e-mail.",
+    "impressumTodo": "Informacje prawne: TODO — należy podać adres do korespondencji służbowej."
+  }
 }

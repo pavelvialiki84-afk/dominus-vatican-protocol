@@ -50,3 +50,10 @@ Place the author-approved language-specific artwork in `assets/` (prefer WebP) a
 
 ## Deployment and review
 Never commit directly to `main` to publish work. Submit a PR with screenshots at 390px and 1366px and a test report, then obtain explicit author approval. No private publishing operations or personal contact details belong in this public repository.
+
+## Substack sign-up and reader downloads
+The newsletter banner on localized pages is inserted by `assets/dominus-reader.js`, with text from the `reader` section of `i18n/<language>.json`. It never receives or stores an email address. The user explicitly acknowledges navigation to the author's supplied Substack profile and submits their email on Substack if they choose.
+
+**Before publishing:** confirm the Substack publication-specific subscription URL and enable/test the publisher's **Require email address confirmation** setting (Publisher Dashboard → Settings → Emails) to enforce double opt-in. Verify the legal privacy disclosure and address with qualified counsel. The current `/<language>/privacy.html` pages are transparent drafts and **not completed GDPR legal notices**.
+
+Exclusive dossier PDF and first-chapter EPUB/PDF downloads are configured in `data/reader-downloads.json` (one record per language and kind: `dossier_pdf`, `chapter_pdf`, `chapter_epub`). Upload the author-approved asset, set `url` to a real file path or HTTPS destination and change `status` to `live`. Entries with no URL or pending status are not shown. Never advertise a nonexistent download. Do not copy texts from unapproved marketing drafts.
