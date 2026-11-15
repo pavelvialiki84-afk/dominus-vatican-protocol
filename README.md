@@ -29,7 +29,7 @@ Supported format identifiers: `ebook`, `paperback`, `hardcover`. Store identifie
 
 The listing is only clickable if `status` is `live` **and** `url` is a confirmed valid HTTPS listing URL. Never guess a link or price. A volume with no valid store link appears as a title with a localized coming-soon label.
 
-**KDP Select:** do not add Kobo or Google Play eBook links to an edition while that eBook remains under Amazon's applicable digital exclusivity.
+**Digital distribution:** confirm existing retailer exclusivity before adding an alternative storefront.
 
 ## Changing interface text
 Edit the appropriate `i18n/<language>.json` file. Keep all eight languages synchronized for newly introduced fields. Some legacy long-form page text still lives in localized HTML and is scheduled for extraction in the next editorial pass.
