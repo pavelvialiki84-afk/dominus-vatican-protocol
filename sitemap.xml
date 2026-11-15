@@ -1,73 +1,628 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url><loc>https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/</loc><lastmod>2026-11-15</lastmod></url>
   <url>
-    <loc>https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/</loc>
+    <loc>https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/en/</loc>
     <lastmod>2026-11-15</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/dominus-band1-de.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/dominus-volume1-fr.html" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/dominus-volume1-it.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/dominus-volumen1-es.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/en/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/de/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/it/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/fr/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pt-br/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/nl/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pl/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/"/>
   </url>
   <url>
-    <loc>https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/dominus-band1-de.html</loc>
+    <loc>https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/en/book-1.html</loc>
     <lastmod>2026-11-15</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/dominus-band1-de.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/dominus-volume1-fr.html" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/dominus-volume1-it.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/dominus-volumen1-es.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/en/book-1.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/de/book-1.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/it/book-1.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/fr/book-1.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/es/book-1.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pt-br/book-1.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/nl/book-1.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pl/book-1.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/"/>
   </url>
   <url>
-    <loc>https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/dominus-volume1-fr.html</loc>
+    <loc>https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/en/book-2.html</loc>
     <lastmod>2026-11-15</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/dominus-band1-de.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/dominus-volume1-fr.html" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/dominus-volume1-it.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/dominus-volumen1-es.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/en/book-2.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/de/book-2.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/it/book-2.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/fr/book-2.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/es/book-2.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pt-br/book-2.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/nl/book-2.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pl/book-2.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/"/>
   </url>
   <url>
-    <loc>https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/dominus-volume1-it.html</loc>
+    <loc>https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/en/author.html</loc>
     <lastmod>2026-11-15</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/dominus-band1-de.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/dominus-volume1-fr.html" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/dominus-volume1-it.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/dominus-volumen1-es.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/en/author.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/de/author.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/it/author.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/fr/author.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/es/author.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pt-br/author.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/nl/author.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pl/author.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/"/>
   </url>
   <url>
-    <loc>https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/dominus-volumen1-es.html</loc>
+    <loc>https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/en/reading-order.html</loc>
     <lastmod>2026-11-15</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/dominus-band1-de.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/dominus-volume1-fr.html" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/dominus-volume1-it.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/dominus-volumen1-es.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/en/reading-order.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/de/reading-order.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/it/reading-order.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/fr/reading-order.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/es/reading-order.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pt-br/reading-order.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/nl/reading-order.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pl/reading-order.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/"/>
   </url>
   <url>
-    <loc>https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/editions.html</loc>
+    <loc>https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/en/editions.html</loc>
     <lastmod>2026-11-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/en/editions.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/de/editions.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/it/editions.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/fr/editions.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/es/editions.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pt-br/editions.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/nl/editions.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pl/editions.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/"/>
   </url>
   <url>
-    <loc>https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/read.html</loc>
-    <lastmod>2026-11-14</lastmod>
+    <loc>https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/de/</loc>
+    <lastmod>2026-11-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/en/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/de/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/it/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/fr/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pt-br/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/nl/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pl/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/"/>
   </url>
   <url>
-    <loc>https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/author.html</loc>
+    <loc>https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/de/book-1.html</loc>
     <lastmod>2026-11-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/en/book-1.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/de/book-1.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/it/book-1.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/fr/book-1.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/es/book-1.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pt-br/book-1.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/nl/book-1.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pl/book-1.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/"/>
   </url>
   <url>
-    <loc>https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/autor-de.html</loc>
+    <loc>https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/de/book-2.html</loc>
     <lastmod>2026-11-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/en/book-2.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/de/book-2.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/it/book-2.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/fr/book-2.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/es/book-2.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pt-br/book-2.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/nl/book-2.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pl/book-2.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/"/>
   </url>
   <url>
-    <loc>https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/auteur-fr.html</loc>
+    <loc>https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/de/author.html</loc>
     <lastmod>2026-11-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/en/author.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/de/author.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/it/author.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/fr/author.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/es/author.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pt-br/author.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/nl/author.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pl/author.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/"/>
+  </url>
+  <url>
+    <loc>https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/de/reading-order.html</loc>
+    <lastmod>2026-11-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/en/reading-order.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/de/reading-order.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/it/reading-order.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/fr/reading-order.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/es/reading-order.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pt-br/reading-order.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/nl/reading-order.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pl/reading-order.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/"/>
+  </url>
+  <url>
+    <loc>https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/de/editions.html</loc>
+    <lastmod>2026-11-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/en/editions.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/de/editions.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/it/editions.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/fr/editions.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/es/editions.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pt-br/editions.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/nl/editions.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pl/editions.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/"/>
+  </url>
+  <url>
+    <loc>https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/it/</loc>
+    <lastmod>2026-11-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/en/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/de/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/it/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/fr/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pt-br/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/nl/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pl/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/"/>
+  </url>
+  <url>
+    <loc>https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/it/book-1.html</loc>
+    <lastmod>2026-11-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/en/book-1.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/de/book-1.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/it/book-1.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/fr/book-1.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/es/book-1.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pt-br/book-1.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/nl/book-1.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pl/book-1.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/"/>
+  </url>
+  <url>
+    <loc>https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/it/book-2.html</loc>
+    <lastmod>2026-11-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/en/book-2.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/de/book-2.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/it/book-2.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/fr/book-2.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/es/book-2.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pt-br/book-2.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/nl/book-2.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pl/book-2.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/"/>
+  </url>
+  <url>
+    <loc>https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/it/author.html</loc>
+    <lastmod>2026-11-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/en/author.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/de/author.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/it/author.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/fr/author.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/es/author.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pt-br/author.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/nl/author.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pl/author.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/"/>
+  </url>
+  <url>
+    <loc>https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/it/reading-order.html</loc>
+    <lastmod>2026-11-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/en/reading-order.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/de/reading-order.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/it/reading-order.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/fr/reading-order.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/es/reading-order.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pt-br/reading-order.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/nl/reading-order.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pl/reading-order.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/"/>
+  </url>
+  <url>
+    <loc>https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/it/editions.html</loc>
+    <lastmod>2026-11-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/en/editions.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/de/editions.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/it/editions.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/fr/editions.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/es/editions.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pt-br/editions.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/nl/editions.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pl/editions.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/"/>
+  </url>
+  <url>
+    <loc>https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/fr/</loc>
+    <lastmod>2026-11-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/en/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/de/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/it/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/fr/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pt-br/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/nl/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pl/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/"/>
+  </url>
+  <url>
+    <loc>https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/fr/book-1.html</loc>
+    <lastmod>2026-11-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/en/book-1.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/de/book-1.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/it/book-1.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/fr/book-1.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/es/book-1.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pt-br/book-1.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/nl/book-1.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pl/book-1.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/"/>
+  </url>
+  <url>
+    <loc>https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/fr/book-2.html</loc>
+    <lastmod>2026-11-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/en/book-2.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/de/book-2.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/it/book-2.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/fr/book-2.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/es/book-2.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pt-br/book-2.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/nl/book-2.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pl/book-2.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/"/>
+  </url>
+  <url>
+    <loc>https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/fr/author.html</loc>
+    <lastmod>2026-11-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/en/author.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/de/author.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/it/author.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/fr/author.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/es/author.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pt-br/author.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/nl/author.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pl/author.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/"/>
+  </url>
+  <url>
+    <loc>https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/fr/reading-order.html</loc>
+    <lastmod>2026-11-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/en/reading-order.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/de/reading-order.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/it/reading-order.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/fr/reading-order.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/es/reading-order.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pt-br/reading-order.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/nl/reading-order.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pl/reading-order.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/"/>
+  </url>
+  <url>
+    <loc>https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/fr/editions.html</loc>
+    <lastmod>2026-11-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/en/editions.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/de/editions.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/it/editions.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/fr/editions.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/es/editions.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pt-br/editions.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/nl/editions.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pl/editions.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/"/>
+  </url>
+  <url>
+    <loc>https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/es/</loc>
+    <lastmod>2026-11-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/en/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/de/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/it/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/fr/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pt-br/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/nl/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pl/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/"/>
+  </url>
+  <url>
+    <loc>https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/es/book-1.html</loc>
+    <lastmod>2026-11-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/en/book-1.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/de/book-1.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/it/book-1.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/fr/book-1.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/es/book-1.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pt-br/book-1.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/nl/book-1.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pl/book-1.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/"/>
+  </url>
+  <url>
+    <loc>https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/es/book-2.html</loc>
+    <lastmod>2026-11-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/en/book-2.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/de/book-2.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/it/book-2.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/fr/book-2.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/es/book-2.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pt-br/book-2.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/nl/book-2.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pl/book-2.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/"/>
+  </url>
+  <url>
+    <loc>https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/es/author.html</loc>
+    <lastmod>2026-11-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/en/author.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/de/author.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/it/author.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/fr/author.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/es/author.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pt-br/author.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/nl/author.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pl/author.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/"/>
+  </url>
+  <url>
+    <loc>https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/es/reading-order.html</loc>
+    <lastmod>2026-11-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/en/reading-order.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/de/reading-order.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/it/reading-order.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/fr/reading-order.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/es/reading-order.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pt-br/reading-order.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/nl/reading-order.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pl/reading-order.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/"/>
+  </url>
+  <url>
+    <loc>https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/es/editions.html</loc>
+    <lastmod>2026-11-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/en/editions.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/de/editions.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/it/editions.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/fr/editions.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/es/editions.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pt-br/editions.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/nl/editions.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pl/editions.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/"/>
+  </url>
+  <url>
+    <loc>https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pt-br/</loc>
+    <lastmod>2026-11-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/en/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/de/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/it/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/fr/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pt-br/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/nl/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pl/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/"/>
+  </url>
+  <url>
+    <loc>https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pt-br/book-1.html</loc>
+    <lastmod>2026-11-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/en/book-1.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/de/book-1.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/it/book-1.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/fr/book-1.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/es/book-1.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pt-br/book-1.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/nl/book-1.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pl/book-1.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/"/>
+  </url>
+  <url>
+    <loc>https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pt-br/book-2.html</loc>
+    <lastmod>2026-11-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/en/book-2.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/de/book-2.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/it/book-2.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/fr/book-2.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/es/book-2.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pt-br/book-2.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/nl/book-2.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pl/book-2.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/"/>
+  </url>
+  <url>
+    <loc>https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pt-br/author.html</loc>
+    <lastmod>2026-11-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/en/author.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/de/author.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/it/author.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/fr/author.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/es/author.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pt-br/author.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/nl/author.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pl/author.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/"/>
+  </url>
+  <url>
+    <loc>https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pt-br/reading-order.html</loc>
+    <lastmod>2026-11-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/en/reading-order.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/de/reading-order.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/it/reading-order.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/fr/reading-order.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/es/reading-order.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pt-br/reading-order.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/nl/reading-order.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pl/reading-order.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/"/>
+  </url>
+  <url>
+    <loc>https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pt-br/editions.html</loc>
+    <lastmod>2026-11-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/en/editions.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/de/editions.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/it/editions.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/fr/editions.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/es/editions.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pt-br/editions.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/nl/editions.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pl/editions.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/"/>
+  </url>
+  <url>
+    <loc>https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/nl/</loc>
+    <lastmod>2026-11-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/en/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/de/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/it/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/fr/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pt-br/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/nl/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pl/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/"/>
+  </url>
+  <url>
+    <loc>https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/nl/book-1.html</loc>
+    <lastmod>2026-11-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/en/book-1.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/de/book-1.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/it/book-1.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/fr/book-1.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/es/book-1.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pt-br/book-1.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/nl/book-1.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pl/book-1.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/"/>
+  </url>
+  <url>
+    <loc>https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/nl/book-2.html</loc>
+    <lastmod>2026-11-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/en/book-2.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/de/book-2.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/it/book-2.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/fr/book-2.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/es/book-2.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pt-br/book-2.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/nl/book-2.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pl/book-2.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/"/>
+  </url>
+  <url>
+    <loc>https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/nl/author.html</loc>
+    <lastmod>2026-11-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/en/author.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/de/author.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/it/author.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/fr/author.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/es/author.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pt-br/author.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/nl/author.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pl/author.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/"/>
+  </url>
+  <url>
+    <loc>https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/nl/reading-order.html</loc>
+    <lastmod>2026-11-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/en/reading-order.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/de/reading-order.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/it/reading-order.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/fr/reading-order.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/es/reading-order.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pt-br/reading-order.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/nl/reading-order.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pl/reading-order.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/"/>
+  </url>
+  <url>
+    <loc>https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/nl/editions.html</loc>
+    <lastmod>2026-11-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/en/editions.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/de/editions.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/it/editions.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/fr/editions.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/es/editions.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pt-br/editions.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/nl/editions.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pl/editions.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/"/>
+  </url>
+  <url>
+    <loc>https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pl/</loc>
+    <lastmod>2026-11-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/en/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/de/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/it/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/fr/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pt-br/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/nl/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pl/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/"/>
+  </url>
+  <url>
+    <loc>https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pl/book-1.html</loc>
+    <lastmod>2026-11-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/en/book-1.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/de/book-1.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/it/book-1.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/fr/book-1.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/es/book-1.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pt-br/book-1.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/nl/book-1.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pl/book-1.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/"/>
+  </url>
+  <url>
+    <loc>https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pl/book-2.html</loc>
+    <lastmod>2026-11-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/en/book-2.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/de/book-2.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/it/book-2.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/fr/book-2.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/es/book-2.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pt-br/book-2.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/nl/book-2.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pl/book-2.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/"/>
+  </url>
+  <url>
+    <loc>https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pl/author.html</loc>
+    <lastmod>2026-11-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/en/author.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/de/author.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/it/author.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/fr/author.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/es/author.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pt-br/author.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/nl/author.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pl/author.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/"/>
+  </url>
+  <url>
+    <loc>https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pl/reading-order.html</loc>
+    <lastmod>2026-11-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/en/reading-order.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/de/reading-order.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/it/reading-order.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/fr/reading-order.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/es/reading-order.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pt-br/reading-order.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/nl/reading-order.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pl/reading-order.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/"/>
+  </url>
+  <url>
+    <loc>https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pl/editions.html</loc>
+    <lastmod>2026-11-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/en/editions.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/de/editions.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/it/editions.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/fr/editions.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/es/editions.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pt-br/editions.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/nl/editions.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/pl/editions.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/"/>
   </url>
 </urlset>
