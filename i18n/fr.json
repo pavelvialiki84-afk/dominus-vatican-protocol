@@ -2,11 +2,16 @@
   "available": "Disponible",
   "soon": "Bientôt",
   "formats": {
-    "kindle": "Kindle",
     "paperback": "Broché",
-    "hardcover": "Relié"
+    "hardcover": "Relié",
+    "ebook": "Kindle"
   },
   "buy": "Acheter",
   "volume": "Volume",
-  "noKindle": "Non proposé"
+  "noKindle": "Non proposé",
+  "menu": {
+    "home": "Accueil",
+    "books": "Livres"
+  },
+  "todo": "Informations à venir"
 }
