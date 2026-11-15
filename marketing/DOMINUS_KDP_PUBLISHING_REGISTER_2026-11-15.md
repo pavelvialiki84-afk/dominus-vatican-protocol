@@ -6,13 +6,13 @@ Source: official KDP Gmail notifications for German paperback and hardcover, rec
 |---|---|---|---|---|
 | English | Kindle | LIVE, author-confirmed | $3.99 | https://www.amazon.com/dp/B0HM4CLBZ2 |
 | English | Paperback | LIVE, author-confirmed | $14.99 | https://www.amazon.com/dp/B0HM42FNB3 |
-| English | Hardcover | In review as of Nov 14; recheck Bookshelf | $24.99 planned | Not confirmed |
+| English | Hardcover | IN REVIEW, confirmed KDP Bookshelf Nov 15 | $24.99 planned | Not confirmed |
 | German | Kindle | LIVE, author-confirmed | €3.99 | https://www.amazon.de/dp/B0HRM5NLBY |
-| German | Paperback | PUBLISHED, official KDP email Nov 14 18:33 UTC | €16.90 last reported | https://www.amazon.de/dp/B0HRQMHRW4 |
-| German | Hardcover | PUBLISHED, official KDP email Nov 14 20:29 UTC | €24.90 last reported | https://www.amazon.de/dp/B0HRQT4453 |
-| French | Kindle | In review Nov 14; no new email located | €4.99 planned | Not confirmed |
-| French | Paperback | In review Nov 14; no new email located | €16.90 planned | Not confirmed |
-| French | Hardcover | Not submitted as of Nov 14 | Not set | Not confirmed |
+| German | Paperback | LIVE, confirmed KDP Bookshelf Nov 15 | €16.90 last reported | https://www.amazon.de/dp/B0HRQMHRW4 |
+| German | Hardcover | LIVE, confirmed KDP Bookshelf Nov 15 | €24.90 last reported | https://www.amazon.de/dp/B0HRQT4453 |
+| French | Kindle | IN REVIEW, confirmed KDP Bookshelf Nov 15; KDP Select eBook enrolled | €4.99 planned | Not confirmed |
+| French | Paperback | IN REVIEW, confirmed KDP Bookshelf Nov 15 | €16.90 planned | Not confirmed |
+| French | Hardcover | NOT CREATED, confirmed KDP Bookshelf Nov 15 | Not set | Not confirmed |
 
 ## Next actions
 
@@ -33,3 +33,7 @@ Source: official KDP Gmail notifications for German paperback and hardcover, rec
 - https://kdp.amazon.com/en_US/help/topic/GD9PMU58BV24QFZ7
 
 Official notification means published, not necessarily instantly stocked in all Amazon markets. No unsupported sales or ranking claims.
+
+## Verified 15 November KDP Bookshelf snapshot
+
+Author-provided Bookshelf screen text establishes 6 LIVE books: English Kindle + paperback; German Kindle + paperback + hardcover (3 formats); and no French live formats. English hardcover, French Kindle and French paperback are IN REVIEW. French hardcover shows **+ Create hardcover / Link existing hardcover** and has not been created. French Kindle is marked **KDP Select: eBook enrolled**. Listed retail prices: EN $3.99 / $14.99 / $24.99; DE €3.99 / €16.90 / €24.90; FR €4.99 / €16.90. These are KDP-authoritative status observations and supersede previous stale reports. Do not republish pending formats; focus on preparing French hardcover. This 15 Nov snapshot did not supply a French edition ASIN or English hardcover ASIN.
