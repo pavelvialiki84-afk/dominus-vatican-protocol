@@ -4,10 +4,12 @@ from pathlib import Path
 import xml.etree.ElementTree as ET
 from html.parser import HTMLParser
 
-ROOT = "https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/"
+ROOT = "https://dominusbooks.com/"
 PAGES = {"en":("index.html",ROOT),
          "de":("dominus-band1-de.html",ROOT+"dominus-band1-de.html"),
-         "fr":("dominus-volume1-fr.html",ROOT+"dominus-volume1-fr.html")}
+         "fr":("dominus-volume1-fr.html",ROOT+"dominus-volume1-fr.html"),
+         "it":("dominus-volume1-it.html",ROOT+"dominus-volume1-it.html"),
+         "es":("dominus-volumen1-es.html",ROOT+"dominus-volumen1-es.html")}
 NS={"s":"http://www.sitemaps.org/schemas/sitemap/0.9",
     "x":"http://www.w3.org/1999/xhtml"}
 class HeadLinks(HTMLParser):
@@ -46,4 +48,5 @@ for language,(filename,url) in AUTHOR.items():
     assert canonical==[url], f"Wrong canonical in {filename}"
     alts={(tag.get("hreflang"),tag.get("href")) for tag in parser.links if tag.get("rel")=="alternate"}
     assert alts==auth_expected, f"Wrong alternate pages in {filename}"
-print("PASS: sitemap 6 canonical EN/DE/FR pages and 24 reciprocal hreflang links verified.")
+print("PASS: five language landing pages and three author profiles have canonical and reciprocal hreflang links.")
+
