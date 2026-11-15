@@ -2,7 +2,7 @@
   "version": "2026-11-15",
   "source": "Author-provided Amazon KDP dashboard; live stores not independently reverified",
   "notes": {
-    "es": "Amazon listing provided by author uses 'DOMINUS — El Protocolo del Vaticano: Volumen 1: Cisma'. The requested canonical naming is retained in title until reviewed; do not change Amazon metadata without review.",
+    "es": "Official Spanish book title follows the author's confirmed Amazon KDP listing: DOMINUS — El Protocolo del Vaticano: Volumen 1: Cisma.",
     "fr": "French Kindle is enrolled in KDP Select. Kobo and Google Play links intentionally absent."
   },
   "editions": [
@@ -313,7 +313,7 @@
     {
       "language": "es",
       "volume": 1,
-      "title": "El Protocolo Vaticano. Volumen 1: Cisma",
+      "title": "DOMINUS — El Protocolo del Vaticano: Volumen 1: Cisma",
       "amazonMarket": "amazon.es",
       "formats": {
         "kindle": {
