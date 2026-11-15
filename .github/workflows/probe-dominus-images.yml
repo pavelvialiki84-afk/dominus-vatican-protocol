@@ -1,9 +1,6 @@
 name: Probe original Canva image resolution for DOMINUS
 on:
   workflow_dispatch:
-  push:
-    paths:
-      - .github/workflows/probe-dominus-images.yml
 permissions:
   contents: read
 jobs:
