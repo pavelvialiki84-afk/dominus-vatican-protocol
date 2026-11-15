@@ -2,11 +2,16 @@
   "available": "Disponibile",
   "soon": "Prossimamente",
   "formats": {
-    "kindle": "Kindle",
     "paperback": "Copertina flessibile",
-    "hardcover": "Copertina rigida"
+    "hardcover": "Copertina rigida",
+    "ebook": "Kindle"
   },
   "buy": "Acquista",
   "volume": "Volume",
-  "noKindle": "Non disponibile"
+  "noKindle": "Non disponibile",
+  "menu": {
+    "home": "Inizio",
+    "books": "Libri"
+  },
+  "todo": "Dettagli in arrivo"
 }
