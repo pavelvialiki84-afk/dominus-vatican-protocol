@@ -13,5 +13,22 @@
     "home": "Home",
     "books": "Boeken"
   },
-  "todo": "Meer informatie volgt"
+  "todo": "Meer informatie volgt",
+  "reader": {
+    "newsletterTitle": "Meld je aan voor het archief",
+    "newsletterDescription": "Nieuws over de reeks en exclusief materiaal voor lezers.",
+    "consentLabel": "Ik ga ermee akkoord om naar Substack te gaan en daar mijn e-mailadres op te geven voor de DOMINUS-nieuwsbrief. Afmelden kan op elk moment.",
+    "continueToSubstack": "Verder naar Substack",
+    "privacyAssurance": "Deze website verzamelt of bewaart geen e-mailadressen.",
+    "subscribe": "Aanmelden",
+    "resources": "Voor lezers",
+    "readingPath": "Deel 1 → Archiefprotocol 2008 → Deel 2",
+    "dossierTitle": "Exclusief dossier",
+    "dossierTodo": "TODO: exclusieve pdf beschikbaar na goedkeuring van de auteur.",
+    "chaptersTitle": "Hoofdstukken downloaden",
+    "chaptersTodo": "TODO: EPUB- en pdf-fragmenten volgen na goedkeuring.",
+    "privacyTitle": "Privacy en nieuwsbrief",
+    "privacyDescription": "Deze website verzamelt geen e-mailadressen. Je wordt doorgestuurd naar Substack, waar je het privacybeleid kunt lezen en je kunt aanmelden. De uitgever moet e-mailbevestiging inschakelen.",
+    "impressumTodo": "Juridische informatie: TODO — zakelijk correspondentieadres invullen."
+  }
 }

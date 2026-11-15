@@ -13,5 +13,22 @@
     "home": "Startseite",
     "books": "Bücher"
   },
-  "todo": "Weitere Angaben folgen"
+  "todo": "Weitere Angaben folgen",
+  "reader": {
+    "newsletterTitle": "Zum Archiv-Newsletter",
+    "newsletterDescription": "Neuigkeiten zur Reihe und exklusive Materialien für Leserinnen und Leser.",
+    "consentLabel": "Ich bin damit einverstanden, zu Substack weitergeleitet zu werden und meine E-Mail-Adresse dort für den DOMINUS-Newsletter anzugeben. Ich kann mich jederzeit abmelden.",
+    "continueToSubstack": "Weiter zu Substack",
+    "privacyAssurance": "Diese Website erfasst oder speichert keine E-Mail-Adressen.",
+    "subscribe": "Abonnieren",
+    "resources": "Für Leser",
+    "readingPath": "Band 1 → Archivprotokoll 2008 → Band 2",
+    "dossierTitle": "Exklusives Dossier",
+    "dossierTodo": "TODO: Das zusätzliche PDF folgt nach Freigabe durch den Autor.",
+    "chaptersTitle": "Kapitel zum Download",
+    "chaptersTodo": "TODO: EPUB- und PDF-Leseproben werden nach Freigabe ergänzt.",
+    "privacyTitle": "Datenschutz und Newsletter",
+    "privacyDescription": "Diese Website erhebt keine E-Mail-Adressen. Bei Klick auf Weiter wechseln Sie zu Substack. Dort gelten die Datenschutzinformationen des Dienstes. Die E-Mail-Bestätigung muss vom Herausgeber aktiviert werden.",
+    "impressumTodo": "Impressum / Kontaktanschrift: TODO — Geschäftsadresse für die Korrespondenz ergänzen."
+  }
 }

@@ -13,5 +13,22 @@
     "home": "Accueil",
     "books": "Livres"
   },
-  "todo": "Informations à venir"
+  "todo": "Informations à venir",
+  "reader": {
+    "newsletterTitle": "Rejoindre les archives",
+    "newsletterDescription": "Les nouvelles de la série et des documents exclusifs pour les lecteurs.",
+    "consentLabel": "J'accepte d'être redirigé vers Substack pour y communiquer mon adresse e-mail et recevoir la lettre DOMINUS. Je pourrai me désinscrire à tout moment.",
+    "continueToSubstack": "Continuer vers Substack",
+    "privacyAssurance": "Ce site ne collecte ni ne conserve d'adresse e-mail.",
+    "subscribe": "S'abonner",
+    "resources": "Espace lecteurs",
+    "readingPath": "Volume 1 → Protocole d'archives 2008 → Volume 2",
+    "dossierTitle": "Dossier exclusif",
+    "dossierTodo": "TODO : PDF inédit à fournir après validation de l'auteur.",
+    "chaptersTitle": "Chapitres à télécharger",
+    "chaptersTodo": "TODO : extraits EPUB et PDF à ajouter après validation.",
+    "privacyTitle": "Confidentialité et lettre d'information",
+    "privacyDescription": "Ce site ne collecte pas d'adresse e-mail. Le lien d'abonnement mène à Substack, dont les conditions de confidentialité s'appliquent. La confirmation par e-mail doit être activée par l'éditeur.",
+    "impressumTodo": "Mentions légales : TODO — renseigner une adresse de correspondance professionnelle."
+  }
 }
