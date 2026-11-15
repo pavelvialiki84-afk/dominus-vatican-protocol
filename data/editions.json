@@ -1,0 +1,618 @@
+{
+  "version": "2026-11-15",
+  "source": "Author-provided Amazon KDP dashboard; live stores not independently reverified",
+  "notes": {
+    "es": "Amazon listing provided by author uses 'DOMINUS — El Protocolo del Vaticano: Volumen 1: Cisma'. The requested canonical naming is retained in title until reviewed; do not change Amazon metadata without review.",
+    "fr": "French Kindle is enrolled in KDP Select. Kobo and Google Play links intentionally absent."
+  },
+  "editions": [
+    {
+      "language": "en",
+      "volume": 1,
+      "title": "DOMINUS — The Vatican Protocol. Book One: Schism",
+      "amazonMarket": "amazon.com",
+      "formats": {
+        "kindle": {
+          "status": "live",
+          "price": "3.99",
+          "currency": "USD",
+          "stores": {
+            "amazon": "https://www.amazon.com/dp/B0HM4CLBZ2",
+            "kobo": null,
+            "googlePlay": null
+          }
+        },
+        "paperback": {
+          "status": "live",
+          "price": "14.99",
+          "currency": "USD",
+          "stores": {
+            "amazon": "https://www.amazon.com/dp/B0HM42FNB3",
+            "kobo": null,
+            "googlePlay": null
+          }
+        },
+        "hardcover": {
+          "status": "coming_soon",
+          "price": "24.99",
+          "currency": "USD",
+          "stores": {
+            "amazon": null,
+            "kobo": null,
+            "googlePlay": null
+          }
+        }
+      }
+    },
+    {
+      "language": "en",
+      "volume": 2,
+      "title": "DOMINUS — The Vatican Protocol. Book Two: The Last Day",
+      "amazonMarket": "amazon.com",
+      "formats": {
+        "kindle": {
+          "status": "coming_soon",
+          "price": null,
+          "currency": null,
+          "stores": {
+            "amazon": null,
+            "kobo": null,
+            "googlePlay": null
+          }
+        },
+        "paperback": {
+          "status": "coming_soon",
+          "price": null,
+          "currency": null,
+          "stores": {
+            "amazon": null,
+            "kobo": null,
+            "googlePlay": null
+          }
+        },
+        "hardcover": {
+          "status": "coming_soon",
+          "price": null,
+          "currency": null,
+          "stores": {
+            "amazon": null,
+            "kobo": null,
+            "googlePlay": null
+          }
+        }
+      }
+    },
+    {
+      "language": "de",
+      "volume": 1,
+      "title": "Das Vatikan-Protokoll. Band 1: Schisma",
+      "amazonMarket": "amazon.de",
+      "formats": {
+        "kindle": {
+          "status": "live",
+          "price": "3.99",
+          "currency": "EUR",
+          "stores": {
+            "amazon": "https://www.amazon.de/dp/B0HRM5NLBY",
+            "kobo": null,
+            "googlePlay": null
+          }
+        },
+        "paperback": {
+          "status": "live",
+          "price": "16.90",
+          "currency": "EUR",
+          "stores": {
+            "amazon": "https://www.amazon.de/dp/B0HRQMHRW4",
+            "kobo": null,
+            "googlePlay": null
+          }
+        },
+        "hardcover": {
+          "status": "live",
+          "price": "24.90",
+          "currency": "EUR",
+          "stores": {
+            "amazon": "https://www.amazon.de/dp/B0HRQT4453",
+            "kobo": null,
+            "googlePlay": null
+          }
+        }
+      }
+    },
+    {
+      "language": "de",
+      "volume": 2,
+      "title": "Das Vatikan-Protokoll. Band 2: Der letzte Tag",
+      "amazonMarket": "amazon.de",
+      "formats": {
+        "kindle": {
+          "status": "coming_soon",
+          "price": null,
+          "currency": null,
+          "stores": {
+            "amazon": null,
+            "kobo": null,
+            "googlePlay": null
+          }
+        },
+        "paperback": {
+          "status": "coming_soon",
+          "price": null,
+          "currency": null,
+          "stores": {
+            "amazon": null,
+            "kobo": null,
+            "googlePlay": null
+          }
+        },
+        "hardcover": {
+          "status": "coming_soon",
+          "price": null,
+          "currency": null,
+          "stores": {
+            "amazon": null,
+            "kobo": null,
+            "googlePlay": null
+          }
+        }
+      }
+    },
+    {
+      "language": "it",
+      "volume": 1,
+      "title": "Il Protocollo Vaticano. Volume 1: Scisma",
+      "amazonMarket": "amazon.it",
+      "formats": {
+        "kindle": {
+          "status": "live",
+          "price": "4.99",
+          "currency": "EUR",
+          "stores": {
+            "amazon": "https://www.amazon.it/dp/B0HRS5T51P",
+            "kobo": null,
+            "googlePlay": null
+          }
+        },
+        "paperback": {
+          "status": "coming_soon",
+          "price": "16.90",
+          "currency": "EUR",
+          "stores": {
+            "amazon": null,
+            "kobo": null,
+            "googlePlay": null
+          }
+        },
+        "hardcover": {
+          "status": "coming_soon",
+          "price": null,
+          "currency": null,
+          "stores": {
+            "amazon": null,
+            "kobo": null,
+            "googlePlay": null
+          }
+        }
+      }
+    },
+    {
+      "language": "it",
+      "volume": 2,
+      "title": "Il Protocollo Vaticano. Volume 2: L'ultimo giorno",
+      "amazonMarket": "amazon.it",
+      "formats": {
+        "kindle": {
+          "status": "coming_soon",
+          "price": null,
+          "currency": null,
+          "stores": {
+            "amazon": null,
+            "kobo": null,
+            "googlePlay": null
+          }
+        },
+        "paperback": {
+          "status": "coming_soon",
+          "price": null,
+          "currency": null,
+          "stores": {
+            "amazon": null,
+            "kobo": null,
+            "googlePlay": null
+          }
+        },
+        "hardcover": {
+          "status": "coming_soon",
+          "price": null,
+          "currency": null,
+          "stores": {
+            "amazon": null,
+            "kobo": null,
+            "googlePlay": null
+          }
+        }
+      }
+    },
+    {
+      "language": "fr",
+      "volume": 1,
+      "title": "Le Protocole du Vatican. Volume 1 : Schisme",
+      "amazonMarket": "amazon.fr",
+      "formats": {
+        "kindle": {
+          "status": "live",
+          "price": "4.99",
+          "currency": "EUR",
+          "stores": {
+            "amazon": "https://www.amazon.fr/dp/B0HRS1TDS6",
+            "kobo": null,
+            "googlePlay": null
+          }
+        },
+        "paperback": {
+          "status": "coming_soon",
+          "price": "16.90",
+          "currency": "EUR",
+          "stores": {
+            "amazon": null,
+            "kobo": null,
+            "googlePlay": null
+          }
+        },
+        "hardcover": {
+          "status": "coming_soon",
+          "price": null,
+          "currency": null,
+          "stores": {
+            "amazon": null,
+            "kobo": null,
+            "googlePlay": null
+          }
+        }
+      }
+    },
+    {
+      "language": "fr",
+      "volume": 2,
+      "title": "Le Protocole du Vatican. Volume 2 : Le Dernier Jour",
+      "amazonMarket": "amazon.fr",
+      "formats": {
+        "kindle": {
+          "status": "coming_soon",
+          "price": null,
+          "currency": null,
+          "stores": {
+            "amazon": null,
+            "kobo": null,
+            "googlePlay": null
+          }
+        },
+        "paperback": {
+          "status": "coming_soon",
+          "price": null,
+          "currency": null,
+          "stores": {
+            "amazon": null,
+            "kobo": null,
+            "googlePlay": null
+          }
+        },
+        "hardcover": {
+          "status": "coming_soon",
+          "price": null,
+          "currency": null,
+          "stores": {
+            "amazon": null,
+            "kobo": null,
+            "googlePlay": null
+          }
+        }
+      }
+    },
+    {
+      "language": "es",
+      "volume": 1,
+      "title": "El Protocolo Vaticano. Volumen 1: Cisma",
+      "amazonMarket": "amazon.es",
+      "formats": {
+        "kindle": {
+          "status": "coming_soon",
+          "price": "4.99",
+          "currency": "EUR",
+          "stores": {
+            "amazon": null,
+            "kobo": null,
+            "googlePlay": null
+          }
+        },
+        "paperback": {
+          "status": "coming_soon",
+          "price": "16.90",
+          "currency": "EUR",
+          "stores": {
+            "amazon": null,
+            "kobo": null,
+            "googlePlay": null
+          }
+        },
+        "hardcover": {
+          "status": "coming_soon",
+          "price": null,
+          "currency": null,
+          "stores": {
+            "amazon": null,
+            "kobo": null,
+            "googlePlay": null
+          }
+        }
+      }
+    },
+    {
+      "language": "es",
+      "volume": 2,
+      "title": "El Protocolo Vaticano. Volumen 2: El último día",
+      "amazonMarket": "amazon.es",
+      "formats": {
+        "kindle": {
+          "status": "coming_soon",
+          "price": null,
+          "currency": null,
+          "stores": {
+            "amazon": null,
+            "kobo": null,
+            "googlePlay": null
+          }
+        },
+        "paperback": {
+          "status": "coming_soon",
+          "price": null,
+          "currency": null,
+          "stores": {
+            "amazon": null,
+            "kobo": null,
+            "googlePlay": null
+          }
+        },
+        "hardcover": {
+          "status": "coming_soon",
+          "price": null,
+          "currency": null,
+          "stores": {
+            "amazon": null,
+            "kobo": null,
+            "googlePlay": null
+          }
+        }
+      }
+    },
+    {
+      "language": "pt-br",
+      "volume": 1,
+      "title": "O Protocolo do Vaticano. Volume 1: Cisma",
+      "amazonMarket": "amazon.com.br",
+      "formats": {
+        "kindle": {
+          "status": "coming_soon",
+          "price": null,
+          "currency": null,
+          "stores": {
+            "amazon": null,
+            "kobo": null,
+            "googlePlay": null
+          }
+        },
+        "paperback": {
+          "status": "coming_soon",
+          "price": null,
+          "currency": null,
+          "stores": {
+            "amazon": null,
+            "kobo": null,
+            "googlePlay": null
+          }
+        },
+        "hardcover": {
+          "status": "coming_soon",
+          "price": null,
+          "currency": null,
+          "stores": {
+            "amazon": null,
+            "kobo": null,
+            "googlePlay": null
+          }
+        }
+      }
+    },
+    {
+      "language": "pt-br",
+      "volume": 2,
+      "title": "O Protocolo do Vaticano. Volume 2: O último dia",
+      "amazonMarket": "amazon.com.br",
+      "formats": {
+        "kindle": {
+          "status": "coming_soon",
+          "price": null,
+          "currency": null,
+          "stores": {
+            "amazon": null,
+            "kobo": null,
+            "googlePlay": null
+          }
+        },
+        "paperback": {
+          "status": "coming_soon",
+          "price": null,
+          "currency": null,
+          "stores": {
+            "amazon": null,
+            "kobo": null,
+            "googlePlay": null
+          }
+        },
+        "hardcover": {
+          "status": "coming_soon",
+          "price": null,
+          "currency": null,
+          "stores": {
+            "amazon": null,
+            "kobo": null,
+            "googlePlay": null
+          }
+        }
+      }
+    },
+    {
+      "language": "nl",
+      "volume": 1,
+      "title": "Het Vaticaanprotocol. Deel 1: Schisma",
+      "amazonMarket": "amazon.nl",
+      "formats": {
+        "kindle": {
+          "status": "coming_soon",
+          "price": null,
+          "currency": null,
+          "stores": {
+            "amazon": null,
+            "kobo": null,
+            "googlePlay": null
+          }
+        },
+        "paperback": {
+          "status": "coming_soon",
+          "price": null,
+          "currency": null,
+          "stores": {
+            "amazon": null,
+            "kobo": null,
+            "googlePlay": null
+          }
+        },
+        "hardcover": {
+          "status": "coming_soon",
+          "price": null,
+          "currency": null,
+          "stores": {
+            "amazon": null,
+            "kobo": null,
+            "googlePlay": null
+          }
+        }
+      }
+    },
+    {
+      "language": "nl",
+      "volume": 2,
+      "title": "Het Vaticaanprotocol. Deel 2: De laatste dag",
+      "amazonMarket": "amazon.nl",
+      "formats": {
+        "kindle": {
+          "status": "coming_soon",
+          "price": null,
+          "currency": null,
+          "stores": {
+            "amazon": null,
+            "kobo": null,
+            "googlePlay": null
+          }
+        },
+        "paperback": {
+          "status": "coming_soon",
+          "price": null,
+          "currency": null,
+          "stores": {
+            "amazon": null,
+            "kobo": null,
+            "googlePlay": null
+          }
+        },
+        "hardcover": {
+          "status": "coming_soon",
+          "price": null,
+          "currency": null,
+          "stores": {
+            "amazon": null,
+            "kobo": null,
+            "googlePlay": null
+          }
+        }
+      }
+    },
+    {
+      "language": "pl",
+      "volume": 1,
+      "title": "Watykański protokół. Tom 1: Schizma",
+      "amazonMarket": "amazon.pl",
+      "formats": {
+        "kindle": {
+          "status": "not_offered",
+          "price": null,
+          "currency": null,
+          "stores": {
+            "amazon": null,
+            "kobo": null,
+            "googlePlay": null
+          }
+        },
+        "paperback": {
+          "status": "coming_soon",
+          "price": null,
+          "currency": null,
+          "stores": {
+            "amazon": null,
+            "kobo": null,
+            "googlePlay": null
+          }
+        },
+        "hardcover": {
+          "status": "coming_soon",
+          "price": null,
+          "currency": null,
+          "stores": {
+            "amazon": null,
+            "kobo": null,
+            "googlePlay": null
+          }
+        }
+      }
+    },
+    {
+      "language": "pl",
+      "volume": 2,
+      "title": "Watykański protokół. Tom 2: Ostatni dzień",
+      "amazonMarket": "amazon.pl",
+      "formats": {
+        "kindle": {
+          "status": "not_offered",
+          "price": null,
+          "currency": null,
+          "stores": {
+            "amazon": null,
+            "kobo": null,
+            "googlePlay": null
+          }
+        },
+        "paperback": {
+          "status": "coming_soon",
+          "price": null,
+          "currency": null,
+          "stores": {
+            "amazon": null,
+            "kobo": null,
+            "googlePlay": null
+          }
+        },
+        "hardcover": {
+          "status": "coming_soon",
+          "price": null,
+          "currency": null,
+          "stores": {
+            "amazon": null,
+            "kobo": null,
+            "googlePlay": null
+          }
+        }
+      }
+    }
+  ]
+}
