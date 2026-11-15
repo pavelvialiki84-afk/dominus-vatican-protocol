@@ -1,0 +1,149 @@
+{
+  "version": "2026-11-15",
+  "resources": [
+    {
+      "language": "en",
+      "kind": "dossier_pdf",
+      "url": null,
+      "status": "soon"
+    },
+    {
+      "language": "en",
+      "kind": "chapter_pdf",
+      "url": null,
+      "status": "soon"
+    },
+    {
+      "language": "en",
+      "kind": "chapter_epub",
+      "url": null,
+      "status": "soon"
+    },
+    {
+      "language": "de",
+      "kind": "dossier_pdf",
+      "url": null,
+      "status": "soon"
+    },
+    {
+      "language": "de",
+      "kind": "chapter_pdf",
+      "url": null,
+      "status": "soon"
+    },
+    {
+      "language": "de",
+      "kind": "chapter_epub",
+      "url": null,
+      "status": "soon"
+    },
+    {
+      "language": "it",
+      "kind": "dossier_pdf",
+      "url": null,
+      "status": "soon"
+    },
+    {
+      "language": "it",
+      "kind": "chapter_pdf",
+      "url": null,
+      "status": "soon"
+    },
+    {
+      "language": "it",
+      "kind": "chapter_epub",
+      "url": null,
+      "status": "soon"
+    },
+    {
+      "language": "fr",
+      "kind": "dossier_pdf",
+      "url": null,
+      "status": "soon"
+    },
+    {
+      "language": "fr",
+      "kind": "chapter_pdf",
+      "url": null,
+      "status": "soon"
+    },
+    {
+      "language": "fr",
+      "kind": "chapter_epub",
+      "url": null,
+      "status": "soon"
+    },
+    {
+      "language": "es",
+      "kind": "dossier_pdf",
+      "url": null,
+      "status": "soon"
+    },
+    {
+      "language": "es",
+      "kind": "chapter_pdf",
+      "url": null,
+      "status": "soon"
+    },
+    {
+      "language": "es",
+      "kind": "chapter_epub",
+      "url": null,
+      "status": "soon"
+    },
+    {
+      "language": "pt-br",
+      "kind": "dossier_pdf",
+      "url": null,
+      "status": "soon"
+    },
+    {
+      "language": "pt-br",
+      "kind": "chapter_pdf",
+      "url": null,
+      "status": "soon"
+    },
+    {
+      "language": "pt-br",
+      "kind": "chapter_epub",
+      "url": null,
+      "status": "soon"
+    },
+    {
+      "language": "nl",
+      "kind": "dossier_pdf",
+      "url": null,
+      "status": "soon"
+    },
+    {
+      "language": "nl",
+      "kind": "chapter_pdf",
+      "url": null,
+      "status": "soon"
+    },
+    {
+      "language": "nl",
+      "kind": "chapter_epub",
+      "url": null,
+      "status": "soon"
+    },
+    {
+      "language": "pl",
+      "kind": "dossier_pdf",
+      "url": null,
+      "status": "soon"
+    },
+    {
+      "language": "pl",
+      "kind": "chapter_pdf",
+      "url": null,
+      "status": "soon"
+    },
+    {
+      "language": "pl",
+      "kind": "chapter_epub",
+      "url": null,
+      "status": "soon"
+    }
+  ]
+}
