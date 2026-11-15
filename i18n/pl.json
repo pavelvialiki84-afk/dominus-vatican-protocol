@@ -1,0 +1,12 @@
+{
+  "available": "Dostępne",
+  "soon": "Wkrótce",
+  "formats": {
+    "kindle": "Kindle",
+    "paperback": "Miękka oprawa",
+    "hardcover": "Twarda oprawa"
+  },
+  "buy": "Kup",
+  "volume": "Tom",
+  "noKindle": "Brak wydania Kindle"
+}
