@@ -26,14 +26,14 @@ jobs:
           npx playwright install --with-deps chromium
       - name: Serve static files for QA only
         run: python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/dominus-http.log 2>&1 &
-      - name: Validate 48 localized URLs and capture screenshots
+      - name: Validate 64 URLs, newsletter opt-in and screenshots
         run: |
           mkdir -p qa-artifacts
           node <<'JS'
           const {chromium}=require('playwright');
           const fs=require('fs');
           const langs=['en','de','it','fr','es','pt-br','nl','pl'];
-          const files=['','book-1.html','book-2.html','author.html','reading-order.html','editions.html'];
+          const files=['','book-1.html','book-2.html','author.html','reading-order.html','editions.html','reader-resources.html','privacy.html'];
           (async()=>{
           const browser=await chromium.launch({headless:true,args:['--no-sandbox']});
           const errors=[];
@@ -55,12 +55,14 @@ jobs:
               if(!result.hasCanonical||result.hreflangs<9)errors.push(path+' SEO metadata missing');
               if(result.overflow)errors.push(path+' horizontal overflow '+mode);
               if(result.forbidden)errors.push(path+' internal status in text');
-              if(!file)await page.screenshot({path:'qa-artifacts/'+lang+'-'+mode+'.png',fullPage:true,animations:'disabled'});
+              if(!result.hasCanonical||result.hreflangs<9)errors.push(path+' missing SEO');
+              const newsletter=page.locator('main .reader-optin');if(await newsletter.count()!==1)errors.push(path+' newsletter missing');else {const button=newsletter.locator('button[type="submit"]');if(!await button.isDisabled())errors.push(path+' newsletter must require explicit consent');await newsletter.locator('input[type="checkbox"]').check();if(!await button.isEnabled())errors.push(path+' consent checkbox failed');}
+              if(!file||file==='reader-resources.html')await page.screenshot({path:'qa-artifacts/'+lang+'-'+mode+'.png',fullPage:true,animations:'disabled'});
               await page.close();
             }
             await context.close();
           }
-          await browser.close();fs.writeFileSync('qa-artifacts/results.json',JSON.stringify({errors,urls:48,viewports:[390,1366]},null,2));
+          await browser.close();fs.writeFileSync('qa-artifacts/results.json',JSON.stringify({errors,urls:64,viewports:[390,1366]},null,2));
           if(errors.length){console.error(errors.join('\n'));process.exitCode=1}
           })().catch(e=>{console.error(e);process.exitCode=1});
           JS
