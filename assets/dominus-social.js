@@ -12,7 +12,7 @@ const box=document.createElement('nav');box.className='dominus-official-contacts
 const heading=document.createElement('strong');heading.textContent=t[0];box.append(heading);
 const add=(label,href,external)=>{const a=document.createElement('a');a.textContent=label;a.href=href;if(external){a.target='_blank';a.rel='noopener noreferrer';}box.append(a)};
 if(data.instagram?.status==='verified'&&/^https:\/\/www\.instagram\.com\/[a-z0-9._]+\/?$/i.test(data.instagram.url||''))add(t[1],data.instagram.url,true);
-if(data.facebook?.status==='verified'&&/^https:\/\/(www\.)?facebook\.com\/[a-z0-9._-]+\/?$/i.test(data.facebook.url||''))add(t[2],data.facebook.url,true);
+if(data.facebook?.status==='author-confirmed'&&data.facebook.url==='https://www.facebook.com/profile.php?id=61594883331502')add(t[2],data.facebook.url,true);
 if(data.email?.status==='connected'&&/^[a-z0-9._%+-]+@dominusbooks\.com$/i.test(data.email.primary||''))add(t[3], 'mailto:'+data.email.primary,false);
 const inner=footer.querySelector('.shell')||footer;inner.append(box);
 }).catch(err=>console.warn('Official contacts not loaded:',err.message));
