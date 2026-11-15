@@ -2,11 +2,16 @@
   "available": "Disponível",
   "soon": "Em breve",
   "formats": {
-    "kindle": "Kindle",
     "paperback": "Capa comum",
-    "hardcover": "Capa dura"
+    "hardcover": "Capa dura",
+    "ebook": "Kindle"
   },
   "buy": "Comprar",
   "volume": "Volume",
-  "noKindle": "Não oferecido"
+  "noKindle": "Não oferecido",
+  "menu": {
+    "home": "Início",
+    "books": "Livros"
+  },
+  "todo": "Informações em breve"
 }
