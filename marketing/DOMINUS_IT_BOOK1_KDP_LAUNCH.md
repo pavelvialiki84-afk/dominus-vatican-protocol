@@ -65,3 +65,9 @@ Choose KDP categories from the **actual current picker**, rather than inventing 
 - https://kdp.amazon.com/en_US/help/topic/G200641280
 
 **Current blocker:** KDP Bookshelf is not connected for direct write operations in this conversation. The actual Italian manuscript, ebook art and print files are not available from the known project upload list, so no genuine upload or publication has occurred.
+
+## AUTOMATED RELEASE BLOCK — 15 November 2026
+
+The existing FR/IT audit documents a confirmed chronological divergence between the published English Book I and FR/IT text in chapters 14–15. **The Italian edition is NOT editorially approved for uploading to KDP.** The author must select the canonical timeline; translation QA, independent EPUBCheck and print proof must follow. An EPUB can pass structural validation while retaining a substantive story continuity error. The title, synopsis, ISBN and prices in this page are DRAFTS, not a release authorization. The automated public catalogue now records `it-1` and `it-2` as `HOLD_CHRONOLOGY_RECONCILIATION`.
+
+Technical files can be checked privately using `scripts/book_bundle_preflight.py` without publishing copyrighted manuscripts to this public repo.
