@@ -1,0 +1,12 @@
+{
+  "available": "Erhältlich",
+  "soon": "Demnächst",
+  "formats": {
+    "kindle": "Kindle",
+    "paperback": "Taschenbuch",
+    "hardcover": "Gebundene Ausgabe"
+  },
+  "buy": "Kaufen",
+  "volume": "Band",
+  "noKindle": "Nicht erhältlich"
+}
