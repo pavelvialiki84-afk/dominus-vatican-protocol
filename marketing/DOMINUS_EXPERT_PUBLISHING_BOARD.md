@@ -100,3 +100,22 @@ Statuses: NOT STARTED, BLOCKED, IN REVIEW, READY FOR AUTHOR APPROVAL, APPROVED, 
 4. Which production gate is blocking English hardcover / French reviews?
 
 This document authorizes organization and planning only. It does NOT create autonomous agents, purchase advertising, grant access to KDP, or hire third parties.
+
+## Founder-approved operating delegation — 15 November 2026
+
+The author explicitly delegates these functions to the AI-led marketing/operations desk:
+- **Founder personally uploads / submits books to Amazon KDP and controls final publication.**
+- **Assistant leads** marketing strategy, organic social media content/planning/publication on connected official DOMINUS channels, press outreach preparation, Amazon product-page conversion recommendations, SEO, advertising planning, performance reporting, and evidence-based optimization.
+- **Paid advertising** may be planned and prepared, but actual ad spend, bid changes with spend impact, contracts or additional accounts require a stated budget approval and an authenticated suitable platform tool.
+- User-approved organic auto-publishing on already connected DOMINUS networks remains in effect; no fake claims, no misleading publication statuses, no unauthorized messages/reviews.
+- Author provides publication ASINs, approval notices, or KDP export metrics when no live KDP connector is available. Assistant immediately uses verified data to maintain web, social and press status.
+- No promise of perpetual autonomous activity: scheduled content is handled by Metricool only for posts actually queued, and scheduled code checks by GitHub Actions only as configured.
+
+### Channel inspection and actions on 15 November 2026
+- Metricool brand ID **8094045**, timezone **Europe/Berlin**: **Instagram @dominus.vatican.protocol is connected** (confirmed with getBrandSettings). Other networks have no confirmed active connections in brand settings; several preexisting Facebook planner entries are not proof that Facebook will publish.
+- Existing Instagram auto-publish posts scheduled 16 and 22 Nov corrected to reflect all three German Book I formats now **LIVE** (Metricool post IDs updated to 428819590 and 428819641).
+- New approved organic Instagram auto-publish posts created: **3 Dec 2026 18:00 CET German** (Metricool ID 428819898) and **5 Dec 2026 18:00 CET English** (ID 428819935). These are **SCHEDULED/PENDING**, not published yet.
+- Two post media URLs reuse previously-scheduled DOMINUS-themed images already in user's Metricool planner, declared AI-generated in the Instagram data. Do not claim the original artwork was newly produced.
+- French Kindle/Paperback remain IN REVIEW per last verified KDP Bookshelf; neither is publicly marketed as LIVE.
+- Search and Amazon Ads reporting need actual attributable click/order/royalty data, no forecasts presented as fact.
+
