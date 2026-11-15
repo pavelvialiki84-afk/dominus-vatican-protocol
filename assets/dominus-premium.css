@@ -259,3 +259,7 @@
 .author-aside .author-cover.source-preview{width:125px;height:200px;aspect-ratio:5/8;margin:18px auto 24px;border:1px solid #aa865a;box-shadow:0 14px 25px #000a}
 .author-aside .author-cover.source-preview img{display:block;width:125px;height:200px;object-fit:contain}
 .author-aside:has(.author-cover.source-preview){background:radial-gradient(circle at 50% 40%,#232834,#0b0e12 65%);min-height:300px}
+
+/* Stage 0: prevent fixed soundtrack controls from obscuring reading on small screens. */
+@media(max-width:680px){.site-audio-control{display:none!important}.trailer .sound-toggle{min-width:44px;min-height:44px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
