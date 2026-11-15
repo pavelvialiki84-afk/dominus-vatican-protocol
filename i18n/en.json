@@ -1,0 +1,17 @@
+{
+  "available": "Available",
+  "soon": "Coming soon",
+  "formats": {
+    "paperback": "Paperback",
+    "hardcover": "Hardcover",
+    "ebook": "Kindle"
+  },
+  "buy": "Buy",
+  "volume": "Book",
+  "noKindle": "Not offered",
+  "menu": {
+    "home": "Home",
+    "books": "Books"
+  },
+  "todo": "Details to be announced"
+}

@@ -263,3 +263,9 @@
 /* Stage 0: prevent fixed soundtrack controls from obscuring reading on small screens. */
 @media(max-width:680px){.site-audio-control{display:none!important}.trailer .sound-toggle{min-width:44px;min-height:44px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+
+/* DOMINUS mobile navigation */
+.dominus-menu-toggle{display:none;border:1px solid #c8a96f;border-radius:5px;background:#11151c;color:#f1e3c6;min-width:44px;min-height:44px;font:700 21px Arial,sans-serif;cursor:pointer}
+.bar{position:relative}
+@media(max-width:850px){.dominus-menu-toggle{display:inline-flex;align-items:center;justify-content:center}.bar .toplinks{display:none!important}.bar .toplinks.menu-open{display:flex!important;position:absolute;z-index:60;top:calc(100% - 2px);left:0;right:0;flex-direction:column;align-items:stretch;padding:16px;background:#090d13;border:1px solid #8e764f;box-shadow:0 12px 30px #000a}.bar .toplinks.menu-open a{display:block;padding:11px;min-height:44px}.bar .lang{overflow-x:auto;max-width:62vw}}
+.dominus-menu-toggle:focus-visible{outline:3px solid #fff;outline-offset:3px}
