@@ -30,5 +30,11 @@
     "privacyTitle": "Privacidade e newsletter",
     "privacyDescription": "Este site não coleta e-mails. Ao prosseguir, você acessa o Substack e poderá consultar a política de privacidade do serviço. A confirmação por e-mail deve ser ativada pelo editor.",
     "impressumTodo": "Informações legais: TODO — inserir endereço profissional de correspondência."
+  },
+  "projectContact": {
+    "heading": "Contato",
+    "caption": "Correspondência oficial",
+    "instagram": "Instagram",
+    "email": "E-mail"
   }
 }

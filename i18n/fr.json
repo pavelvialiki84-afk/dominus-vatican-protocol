@@ -30,5 +30,11 @@
     "privacyTitle": "Confidentialité et lettre d'information",
     "privacyDescription": "Ce site ne collecte pas d'adresse e-mail. Le lien d'abonnement mène à Substack, dont les conditions de confidentialité s'appliquent. La confirmation par e-mail doit être activée par l'éditeur.",
     "impressumTodo": "Mentions légales : TODO — renseigner une adresse de correspondance professionnelle."
+  },
+  "projectContact": {
+    "heading": "Contact",
+    "caption": "Correspondance officielle",
+    "instagram": "Instagram",
+    "email": "E-mail"
   }
 }

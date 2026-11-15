@@ -30,5 +30,11 @@
     "privacyTitle": "Personal data & newsletter",
     "privacyDescription": "The site does not collect email addresses. Selecting Continue sends you to Substack, where you can read its privacy terms and subscribe. Email verification must be activated by the publisher.",
     "impressumTodo": "Publication address / legal notice: TODO — professional correspondence address to be provided."
+  },
+  "projectContact": {
+    "heading": "Contact",
+    "caption": "Official correspondence",
+    "instagram": "Instagram",
+    "email": "Email"
   }
 }

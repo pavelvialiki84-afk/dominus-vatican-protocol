@@ -30,5 +30,11 @@
     "privacyTitle": "Privacy en nieuwsbrief",
     "privacyDescription": "Deze website verzamelt geen e-mailadressen. Je wordt doorgestuurd naar Substack, waar je het privacybeleid kunt lezen en je kunt aanmelden. De uitgever moet e-mailbevestiging inschakelen.",
     "impressumTodo": "Juridische informatie: TODO — zakelijk correspondentieadres invullen."
+  },
+  "projectContact": {
+    "heading": "Contact",
+    "caption": "Officiële correspondentie",
+    "instagram": "Instagram",
+    "email": "E-mail"
   }
 }

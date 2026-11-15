@@ -30,5 +30,11 @@
     "privacyTitle": "Datenschutz und Newsletter",
     "privacyDescription": "Diese Website erhebt keine E-Mail-Adressen. Bei Klick auf Weiter wechseln Sie zu Substack. Dort gelten die Datenschutzinformationen des Dienstes. Die E-Mail-Bestätigung muss vom Herausgeber aktiviert werden.",
     "impressumTodo": "Impressum / Kontaktanschrift: TODO — Geschäftsadresse für die Korrespondenz ergänzen."
+  },
+  "projectContact": {
+    "heading": "Kontakt",
+    "caption": "Offizielle Korrespondenz",
+    "instagram": "Instagram",
+    "email": "E-Mail"
   }
 }

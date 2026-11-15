@@ -30,5 +30,11 @@
     "privacyTitle": "Prywatność i newsletter",
     "privacyDescription": "Ta strona nie gromadzi adresów e-mail. Po przejściu do Substack można zapoznać się z zasadami prywatności i zapisać na newsletter. Wydawca musi włączyć potwierdzanie adresu e-mail.",
     "impressumTodo": "Informacje prawne: TODO — należy podać adres do korespondencji służbowej."
+  },
+  "projectContact": {
+    "heading": "Kontakt",
+    "caption": "Oficjalna korespondencja",
+    "instagram": "Instagram",
+    "email": "E-mail"
   }
 }
