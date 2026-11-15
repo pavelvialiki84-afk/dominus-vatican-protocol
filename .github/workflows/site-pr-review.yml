@@ -41,6 +41,8 @@ jobs:
             const context=await browser.newContext({viewport,reducedMotion:'reduce',deviceScaleFactor:1});
             for(const lang of langs)for(const file of files){
               const path='/'+lang+'/'+file, page=await context.newPage();
+              page.on('pageerror',error=>errors.push(path+' JavaScript exception '+String(error.message).slice(0,180)));
+              page.on('console',message=>{if(message.type()==='error')errors.push(path+' console error '+message.text().slice(0,180))});
               const response=await page.goto('http://127.0.0.1:8765'+path,{waitUntil:'networkidle'});
               if(!response||response.status()>=400)errors.push(path+' HTTP '+response?.status());
               const result=await page.evaluate(async()=>{
@@ -55,8 +57,7 @@ jobs:
               if(!result.hasCanonical||result.hreflangs<9)errors.push(path+' SEO metadata missing');
               if(result.overflow)errors.push(path+' horizontal overflow '+mode);
               if(result.forbidden)errors.push(path+' internal status in text');
-              if(!result.hasCanonical||result.hreflangs<9)errors.push(path+' missing SEO');
-              const newsletter=page.locator('main .reader-optin');if(await newsletter.count()!==1)errors.push(path+' newsletter missing');else {const button=newsletter.locator('button[type="submit"]');if(!await button.isDisabled())errors.push(path+' newsletter must require explicit consent');await newsletter.locator('input[type="checkbox"]').check();if(!await button.isEnabled())errors.push(path+' consent checkbox failed');}
+                        const newsletter=page.locator('main .reader-optin');if(await newsletter.count()!==1)errors.push(path+' newsletter missing');else {const button=newsletter.locator('button[type="submit"]');if(!await button.isDisabled())errors.push(path+' newsletter must require explicit consent');await newsletter.locator('input[type="checkbox"]').check();if(!await button.isEnabled())errors.push(path+' consent checkbox failed');}
               if(!file||file==='reader-resources.html')await page.screenshot({path:'qa-artifacts/'+lang+'-'+mode+'.png',fullPage:true,animations:'disabled'});
               await page.close();
             }
