@@ -39,7 +39,8 @@ for(const filename of pages){
     if(filename==='dominus-band1-de.html' && !result.heroBuy.some(h=>h.includes('amazon.de/dp/B0HRM5NLBY')))bad.push('German Kindle direct CTA missing');
     if(filename==='dominus-band1-de.html' && !result.printBuy?.some(h=>h.includes('amazon.de/dp/B0HRQMHRW4')))bad.push('Published German paperback link missing');
     if(filename==='dominus-band1-de.html' && !result.printBuy?.some(h=>h.includes('amazon.de/dp/B0HRQT4453')))bad.push('Published German hardcover link missing');
-    if(filename==='dominus-volume1-fr.html' && !result.heroBuy.includes('#edition'))bad.push('French unverified edition must lead to formats instead of invented ASIN');
+    if(filename==='dominus-volume1-fr.html' && !result.heroBuy.some(h=>h.includes('amazon.fr/dp/B0HRS1TDS6')))bad.push('Confirmed French Kindle direct CTA missing');
+    if(filename==='dominus-volume1-fr.html' && !result.printBuy.some(h=>h.includes('amazon.fr/dp/B0HRSBN5VV')))bad.push('Confirmed French paperback direct CTA missing');
     if(width<=680 && !result.mobileBuy)bad.push('Mobile purchase CTA missing');
     const expectedPortraits=['portrait-salvatore-realistic.webp','portrait-rafael-realistic.webp','portrait-luiza-realistic.webp'];
     const actualPortraits=result.portraitSources.map(u=>u?.split('/').pop());
