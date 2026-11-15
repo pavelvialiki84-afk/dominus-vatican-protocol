@@ -17,7 +17,7 @@
   "reader": {
     "newsletterTitle": "Dołącz do archiwum",
     "newsletterDescription": "Nowości o serii i materiały dostępne wyłącznie dla czytelników.",
-    "consentLabel": "Wyrażam zgodę na przejście do Substack i podanie tam adresu e-mail w celu otrzymywania newslettera DOMINUS. W każdej chwili mogę zrezygnować.",
+    "consentLabel": "Chcę przejść do Substack, gdzie zdecyduję, czy podać adres e-mail i zapisać się na newsletter. Mogę zrezygnować w dowolnym momencie.",
     "continueToSubstack": "Przejdź do Substack",
     "privacyAssurance": "Ta strona nie zbiera ani nie przechowuje adresów e-mail.",
     "subscribe": "Zapisz się",
