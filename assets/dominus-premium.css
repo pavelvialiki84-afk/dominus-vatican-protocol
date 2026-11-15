@@ -275,3 +275,6 @@
 
 /* Prevent long localized headings from overflowing 390px mobile viewports. */
 @media(max-width:640px){.section h1,.reader-newsletter h2,.reader-privacy-hint{overflow-wrap:anywhere;hyphens:auto;max-width:100%}}
+
+/* Long localized page titles: responsive sizing as well as safe wrapping. */
+@media(max-width:640px){main .section h1{font-size:clamp(30px,8vw,42px);line-height:1.15;letter-spacing:-.025em;max-width:100%;overflow-wrap:anywhere;word-break:break-word}.reader-newsletter h2{font-size:clamp(25px,7vw,36px)}}
