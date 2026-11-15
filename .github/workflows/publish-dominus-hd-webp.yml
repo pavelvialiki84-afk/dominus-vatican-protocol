@@ -1,12 +1,8 @@
 name: Publish DOMINUS genuine HD web artwork
 on:
   workflow_dispatch:
-  push:
-    paths:
-      - 'assets/source/DOMINUS_HD_web_optimized.zip'
-      - '.github/workflows/publish-dominus-hd-webp.yml'
 permissions:
-  contents: write
+  contents: read
 jobs:
   publish:
     runs-on: ubuntu-24.04
@@ -60,5 +56,5 @@ jobs:
           if ! git diff --cached --quiet; then
             git commit -m 'Install original high-resolution DOMINUS portraits and story artwork'
             git pull --rebase origin main
-            git push origin HEAD:main
+            echo 'Publishing disabled: review artifacts in a PR instead'
           fi
