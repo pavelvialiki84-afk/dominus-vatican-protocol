@@ -18,15 +18,15 @@
       },
       {
         "address": "rights@dominusbooks.com",
-        "status": "created-pending-delivery-verification"
+        "status": "verified-receiving"
       },
       {
         "address": "publishing@dominusbooks.com",
-        "status": "created-pending-delivery-verification"
+        "status": "verified-receiving"
       },
       {
         "address": "readers@dominusbooks.com",
-        "status": "created-pending-delivery-verification"
+        "status": "verified-receiving"
       }
     ],
     "lastVerificationDate": "2026-11-15"
