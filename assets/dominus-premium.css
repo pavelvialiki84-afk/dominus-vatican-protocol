@@ -278,3 +278,6 @@
 
 /* Long localized page titles: responsive sizing as well as safe wrapping. */
 @media(max-width:640px){main .section h1{font-size:clamp(30px,8vw,42px);line-height:1.15;letter-spacing:-.025em;max-width:100%;overflow-wrap:anywhere;word-break:break-word}.reader-newsletter h2{font-size:clamp(25px,7vw,36px)}}
+
+/* Accessible official project email + social links. */
+.dominus-contact{width:min(1200px,92%);margin:26px auto 0;padding:20px 0 8px;border-top:1px solid #89744e}.dominus-contact-title{font:600 20px/1.35 Georgia,serif;margin:0 0 6px}.dominus-contact-caption{font-size:14px;color:#dbc9b2;margin:0 0 12px}.dominus-contact-links{display:flex;align-items:center;gap:8px;flex-wrap:wrap;overflow-wrap:anywhere}.dominus-contact a{color:#f2ce89;text-decoration:underline;text-underline-offset:4px;padding:4px 0;min-height:40px;display:inline-flex;align-items:center}.dominus-contact a:focus-visible{outline:3px solid white;outline-offset:3px}@media(max-width:600px){.dominus-contact{width:calc(100% - 36px)}.dominus-contact-links{flex-direction:column;align-items:flex-start;gap:2px}.dominus-contact-links a{min-height:44px}}

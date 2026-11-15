@@ -57,6 +57,11 @@ jobs:
               if(!result.hasCanonical||result.hreflangs<9)errors.push(path+' SEO metadata missing');
               if(result.overflow)errors.push(path+' horizontal overflow '+mode);
               if(result.forbidden)errors.push(path+' internal status in text');
+              const publicEmail=page.locator('footer .dominus-contact a[href="mailto:contact@dominusbooks.com"]');
+              const insta=page.locator('footer .dominus-contact a[href="https://www.instagram.com/dominus.vatican.protocol/"]');
+              if(await publicEmail.count()!==1)errors.push(path+' missing official email');
+              if(await insta.count()!==1)errors.push(path+' missing verified Instagram link');
+              if((await page.locator('footer').innerText()).includes('pavelvialiki84@gmail.com'))errors.push(path+' owner private mail exposed');
                         const newsletter=page.locator('main .reader-optin');if(await newsletter.count()!==1)errors.push(path+' newsletter missing');else {const button=newsletter.locator('button[type="submit"]');if(!await button.isDisabled())errors.push(path+' newsletter must require explicit consent');await newsletter.locator('input[type="checkbox"]').check();if(!await button.isEnabled())errors.push(path+' consent checkbox failed');}
               if(!file||file==='reader-resources.html')await page.screenshot({path:'qa-artifacts/'+lang+'-'+mode+'.png',fullPage:true,animations:'disabled'});
               await page.close();

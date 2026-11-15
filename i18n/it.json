@@ -30,5 +30,11 @@
     "privacyTitle": "Privacy e newsletter",
     "privacyDescription": "Questo sito non raccoglie indirizzi email. Proseguendo passerai a Substack, dove potrai consultare l'informativa sulla privacy e iscriverti. La conferma via email deve essere attivata dall'editore.",
     "impressumTodo": "Informazioni legali: TODO — indicare un recapito professionale."
+  },
+  "projectContact": {
+    "heading": "Contatti",
+    "caption": "Corrispondenza ufficiale",
+    "instagram": "Instagram",
+    "email": "Email"
   }
 }
