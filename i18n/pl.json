@@ -2,11 +2,16 @@
   "available": "Dostępne",
   "soon": "Wkrótce",
   "formats": {
-    "kindle": "Kindle",
     "paperback": "Miękka oprawa",
-    "hardcover": "Twarda oprawa"
+    "hardcover": "Twarda oprawa",
+    "ebook": "Kindle"
   },
   "buy": "Kup",
   "volume": "Tom",
-  "noKindle": "Brak wydania Kindle"
+  "noKindle": "Brak wydania Kindle",
+  "menu": {
+    "home": "Strona główna",
+    "books": "Książki"
+  },
+  "todo": "Szczegóły wkrótce"
 }
