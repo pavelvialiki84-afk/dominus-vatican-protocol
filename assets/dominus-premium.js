@@ -2,7 +2,7 @@
    Browser autoplay policy may deny audible play until visitor interacts.
    No analytics or personal data is transmitted. */
 (()=>{'use strict';
- const soundtrack=new Audio('assets/dominus-score.mp3');
+ const resourceRoot=new URL('.',document.currentScript?.src||location.href);const soundtrack=new Audio(new URL('dominus-score.mp3',resourceRoot).href);
  soundtrack.preload='auto';
  soundtrack.loop=true;
  soundtrack.volume=.28;
