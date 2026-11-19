@@ -1,5 +1,9 @@
 name: DOMINUS production HTTP and DNS probe
 on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/production-probe.yml'
   workflow_dispatch:
   schedule:
     - cron: '17 7 * * *'
