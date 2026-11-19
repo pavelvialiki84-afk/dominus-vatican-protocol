@@ -1,0 +1,31 @@
+name: DOMINUS production HTTP and DNS probe
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 7 * * *'
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check DNS and HTTPS without leaking credentials
+        shell: bash
+        run: |
+          set -uo pipefail
+          for host in dominusbooks.com www.dominusbooks.com pavelvialiki84-afk.github.io; do
+            echo "::group::DNS $host"
+            getent ahostsv4 "$host" | head -n 5 || true
+            echo "::endgroup::"
+          done
+          failed=0
+          for path in / /dominus-band1-de.html /dominus-volume1-fr.html /dominus-volume1-it.html /dominus-volumen1-es.html /assets/analytics.js /sitemap.xml; do
+            url="https://dominusbooks.com$path"
+            echo "::group::$url"
+            result=$(curl -L -sS -o /dev/null -w 'status=%{http_code} final=%{url_effective} bytes=%{size_download}' --connect-timeout 10 --max-time 25 "$url") || failed=1
+            echo "$result"
+            [[ "$result" == status=200* ]] || failed=1
+            echo "::endgroup::"
+          done
+          exit "$failed"
