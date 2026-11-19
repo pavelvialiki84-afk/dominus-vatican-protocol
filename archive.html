@@ -16,6 +16,26 @@ section.content{padding:65px 22px;border-bottom:1px solid #3c352c}h2{font-size:c
 .case{padding:27px 30px;border:1px solid #7c6747;background:#171d26}.case blockquote{margin:20px 0;padding:19px 24px;background:#0d141e;border-left:3px solid var(--gold);font-size:clamp(20px,3vw,29px);color:#ead8b8}.case label{display:block;font:700 12px Arial,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#d7be91;margin:20px 0 9px}.controls{display:flex;flex-wrap:wrap;gap:12px}.controls input{font:18px Georgia,serif;color:#fff;background:#101722;border:1px solid #a18b64;border-radius:4px;padding:12px;flex:1 1 200px;min-width:0}.btn,button{display:inline-block;border:1px solid var(--gold);background:var(--gold);color:#14141a;padding:12px 20px;border-radius:3px;font:700 13px/1.5 Arial,sans-serif;text-decoration:none;cursor:pointer}button:hover,.btn:hover{filter:brightness(1.1)}.btn.alt{color:var(--gold);background:transparent}.result{min-height:26px;margin-top:15px;color:#d4c9bb}.reveal{margin:20px 0;padding:20px;border:1px solid #9a8058;background:#232428}.reveal[hidden]{display:none}.tiny{font:13px/1.65 Arial,sans-serif;color:var(--muted)}.portrait{aspect-ratio:4/3;object-position:center top}.links{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}.fact{display:grid;grid-template-columns:1fr 1fr;gap:22px}.fact article{padding:24px;border:1px solid #6c5a40;background:var(--paper)}.fact p{font-size:16px}footer{padding:36px 22px;color:#b5aca0;font:13px Arial,sans-serif}
 @media(max-width:750px){.three,.fact{grid-template-columns:1fr}.hero{padding:65px 22px}.case{padding:20px}.file img{aspect-ratio:16/9}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* ARCHIVE 2.0 — responsive case chronology and three-stage investigation */
+.case-progress{display:flex;align-items:center;gap:12px;margin:22px 0;color:var(--gold);font:700 13px Arial,sans-serif}
+.case-progress progress{width:min(360px,65%);height:13px;accent-color:#d4af70}
+.case-stage{border:1px solid #756040;background:linear-gradient(135deg,#1d2631,#10151e);padding:25px;margin:22px 0}
+.case-stage[hidden],.reveal[hidden],.final-brief[hidden]{display:none!important}
+.case-stage label{display:block;font:700 12px Arial,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#d7be91;margin:18px 0 10px}
+.case-stage blockquote{border-left:3px solid var(--gold);padding:14px 23px;background:#0d131b;font-size:clamp(19px,3vw,27px);margin:15px 0}
+.case-stage input{font:18px Georgia,serif;color:#fff;background:#101722;border:1px solid #a18b64;border-radius:4px;padding:12px;min-width:0;max-width:100%}
+.case-stage .result{min-height:26px}
+.final-brief{background:#222a2d;border:2px solid #cfb177;padding:30px}
+.timeline{list-style:none;margin:28px 0;padding:0;border-left:2px solid #816b45}
+.timeline li{position:relative;padding:0 0 30px 30px}
+.timeline li:before{content:"";position:absolute;left:-8px;top:4px;background:#d2ad71;border:2px solid #131923;width:13px;height:13px;border-radius:50%}
+.timeline .time{display:block;color:#e3bf80;font:700 12px Arial,sans-serif;letter-spacing:.14em;margin-bottom:7px}
+.timeline h3{font-size:22px}.timeline p{margin:7px 0;color:#cfc6ba}
+.timeline .step{padding:17px 21px;background:#1a2028;border:1px solid #564b38}
+.research-guide{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.research-guide article{padding:20px;border:1px solid #67573d;background:#181d25}
+@media(max-width:750px){.research-guide{grid-template-columns:1fr}.case-stage{padding:18px}.timeline li{padding-left:23px}}
 </style></head><body>
 <header><nav aria-label="Main navigation"><a href="/">DOMINUS</a><a href="/editions.html">Editions</a><a href="/dossier.html">Research Dossier</a><a href="/#sample">Read the opening</a><a href="/author.html">Author</a></nav></header>
 <main>
@@ -29,6 +49,28 @@ section.content{padding:65px 22px;border-bottom:1px solid #3c352c}h2{font-size:c
 <section class="content" id="decode"><div class="shell"><div class="kicker">Interactive challenge · No account required</div><h2>Decode the protocol</h2><div class="case"><p>This fictional fragment poses a real interpretive problem. Translate the final word to reveal the archivist's note.</p><blockquote lang="la">VERITAS NON EST POTESTAS.</blockquote><p>Latin clue: <em>veritas</em> means truth; <em>non est</em> means is not. What does <em>potestas</em> mean here?</p>
 <form id="puzzle"><label for="answer">English answer</label><div class="controls"><input id="answer" name="answer" type="text" autocomplete="off" maxlength="40" placeholder="One word" required><button type="submit">Unlock the note</button></div></form><p class="result" id="feedback" role="status" aria-live="polite"></p>
 <div class="reveal" id="reveal" hidden><strong>ARCHIVIST'S NOTE · UNLOCKED</strong><p>Truth is not power. The fact that a claim can be established does not mean that its bearer has the authority to command others.</p><p>In <em>DOMINUS</em>, the conflict is not simply whether a system can produce an answer. It is whether anyone should grant it the final word.</p><p class="tiny">This exercise is an original companion puzzle, not an excerpt or an official archival translation.</p><a class="btn" href="/#sample">Read the novel's opening</a></div></div></div></section>
+
+<section class="content" id="chronology"><div class="shell"><div class="kicker">Investigation timeline · Spoiler-light</div><h2>Follow the chain of evidence</h2>
+<p>The sequence below is an interpretive guide to the novel's opening premise, not a reproduction of confidential or authentic Vatican documents. Dates beyond the established opening are deliberately withheld.</p>
+<ol class="timeline">
+<li><div class="step"><span class="time">STAGE I · ACCESS</span><h3>The locked archive</h3><p>Every document enters the historical record through a place, a custodian and a chain of transmission. In the fictional story, entry to the archive is the first threshold.</p></div></li>
+<li><div class="step"><span class="time">STAGE II · THE ANOMALY</span><h3>A record dated in the future</h3><p>A timestamp that should not exist makes a simple archival question dangerous: can we establish what this record actually is?</p></div></li>
+<li><div class="step"><span class="time">STAGE III · THE INTERPRETATION</span><h3>Who controls the meaning?</h3><p>The archivist, theologian and specialist in verification approach the same problem with different methods.</p></div></li>
+<li><div class="step"><span class="time">STAGE IV · THE DECISION</span><h3>Evidence is not authority</h3><p>The investigation leads to a question larger than the anomaly itself: who has the legitimate right to act on a claim?</p></div></li>
+</ol><div class="links"><a class="btn" href="#challenge-2">Continue the investigation</a><a class="btn alt" href="/#sample">Read the actual opening</a></div></div></section>
+<section class="content" id="challenge-2"><div class="shell"><div class="kicker">The cipher sequence · Two more clues</div><h2>Complete the protocol</h2>
+<p>Each answer opens the next file. No account is required, and your responses stay in your browser during this visit. The puzzles are original educational companions, not quotations from the manuscript.</p>
+<div class="case-progress"><label for="progress2">Files decoded</label><progress id="progress2" max="3" value="0">0 of 3</progress><output id="progress-label">0 / 3</output></div>
+<article class="case-stage" id="stage-a"><span class="file-index">FILE A / THE RECORD</span><h3>What does a witness leave behind?</h3><blockquote lang="la">TESTIMONIUM</blockquote><p>Translate this Latin noun into English. Hint: something that can be given by a witness.</p><form id="stage-a-form"><label for="stage-a-input">Your translation</label><div class="controls"><input id="stage-a-input" required maxlength="50" autocomplete="off" placeholder="One English word"><button type="submit">Verify file A</button></div></form><p id="stage-a-feedback" class="result" role="status" aria-live="polite"></p></article>
+<article class="case-stage" id="stage-b" hidden><span class="file-index">FILE B / THE MEMORY</span><h3>What survives the witness?</h3><blockquote lang="la">MEMORIA</blockquote><p>Translate this Latin noun into English. Hint: what institutions preserve but cannot wholly control.</p><form id="stage-b-form"><label for="stage-b-input">Your translation</label><div class="controls"><input id="stage-b-input" required maxlength="50" autocomplete="off" placeholder="One English word"><button type="submit">Verify file B</button></div></form><p id="stage-b-feedback" class="result" role="status" aria-live="polite"></p></article>
+<div class="final-brief" id="final-brief" hidden><span class="file-index">RESTRICTED NOTE / RELEASED</span><h3>The last word belongs to whom?</h3><p>A recorded statement can outlive the person who made it. A machine may reproduce that statement convincingly. Yet neither a document nor an algorithm automatically possesses authority over the life it describes.</p><p>You have completed the short companion challenge. The novel takes these problems further, through characters, evidence and choices.</p><div class="links"><a class="btn" href="/#sample">Read the opening</a><a class="btn alt" href="/editions.html">Choose your language edition</a><a class="btn alt" href="/dossier.html">Research behind the fiction</a></div></div>
+</div></section>
+<section class="content" id="research-library"><div class="shell"><div class="kicker">Research library</div><h2>Go beyond the fiction</h2><div class="research-guide">
+<article><h3>Latin and the language of authority</h3><p>Why a persuasive sentence is not the same as evidence—or a lawful command.</p><a href="/dossier.html">Open the research dossier</a></article>
+<article><h3>Archives, evidence and provenance</h3><p>Discover why context, custody and historical criticism matter to every archival claim.</p><a href="/dossier.html">Explore the historical notes</a></article>
+<article><h3>Canon law and institutional competence</h3><p>Explore the distinction between knowing facts and possessing authority to decide.</p><a href="/dossier.html">Read the background</a></article>
+<article><h3>New dispatches from the author</h3><p>Follow essays that connect documentary history and speculative fiction.</p><a href="https://substack.com/@pavelvelichii" target="_blank" rel="noopener noreferrer">Visit the author's Substack</a></article>
+</div></div></section>
 <section class="content" id="characters"><div class="shell"><div class="kicker">Witnesses · Fictional characters</div><h2>Three people inside the protocol</h2><div class="three">
 <article class="file"><img class="portrait" src="assets/illustrations/portrait-salvatore-realistic.webp" alt="Fictional portrait of archivist Salvatore Ventresca" loading="lazy"><div class="file-body"><span class="file-index">DOSSIER 01 / THE ARCHIVIST</span><h3>Salvatore Ventresca</h3><p>The person nearest the record, and the first to confront its implications.</p></div></article>
 <article class="file"><img class="portrait" src="assets/illustrations/portrait-rafael-realistic.webp" alt="Fictional portrait of theologian Rafael Costa" loading="lazy"><div class="file-body"><span class="file-index">DOSSIER 02 / THE THEOLOGIAN</span><h3>Rafael Costa</h3><p>A linguist and theologian who knows that interpretation changes the weight of evidence.</p></div></article>
@@ -40,5 +82,17 @@ section.content{padding:65px 22px;border-bottom:1px solid #3c352c}h2{font-size:c
 </div><div class="links"><a class="btn" href="/editions.html">Explore all five editions</a><a class="btn alt" href="https://substack.com/@pavelvelichii" target="_blank" rel="noopener noreferrer">Research essays on Substack</a></div></div></section></main>
 <footer><div class="shell">© 2026 Pavel Velichii · DOMINUS — The Vatican Protocol. Interactive fictional companion. No Vatican affiliation or endorsement. <a href="/analytics-privacy.html#en">Privacy</a>.</div></footer>
 <script>
-(()=>{'use strict';const form=document.getElementById('puzzle');const input=document.getElementById('answer');const feedback=document.getElementById('feedback');const reveal=document.getElementById('reveal');form.addEventListener('submit',e=>{e.preventDefault();const a=input.value.trim().toLowerCase().replace(/[^a-z\s]/g,'');if(['power','authority','the power','the authority'].includes(a)){feedback.textContent='Correct. The note has been unlocked.';reveal.hidden=false;reveal.scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'nearest'});}else{feedback.textContent='Not quite. Think of the difference between knowing a fact and possessing legitimate power.';reveal.hidden=true;}})})();
+(()=>{'use strict';
+const normalize=v=>v.toLowerCase().trim().replace(/[^a-z ]/g,'').replace(/\\s+/g,' ');
+const progress=document.getElementById('progress2');
+const counter=document.getElementById('progress-label');
+let unlocked=0;
+const setProgress=n=>{unlocked=Math.max(unlocked,n);progress.value=unlocked;counter.textContent=unlocked+' / 3';};
+const steps=[
+ {form:'puzzle',input:'answer',feedback:'feedback',accepted:['power','authority','the power','the authority'],wrong:'Think of the difference between knowing a fact and possessing legitimate power.',success:()=>{document.getElementById('reveal').hidden=false;document.getElementById('stage-a').scrollIntoView({behavior:'auto',block:'center'});}},
+ {form:'stage-a-form',input:'stage-a-input',feedback:'stage-a-feedback',accepted:['testimony','evidence','witness statement','statement'],wrong:'A witness gives this in a trial or inquiry.',success:()=>{document.getElementById('stage-b').hidden=false;document.getElementById('stage-b').scrollIntoView({behavior:'auto',block:'center'});}},
+ {form:'stage-b-form',input:'stage-b-input',feedback:'stage-b-feedback',accepted:['memory','remembrance'],wrong:'The English word begins with M and describes remembering.',success:()=>{document.getElementById('final-brief').hidden=false;document.getElementById('final-brief').scrollIntoView({behavior:'auto',block:'center'});}}
+];
+steps.forEach((step,i)=>{document.getElementById(step.form).addEventListener('submit',e=>{e.preventDefault();const a=normalize(document.getElementById(step.input).value);const feedback=document.getElementById(step.feedback);if(step.accepted.includes(a)){feedback.textContent='Correct. File '+(i+1)+' unlocked.';setProgress(i+1);step.success();}else{feedback.textContent='Not quite. '+step.wrong;}});});
+})();
 </script></body></html>
