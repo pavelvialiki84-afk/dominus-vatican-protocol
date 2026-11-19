@@ -26,8 +26,8 @@
     if (!link) return;
     let destination;
     try { destination = new URL(link.href); } catch { return; }
-    if (!/^www\\.amazon\\.(com|de|fr|it|es)$/.test(destination.hostname)) return;
-    if (!/^\\/dp\\/[A-Z0-9]{10}(?:[/?#]|$)/.test(destination.pathname)) return;
+    if (!['www.amazon.com', 'www.amazon.de', 'www.amazon.fr', 'www.amazon.it', 'www.amazon.es'].includes(destination.hostname)) return;
+    if (destination.pathname.split('/')[1] !== 'dp' || !/^[A-Z0-9]{10}$/.test(destination.pathname.split('/')[2] || '')) return;
     if (!Array.isArray(window.dataLayer)) return;
     const pageLanguage = document.documentElement.lang || 'en';
     const asin = destination.pathname.split('/')[2];
