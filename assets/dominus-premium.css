@@ -371,3 +371,8 @@ section[id]{scroll-margin-top:90px}
   .gallery .world-feature-copy{padding:19px 20px 23px}
 }
 @media(prefers-reduced-motion:reduce){.gallery .world-feature-card:hover .world-feature-image img{transform:none}}
+
+/* Readable attribution for high-resolution archival photography. */
+.gallery .world-feature-credit{display:block;margin-top:auto;padding-top:12px;border-top:1px solid #66573a60;color:#aaa99f;font:400 11px/1.55 Arial,Helvetica,sans-serif;letter-spacing:0;text-transform:none}
+.gallery .world-feature-credit a{color:#dac39e;text-decoration:underline;text-decoration-color:#b09870;text-underline-offset:2px}
+.gallery .world-feature-image img{filter:brightness(.87) saturate(.83);image-rendering:auto}
