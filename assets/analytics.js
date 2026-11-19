@@ -1,11 +1,14 @@
-/* Cookie-free page analytics for the DOMINUS Metricool brand.
-   The brand hash is a public tracker identifier, not an API credential. */
+/* DOMINUS analytics: Metricool page tracking and privacy-conscious outbound intent events.
+   Outbound events are emitted to dataLayer only when an analytics consumer exists.
+   No personal data, cookies or extra network requests are created here. */
 (() => {
   'use strict';
-  if (!['dominusbooks.com', 'www.dominusbooks.com'].includes(location.hostname)) return;
+  const productionHosts = ['dominusbooks.com', 'www.dominusbooks.com'];
+  if (!productionHosts.includes(location.hostname)) return;
   if (navigator.doNotTrack === '1' || navigator.globalPrivacyControl === true) return;
   if (window.dominusAnalyticsLoaded) return;
   window.dominusAnalyticsLoaded = true;
+
   const script = document.createElement('script');
   script.src = 'https://tracker.metricool.com/resources/be.js';
   script.async = true;
@@ -15,4 +18,24 @@
     }
   };
   document.head.appendChild(script);
+
+  // The dataLayer event becomes measurable only after a compatible analytics
+  // integration is configured. This does not claim an Amazon purchase occurred.
+  document.addEventListener('click', (event) => {
+    const link = event.target.closest?.('a[href]');
+    if (!link) return;
+    let destination;
+    try { destination = new URL(link.href); } catch { return; }
+    if (!/^www\\.amazon\\.(com|de|fr|it|es)$/.test(destination.hostname)) return;
+    if (!/^\\/dp\\/[A-Z0-9]{10}(?:[/?#]|$)/.test(destination.pathname)) return;
+    if (!Array.isArray(window.dataLayer)) return;
+    const pageLanguage = document.documentElement.lang || 'en';
+    const asin = destination.pathname.split('/')[2];
+    window.dataLayer.push({
+      event: 'dominus_amazon_click',
+      book_language: pageLanguage,
+      amazon_marketplace: destination.hostname,
+      amazon_asin: asin
+    });
+  });
 })();
