@@ -1,6 +1,6 @@
 /* DOMINUS site soundtrack: attempt to start immediately on entry.
    Browser autoplay policy may deny audible play until visitor interacts.
-   No analytics or personal data is transmitted. */
+   This audio module does not transmit data. Website analytics is in analytics.js. */
 (()=>{'use strict';
  const soundtrack=new Audio('assets/dominus-score.mp3');
  soundtrack.preload='auto';
