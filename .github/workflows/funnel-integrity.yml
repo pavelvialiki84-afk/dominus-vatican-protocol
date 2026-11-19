@@ -1,0 +1,30 @@
+name: DOMINUS funnel integrity
+on:
+  push:
+    branches: [main]
+    paths:
+      - '*.html'
+      - 'assets/**'
+      - 'CNAME'
+      - 'scripts/check_funnels.py'
+      - '.github/workflows/funnel-integrity.yml'
+  pull_request:
+    paths:
+      - '*.html'
+      - 'assets/**'
+      - 'CNAME'
+      - 'scripts/check_funnels.py'
+      - '.github/workflows/funnel-integrity.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  static-funnel-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check localized funnel contract
+        run: python scripts/check_funnels.py
