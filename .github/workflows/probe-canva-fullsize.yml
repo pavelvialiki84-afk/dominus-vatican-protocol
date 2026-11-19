@@ -1,0 +1,26 @@
+name: Probe Canva original art URLs
+on:
+  push:
+    paths:
+      - '.github/workflows/probe-canva-fullsize.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check Canva asset resolution
+        run: |
+          python3 -m pip install --user requests Pillow --quiet
+          python3 - <<'PY'
+          import requests
+          from PIL import Image
+          from io import BytesIO
+          urls=["https://media.canva.com/v2/image-resize/format:PNG/height:150/quality:100/uri:ifs%3A%2F%2FM%2Fcc8b219a-e2d2-4db7-8e56-1b527f4b4ee6/watermark:F/width:200?csig=AAAAAAAAAAAAAAAAAAAAAHXadqj0A3VQ-HEeyWWL68xD05Ou56jjPhrHY3TOdZV6&exp=1795147690&osig=AAAAAAAAAAAAAAAAAAAAAK8f6qMt5PYGBu04CFk2lD-OPZqzHdDBeoSe5Kpj5mXs&signer=media-rpc&token=AAIAAU0AJGNjOGIyMTlhLWUyZDItNGRiNy04ZTU2LTFiNTI3ZjRiNGVlNgAAAAABofcj8BB_oZonOFUjIlTFHhNKxSZo3Nj_9iSDF7tvlhRa_YtMiw&x-canva-quality=thumbnail","https://media.canva.com/v2/image-resize/format:PNG/height:1086/quality:100/uri:ifs%3A%2F%2FM%2Fcc8b219a-e2d2-4db7-8e56-1b527f4b4ee6/watermark:F/width:1448?csig=AAAAAAAAAAAAAAAAAAAAAHXadqj0A3VQ-HEeyWWL68xD05Ou56jjPhrHY3TOdZV6&exp=1795147690&osig=AAAAAAAAAAAAAAAAAAAAAK8f6qMt5PYGBu04CFk2lD-OPZqzHdDBeoSe5Kpj5mXs&signer=media-rpc&token=AAIAAU0AJGNjOGIyMTlhLWUyZDItNGRiNy04ZTU2LTFiNTI3ZjRiNGVlNgAAAAABofcj8BB_oZonOFUjIlTFHhNKxSZo3Nj_9iSDF7tvlhRa_YtMiw&x-canva-quality=thumbnail","https://media.canva.com/ifs/M/cc8b219a-e2d2-4db7-8e56-1b527f4b4ee6","https://media.canva.com/v2/image-resize/format:PNG/height:1086/quality:100/uri:ifs%3A%2F%2FM%2Fcc8b219a-e2d2-4db7-8e56-1b527f4b4ee6/watermark:F/width:1448"]
+          for i,u in enumerate(urls):
+           try:
+            r=requests.get(u,timeout=12);print(i,r.status_code,len(r.content),r.headers.get("content-type"))
+            if r.status_code==200: print("dims",Image.open(BytesIO(r.content)).size)
+           except Exception as e: print(i,str(e)[:100])
+          PY
