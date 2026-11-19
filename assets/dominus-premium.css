@@ -282,3 +282,17 @@ section[id]{scroll-margin-top:90px}
  .edition-format{flex-wrap:wrap}
  .edition-format a,.unavailable{white-space:normal;overflow-wrap:anywhere}
 }
+
+
+/* Mobile navigation and audio overlap correction — 2026-11-19.
+   Preserve all five language links and seven section links. */
+@media(max-width:590px){
+ header .bar{gap:5px;padding-top:9px;padding-bottom:9px}
+ header .brand{font-size:18px;line-height:1.4}
+ header .lang{gap:2px;padding:2px}
+ header .lang a{min-height:36px;min-width:42px;padding:6px 9px}
+ header .toplinks{gap:0 13px;justify-content:center;line-height:1.2}
+ header .toplinks a{min-height:34px;font-size:11px;letter-spacing:.06em}
+ .site-audio-control{right:10px;bottom:calc(88px + env(safe-area-inset-bottom));width:44px;height:44px;min-height:44px;max-width:44px;overflow:hidden;padding:0;font-size:0;gap:0;border-radius:50%}
+ .site-audio-control::before{content:"♫";font:700 21px/1 Arial,sans-serif;color:#e9d5b0}
+}
