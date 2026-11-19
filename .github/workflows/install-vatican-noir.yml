@@ -1,0 +1,92 @@
+name: Install cinematic Vatican Noir artwork
+on:
+  push:
+    paths:
+      - 'assets/source/DOMINUS_VATICAN_NOIR_ART.zip'
+      - '.github/workflows/install-vatican-noir.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Pillow
+        run: python3 -m pip install --user Pillow
+      - name: Validate and install artwork
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          from zipfile import ZipFile
+          from io import BytesIO
+          from PIL import Image
+          import re
+          zip_path=Path("assets/source/DOMINUS_VATICAN_NOIR_ART.zip")
+          if not zip_path.is_file():
+              print("ZIP not uploaded; no artwork changes.")
+              raise SystemExit(0)
+          names=("scene-corridor-noir.webp","scene-archive-noir.webp","scene-ai-noir.webp")
+          with ZipFile(zip_path) as z:
+              if set(z.namelist())!=set(names):
+                  raise ValueError("Unexpected ZIP file names")
+              for name in names:
+                  blob=z.read(name)
+                  if blob[:4]!=b"RIFF" or blob[8:12]!=b"WEBP":
+                      raise ValueError("Invalid WebP header: "+name)
+                  im=Image.open(BytesIO(blob));im.load()
+                  if im.width<1200 or im.height<900:
+                      raise ValueError("Low-resolution artwork: "+name)
+                  Path("assets/illustrations",name).write_bytes(blob)
+                  print("Installed",name,im.size,len(blob))
+          paths=("index.html","archive.html","dossier.html","dominus-band1-de.html","dominus-volume1-fr.html","dominus-volume1-it.html","dominus-volumen1-es.html")
+          for filename in paths:
+              p=Path(filename)
+              s=p.read_text(encoding="utf-8")
+              changes=0
+              for key in ("corridor","archive","ai"):
+                  old=f"assets/illustrations/scene-{key}-hd.webp"
+                  new=f"assets/illustrations/scene-{key}-noir.webp"
+                  if old in s:
+                      s=s.replace(old,new)
+                      changes+=1
+                  elif new not in s and filename in ("index.html","archive.html","dominus-band1-de.html","dominus-volume1-fr.html"):
+                      raise ValueError("Missing expected scene reference in "+filename+": "+key)
+              if filename=="index.html":
+                  s=re.sub(r'<span class="world-feature-credit">Photo:.*?</span>', '<span class="world-feature-credit">Original AI-generated fictional concept art for DOMINUS — not a photograph of an actual Vatican interior.</span>',s,flags=re.S)
+                  s=s.replace('Real archival storage corridor with document shelves in the Vatican Apostolic Archive; documentary setting reference','Fictional cinematic corridor inspired by ecclesiastical architecture')
+                  s=s.replace('Real shelves and secured record cabinets inside the Vatican Apostolic Archive; documentary setting reference','Fictional cinematic restricted library and archive')
+                  s=s.replace("Real server racks at the NERSC computing center; illustrative metaphor for the novel's AI theme, not Vatican infrastructure","Fictional cinematic image combining sacred architecture and artificial intelligence")
+              elif filename=="archive.html":
+                  s=re.sub(r'<p class="tiny" style="margin-top:22px">Photo credits:.*?</p>', '<p class="tiny" style="margin-top:22px">Original AI-generated fictional concept artwork. These settings do not depict authentic Vatican interiors.</p>',s,flags=re.S)
+                  s=s.replace('Real archival storage corridor with document shelves in the Vatican Apostolic Archive; documentary setting reference','Fictional cinematic corridor inspired by ecclesiastical architecture')
+                  s=s.replace('Real shelves and secured record cabinets inside the Vatican Apostolic Archive; documentary setting reference','Fictional cinematic restricted library and archive')
+                  s=s.replace("Real server racks at the NERSC computing center; illustrative metaphor for the novel's AI theme, not Vatican infrastructure","Fictional cinematic image combining sacred architecture and artificial intelligence")
+              elif filename=="dossier.html":
+                  s=s.replace('Real archival storage photograph used as a setting reference for the fictional DOMINUS world. Source: Vatican Television Center / Collective, CC BY 3.0.','Original fictional cinematic concept illustration for DOMINUS (AI-generated).')
+                  s=s.replace('alt="Documentary photograph of an archival corridor in the Vatican Apostolic Archive"','alt="Fictional cinematic corridor inspired by the Vatican archive"')
+              else:
+                  s=re.sub(r'<p class="shell" style="font:11px/1.7 Arial,sans-serif;color:#a8a39b">HD image references:.*?</p>', '<p class="shell" style="font:11px/1.7 Arial,sans-serif;color:#a8a39b">The artistic scenes are fictional, AI-generated illustrations inspired by ecclesiastical architecture; not authentic photographs of Vatican interiors.</p>',s,flags=re.S)
+                  s=s.replace(' — fotografische Bildreferenz',' — fiktive KI-Illustration')
+                  s=s.replace(' — photographie documentaire illustrative',' — illustration fictive générée par IA')
+              if changes:
+                  p.write_text(s,encoding="utf-8")
+                  print("Updated",filename,changes,"scene paths")
+          PY
+      - name: Publish verified artistic release
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ ! -f assets/source/DOMINUS_VATICAN_NOIR_ART.zip ]; then
+            echo 'No release ZIP uploaded yet.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add assets/illustrations/scene-*-noir.webp index.html archive.html dossier.html dominus-band1-de.html dominus-volume1-fr.html dominus-volume1-it.html dominus-volumen1-es.html
+          if ! git diff --cached --quiet; then
+            git commit -m "Release cinematic Vatican Noir art across all editions"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
