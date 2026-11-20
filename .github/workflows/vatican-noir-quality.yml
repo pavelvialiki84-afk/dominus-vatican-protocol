@@ -1,0 +1,112 @@
+name: Vatican Noir image quality gate
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'assets/illustrations/**'
+      - 'index.html'
+      - 'archive.html'
+      - 'dossier.html'
+      - 'dominus-band1-de.html'
+      - 'dominus-volume1-fr.html'
+      - 'dominus-volume1-it.html'
+      - 'dominus-volumen1-es.html'
+      - '.github/workflows/vatican-noir-quality.yml'
+  pull_request:
+    paths:
+      - 'assets/illustrations/**'
+      - 'index.html'
+      - 'archive.html'
+      - 'dossier.html'
+      - 'dominus-band1-de.html'
+      - 'dominus-volume1-fr.html'
+      - 'dominus-volume1-it.html'
+      - 'dominus-volumen1-es.html'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  artwork-integrity:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install image validator
+        run: python3 -m pip install Pillow
+      - name: Verify original Vatican Noir artwork and page references
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          from PIL import Image, UnidentifiedImageError
+          import re, sys
+
+          images = {
+              "scene-corridor-noir.webp",
+              "scene-archive-noir.webp",
+              "scene-ai-noir.webp",
+          }
+          image_root = Path("assets/illustrations")
+          html_files = [
+              Path("index.html"), Path("archive.html"), Path("dossier.html"),
+              Path("dominus-band1-de.html"), Path("dominus-volume1-fr.html"),
+              Path("dominus-volume1-it.html"), Path("dominus-volumen1-es.html"),
+          ]
+          errors, warnings = [], []
+
+          for name in sorted(images):
+              path = image_root / name
+              if not path.is_file():
+                  errors.append(f"Missing artwork: {path}")
+                  continue
+              try:
+                  with Image.open(path) as im:
+                      im.verify()
+                  with Image.open(path) as im:
+                      size, fmt = im.size, im.format
+                  if fmt != "WEBP" or size[0] < 1200 or size[1] < 900:
+                      errors.append(f"Unexpected format or low resolution: {path} ({fmt}, {size})")
+                  size_kib = path.stat().st_size / 1024
+                  print(f"OK: {path}: {size[0]}x{size[1]}, {size_kib:.0f} KiB")
+                  if size_kib > 750:
+                      warnings.append(f"Large artwork (consider lossless visual review before compression): {path} — {size_kib:.0f} KiB")
+              except (OSError, UnidentifiedImageError, ValueError) as exc:
+                  errors.append(f"Unreadable image: {path}: {exc}")
+
+          for page in html_files:
+              if not page.is_file():
+                  errors.append(f"Missing expected page: {page}")
+                  continue
+              html = page.read_text(encoding="utf-8")
+              for img in re.finditer(r'<img\b[^>]*>', html, re.I | re.S):
+                  tag = img.group(0)
+                  src = re.search(r'\bsrc=["\']([^"\']+)["\']', tag, re.I)
+                  if not src:
+                      continue
+                  asset = src.group(1).split("?", 1)[0]
+                  if asset.startswith("assets/") and not Path(asset).is_file():
+                      errors.append(f"Missing local image in {page}: {asset}")
+                  if any(name in asset for name in images):
+                      if not re.search(r'\balt=["\'][^"\']+["\']', tag, re.I):
+                          warnings.append(f"Artwork missing descriptive alt text in {page}: {asset}")
+                      if not re.search(r'\bwidth=["\']\d+["\']', tag, re.I):
+                          warnings.append(f"Artwork missing width in {page}: {asset}")
+                      if not re.search(r'\bheight=["\']\d+["\']', tag, re.I):
+                          warnings.append(f"Artwork missing height in {page}: {asset}")
+              print(f"Checked local image paths: {page}")
+
+          for page in (Path("index.html"), Path("archive.html")):
+              html = page.read_text(encoding="utf-8")
+              for name in images:
+                  if name not in html:
+                      errors.append(f"Core image reference absent in {page}: {name}")
+
+          for warning in warnings:
+              print(f"::warning::{warning}")
+          for error in errors:
+              print(f"::error::{error}")
+          if errors:
+              sys.exit(1)
+          print("PASS: all three Vatican Noir originals are valid and all checked image paths resolve.")
+          PY
