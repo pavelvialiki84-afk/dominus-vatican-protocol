@@ -20,7 +20,8 @@ for(const filename of pages){
     if(result.documentWidth>width+3)bad.push('Horizontal overflow '+result.documentWidth);
     const expectedGalleryCount=filename==='index.html'?3:6;
     if(result.gallery.length!==expectedGalleryCount)bad.push('Expected '+expectedGalleryCount+' gallery items, got '+result.gallery.length);
-    if(result.cast.length!==0||result.dossiers.length!==3)bad.push('Unexpected cast strip or dossier count (cast '+result.cast.length+', dossier '+result.dossiers.length+')');
+    const expectedDossierCount=filename==='index.html'?6:3;
+    if(result.cast.length!==0||result.dossiers.length!==expectedDossierCount)bad.push('Unexpected cast strip or dossier count (expected '+expectedDossierCount+', cast '+result.cast.length+', dossier '+result.dossiers.length+')');
     for(const [selector,rects] of [['gallery',result.gallery],['cast',result.cast],['dossiers',result.dossiers]]){
       for(let i=0;i<rects.length;i++){
         let a=rects[i];if(a.width<35||a.height<35)bad.push(selector+' card too small '+i);
