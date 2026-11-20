@@ -48,5 +48,14 @@ for language,(filename,url) in AUTHOR.items():
     assert canonical==[url], f"Wrong canonical in {filename}"
     alts={(tag.get("hreflang"),tag.get("href")) for tag in parser.links if tag.get("rel")=="alternate"}
     assert alts==auth_expected, f"Wrong alternate pages in {filename}"
-print("PASS: five language landing pages and three author profiles have canonical and reciprocal hreflang links.")
+# Confirm that editorial and compliance pages are discoverable under canonical domain.
+for filename in ("who-owns-the-truth.html", "analytics-privacy.html", "read.html", "editions.html"):
+    url = ROOT + filename
+    assert url in found, f"Missing published page in sitemap: {url}"
+    parser = HeadLinks()
+    parser.feed(Path(filename).read_text(encoding="utf-8"))
+    canonicals = [link.get("href") for link in parser.links if link.get("rel") == "canonical"]
+    assert canonicals == [url], f"{filename}: canonical mismatch"
+
+print("PASS: multilingual canonicals, hreflang, editorial and compliance sitemap entries.")
 
