@@ -1,0 +1,47 @@
+name: Build DOMINUS Teaser C
+on:
+  workflow_dispatch:
+
+jobs:
+  build-video:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Install FFmpeg and fonts
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg fonts-dejavu-core
+      - name: Download and validate licensed assets
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p teaser_c/assets
+          curl --fail --location --retry 3 --max-time 45 "https://unsplash.com/photos/0hm5wgg40Vs/download?force=true" -o teaser_c/assets/shot1_vatican_night.jpg
+          curl --fail --location --retry 3 --max-time 45 "https://unsplash.com/photos/4THEX1aryF0/download?force=true" -o teaser_c/assets/shot2_archive_interior.jpg
+          curl --fail --location --retry 3 --max-time 45 "https://unsplash.com/photos/M5tzZtFCOfs/download?force=true" -o teaser_c/assets/shot3_server_room.jpg
+          curl --fail --location --retry 3 --max-time 45 "https://images.pexels.com/photos/4597280/pexels-photo-4597280.jpeg" -o teaser_c/assets/shot4_control_room.jpg
+          curl --fail --location --retry 3 --max-time 45 "https://dominusbooks.com/cover.png" -o teaser_c/assets/cover.png
+          for f in teaser_c/assets/*; do
+            test "$(stat -c %s "$f")" -gt 10000 || { echo "Too small: $f"; exit 1; }
+            ffprobe -v error -select_streams v:0 -show_entries stream=width,height -of csv=p=0 "$f" | grep -qE '^[0-9]+,[0-9]+$' || { echo "Not an image: $f"; exit 1; }
+          done
+      - name: Build video
+        working-directory: teaser_c
+        run: bash ffmpeg_assembly_v2.sh
+      - name: Validate MP4
+        shell: bash
+        run: |
+          set -euo pipefail
+          f=teaser_c/DOMINUS_THE_BROADCAST_v2.mp4
+          test -s "$f"
+          test "$(ffprobe -v error -select_streams v:0 -show_entries stream=width,height -of csv=p=0 "$f")" = "1080,1920"
+          ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1 "$f"
+      - name: Upload MP4 as Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: DOMINUS_THE_BROADCAST_v2
+          path: teaser_c/DOMINUS_THE_BROADCAST_v2.mp4
+          if-no-files-found: error
+          retention-days: 30
