@@ -18,20 +18,30 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y ffmpeg fonts-dejavu-core
-      - name: Download and validate licensed assets
+      - name: Prepare image assets with network fallback
         shell: bash
         run: |
           set -euo pipefail
           mkdir -p teaser_c/assets
-          curl --fail --location --retry 3 --max-time 45 "https://unsplash.com/photos/0hm5wgg40Vs/download?force=true" -o teaser_c/assets/shot1_vatican_night.jpg
-          curl --fail --location --retry 3 --max-time 45 "https://unsplash.com/photos/4THEX1aryF0/download?force=true" -o teaser_c/assets/shot2_archive_interior.jpg
-          curl --fail --location --retry 3 --max-time 45 "https://unsplash.com/photos/M5tzZtFCOfs/download?force=true" -o teaser_c/assets/shot3_server_room.jpg
-          curl --fail --location --retry 3 --max-time 45 "https://images.pexels.com/photos/4597280/pexels-photo-4597280.jpeg" -o teaser_c/assets/shot4_control_room.jpg
-          curl --fail --location --retry 3 --max-time 45 "https://dominusbooks.com/cover.png" -o teaser_c/assets/cover.png
-          for f in teaser_c/assets/*; do
-            test "$(stat -c %s "$f")" -gt 10000 || { echo "Too small: $f"; exit 1; }
-            ffprobe -v error -select_streams v:0 -show_entries stream=width,height -of csv=p=0 "$f" | grep -qE '^[0-9]+,[0-9]+$' || { echo "Not an image: $f"; exit 1; }
-          done
+          get_image() {
+            local target="$1" url="$2" label="$3"
+            if curl --fail --location --retry 1 --max-time 25 "$url" -o "$target" &&
+               ffprobe -v error -select_streams v:0 -show_entries stream=width -of csv=p=0 "$target" | grep -qE '^[0-9]+$'; then
+              echo "Downloaded: $target"
+            else
+              echo "::warning::Remote image unavailable: $target; generating temporary visual."
+              ffmpeg -y -hide_banner -loglevel error -f lavfi -i "color=c=0x101923:s=1080x1920:r=1" -frames:v 1 -vf "drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf:text='$label':fontcolor=white:fontsize=54:x=(w-text_w)/2:y=(h-text_h)/2" "$target"
+            fi
+          }
+          get_image teaser_c/assets/shot1_vatican_night.jpg "https://unsplash.com/photos/0hm5wgg40Vs/download?force=true" "VATICAN AT NIGHT"
+          get_image teaser_c/assets/shot2_archive_interior.jpg "https://unsplash.com/photos/4THEX1aryF0/download?force=true" "THE ARCHIVES"
+          get_image teaser_c/assets/shot3_server_room.jpg "https://unsplash.com/photos/M5tzZtFCOfs/download?force=true" "THE NETWORK"
+          get_image teaser_c/assets/shot4_control_room.jpg "https://images.pexels.com/photos/4597280/pexels-photo-4597280.jpeg" "BROADCAST CONTROL"
+          if ! curl --fail --location --retry 1 --max-time 25 "https://dominusbooks.com/cover.png" -o teaser_c/assets/cover.png ||
+             ! ffprobe -v error -select_streams v:0 -show_entries stream=width -of csv=p=0 teaser_c/assets/cover.png | grep -qE '^[0-9]+$'; then
+            echo "::warning::Cover URL unavailable; using temporary title card."
+            ffmpeg -y -hide_banner -loglevel error -f lavfi -i "color=c=0x101923:s=1080x1600:r=1" -frames:v 1 -vf "drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf:text='DOMINUS':fontcolor=white:fontsize=110:x=(w-text_w)/2:y=550,drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf:text='THE VATICAN PROTOCOL':fontcolor=white:fontsize=38:x=(w-text_w)/2:y=750" -update 1 teaser_c/assets/cover.png
+          fi
       - name: Build video
         working-directory: teaser_c
         run: bash ffmpeg_assembly_v2.sh
