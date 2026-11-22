@@ -1,6 +1,11 @@
 name: Build DOMINUS Teaser C
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'teaser_c/**'
+      - '.github/workflows/build-teaser-c.yml'
 
 jobs:
   build-video:
