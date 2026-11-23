@@ -60,6 +60,13 @@ for (const device of [
       const broken = await page.locator('img').evaluateAll(nodes =>
         nodes.filter(img=>img.complete && img.naturalWidth===0).map(img=>img.src));
       qa(broken.length===0,device.name+'/'+lang+' broken images: '+broken.join(','));
+      const portraitInfo = await page.locator('img[src*="portrait-"]').evaluateAll(nodes =>
+        nodes.map(img => ({src:img.getAttribute('src'),width:img.naturalWidth,height:img.naturalHeight})));
+      qa(portraitInfo.length===3,device.name+'/'+lang+' expected three portraits');
+      for (const image of portraitInfo) {
+        qa(image.width>=800 && image.height>=1000,
+          device.name+'/'+lang+' low resolution portrait '+image.src+' '+image.width+'x'+image.height);
+      }
       const overflow = await page.evaluate(() => document.documentElement.scrollWidth > innerWidth + 2);
       qa(!overflow,device.name+'/'+lang+' horizontal overflow at viewport width '+device.viewport.width);
       qa(pageErrors.length===0,device.name+'/'+lang+' JS console errors: '+pageErrors.join(','));
