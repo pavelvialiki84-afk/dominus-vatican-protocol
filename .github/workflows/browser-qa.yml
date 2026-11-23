@@ -5,6 +5,8 @@ on:
     branches: [main]
     paths:
       - 'scripts/browser-qa.mjs'
+      - 'world-atlas*.html'
+      - 'assets/illustrations/portrait-*.webp'
       - '.github/workflows/browser-qa.yml'
   schedule:
     - cron: '42 7 * * 1'
@@ -23,6 +25,19 @@ jobs:
         run: |
           npm install --no-save --no-package-lock playwright@1.56.1
           npx playwright install --with-deps chromium
+      - name: Wait until GitHub Pages serves the updated HD portraits
+        run: |
+          for attempt in $(seq 1 36); do
+            url="https://dominusbooks.com/world-atlas.html?qa_deploy=$GITHUB_SHA-$attempt"
+            if curl --fail --silent --show-error --location "$url" | grep -q 'portrait-salvatore-realistic.webp?v=20261124-hd'; then
+              echo "Updated atlas is publicly available"
+              exit 0
+            fi
+            echo "Waiting for Pages deployment: attempt $attempt"
+            sleep 10
+          done
+          echo "Latest HTML not publicly available" >&2
+          exit 1
       - name: Execute desktop and mobile QA
         run: node scripts/browser-qa.mjs
       - name: Preserve screenshots and test evidence
