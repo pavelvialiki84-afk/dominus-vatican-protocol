@@ -47,11 +47,18 @@ for (const [lang, file] of pages) {
     }
     check(body.includes('editions.html') || body.includes('/dp/'),
       file + ': no book conversion link');
+    const expectedMarkets = { en: 'www.amazon.com', de: 'www.amazon.de',
+      fr: 'www.amazon.fr', it: 'www.amazon.it', es: 'www.amazon.es' };
+    check(body.includes(expectedMarkets[lang] + '/dp/'),
+      file + ': wrong or absent localized Kindle marketplace');
     console.log('PASS',lang,response.status,file,'chars='+body.length);
   } catch (e) { errors.push(file + ': request failed: ' + e.message); console.error('FAIL',file,e.message); }
 }
 for (const asset of ['/assets/hero-vatican.webp', '/assets/illustrations/scene-archive-noir.webp',
-                    '/assets/illustrations/scene-corridor-noir.webp', '/assets/illustrations/scene-ai-noir.webp']) {
+                    '/assets/illustrations/scene-corridor-noir.webp', '/assets/illustrations/scene-ai-noir.webp',
+                    '/assets/illustrations/portrait-salvatore-realistic.webp',
+                    '/assets/illustrations/portrait-rafael-realistic.webp',
+                    '/assets/illustrations/portrait-luiza-realistic.webp']) {
   try {
     const url = new URL(asset, origin);
     url.searchParams.set('smoke', Date.now().toString());
