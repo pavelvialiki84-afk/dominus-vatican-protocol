@@ -60,6 +60,11 @@ for (const device of [
       const broken = await page.locator('img').evaluateAll(nodes =>
         nodes.filter(img=>img.complete && img.naturalWidth===0).map(img=>img.src));
       qa(broken.length===0,device.name+'/'+lang+' broken images: '+broken.join(','));
+      const portraitImages = page.locator('img[src*="portrait-"]');
+      for (const img of await portraitImages.all()) {
+        await img.scrollIntoViewIfNeeded();
+        await img.evaluate(async el => { if (!el.complete) await el.decode().catch(()=>{}); });
+      }
       const portraitInfo = await page.locator('img[src*="portrait-"]').evaluateAll(nodes =>
         nodes.map(img => ({src:img.getAttribute('src'),width:img.naturalWidth,height:img.naturalHeight})));
       qa(portraitInfo.length===3,device.name+'/'+lang+' expected three portraits');
