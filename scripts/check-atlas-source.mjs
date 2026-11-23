@@ -44,7 +44,7 @@ for (const [locale, {file, market}] of Object.entries(locales)) {
     test(fs.existsSync(path.join(root,clean)), 'missing internal file '+clean);
   }
   test(html.includes(market + '/dp/'), 'no correct locale marketplace Kindle link');
-  const inlineScript = new RegExp('<script>([\\s\\S]*?)<\\/script>', 'g');
+  const inlineScript = /<script>([\s\S]*?)<\/script>/g;
   for (const [,js] of html.matchAll(inlineScript)) {
     try { new Function(js); } catch(e) { failures.push(file + ': JS syntax ' + e.message); }
   }
