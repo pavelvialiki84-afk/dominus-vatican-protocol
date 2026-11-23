@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Explore the World | DOMINUS — The Vatican Protocol</title>
+<meta name="description" content="Explore the fictional world of DOMINUS: Vatican archive, restricted wing, and the AI protocol. Interactive story atlas and character files.">
+<link rel="canonical" href="https://dominusbooks.com/world-atlas.html">
+<meta property="og:type" content="website"><meta property="og:title" content="Enter the World of DOMINUS">
+<meta property="og:image" content="https://dominusbooks.com/cover.png">
+<link rel="stylesheet" href="assets/dominus-premium.css">
+<style>
+:root{--ink:#0a0e14;--gold2:#d8b878;--paper:#ede5d6}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--ink);color:var(--paper);font-family:Georgia,serif}
+a{color:inherit}.atlas-nav{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:20px max(20px,calc((100vw - 1120px)/2));border-bottom:1px solid #b4935840;background:#0a0e14}
+.atlas-nav a{text-decoration:none}.atlas-nav strong{letter-spacing:.18em;color:var(--gold2);font:700 17px Arial,sans-serif}.atlas-nav span{font:12px Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase}
+.atlas-hero{min-height:75vh;display:flex;align-items:end;position:relative;isolation:isolate;padding:110px max(24px,calc((100vw - 1120px)/2)) 85px;background:#10141c}
+.atlas-hero:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(0deg,#090d14 4%,#090d14b0 47%,#090d1440),url("assets/hero-vatican.webp") center/cover}
+.k{font:700 12px Arial,sans-serif;color:var(--gold2);text-transform:uppercase;letter-spacing:.22em}
+.atlas-hero h1{max-width:900px;font-size:clamp(48px,8vw,104px);line-height:1.03;margin:18px 0;letter-spacing:-.045em}
+.atlas-hero p{max-width:670px;font-size:clamp(19px,2.4vw,27px);line-height:1.5}
+.atlas-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.atlas-button{display:inline-flex;justify-content:center;align-items:center;min-height:48px;padding:13px 20px;border:1px solid #c7ab78;background:transparent;color:#f5ede0;text-decoration:none;cursor:pointer;font:700 13px Arial,sans-serif;letter-spacing:.04em}
+.atlas-button.primary{background:#c7a36a;color:#14100b}.atlas-button:focus-visible,.place-tab:focus-visible{outline:3px solid #fff;outline-offset:4px}
+.atlas-section{max-width:1120px;margin:auto;padding:90px 24px}.atlas-section h2{font-size:clamp(33px,5vw,59px);line-height:1.12;margin:15px 0 25px}
+.atlas-intro{font-size:20px;line-height:1.65;color:#c6c4c0;max-width:780px}.place-tabs{display:flex;flex-wrap:wrap;gap:10px;margin:38px 0 22px}
+.place-tab{min-height:48px;padding:14px 18px;border:1px solid #9b835e;background:#121923;color:#f4ece0;cursor:pointer;font:700 13px Arial,sans-serif}
+.place-tab[aria-selected="true"]{background:#c6a671;color:#0b1017}.atlas-panel{display:grid;grid-template-columns:1.25fr 1fr;gap:0;background:#111923;border:1px solid #80683e}
+.atlas-panel[hidden]{display:none}.atlas-panel img{width:100%;height:100%;min-height:360px;object-fit:cover;display:block}
+.atlas-panel .atlas-copy{padding:clamp(22px,4vw,54px);align-self:center}.atlas-panel h3{font-size:clamp(28px,3vw,42px);line-height:1.17;margin:14px 0}.atlas-panel p{font-size:18px;line-height:1.7;color:#d0cbc2}
+.atlas-note{font:12px/1.6 Arial,sans-serif;color:#b0aca7;margin-top:18px}.atlas-people{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:35px}
+.atlas-person{border:1px solid #856e4855;background:#121820;overflow:hidden}.atlas-person img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:center 25%;display:block}
+.atlas-person div{padding:22px}.atlas-person h3{font-size:25px;margin:7px 0}.atlas-person p{font:15px/1.7 Arial,sans-serif;color:#cec9c1}
+.atlas-closing{text-align:center;background:linear-gradient(130deg,#141d27,#080b10);border-top:1px solid #88704c;border-bottom:1px solid #88704c;padding:90px 24px}
+.atlas-closing h2{font-size:clamp(35px,5vw,65px);margin:14px auto 22px;max-width:850px}.atlas-closing .atlas-actions{justify-content:center}
+.atlas-footer{padding:30px 24px;text-align:center;font:13px/1.8 Arial,sans-serif;color:#a8a7a5}
+@media(max-width:760px){.atlas-hero{min-height:590px;padding:90px 24px 55px}.atlas-panel{grid-template-columns:1fr}.atlas-panel img{height:270px;min-height:0}.atlas-people{grid-template-columns:1fr}.atlas-person img{aspect-ratio:16/9}.atlas-section{padding:65px 20px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style></head>
+<body>
+<nav class="atlas-nav" aria-label="Page navigation"><a href="./"><strong>DOMINUS</strong></a><a href="./">← Main website</a><a href="editions.html">Editions ↗</a></nav>
+<main><section class="atlas-hero"><div><div class="k">A fictional world • An interactive companion</div>
+<h1>THE TRUTH HAS AN ARCHIVE.</h1><p>A witness is dead. The record is dated in the future. Somewhere between faith and machine, a protocol begins to speak.</p>
+<div class="atlas-actions"><a class="atlas-button primary" href="#locations">Explore the world ↓</a><a class="atlas-button" href="read.html">Read the opening ↗</a></div></div></section>
+<section class="atlas-section" id="locations"><div class="k">01 / Story atlas</div><h2>Three places. One impossible record.</h2>
+<p class="atlas-intro">Choose a location to enter the fictional geography of DOMINUS. These scenes are an artistic companion to the novel, not photographs of restricted Vatican spaces.</p>
+<div class="place-tabs" role="tablist" aria-label="Story locations">
+<button class="place-tab" type="button" role="tab" id="tab-archive" aria-controls="panel-archive" aria-selected="true" tabindex="0">01 · The archive</button>
+<button class="place-tab" type="button" role="tab" id="tab-wing" aria-controls="panel-wing" aria-selected="false" tabindex="-1">02 · Restricted wing</button>
+<button class="place-tab" type="button" role="tab" id="tab-protocol" aria-controls="panel-protocol" aria-selected="false" tabindex="-1">03 · The protocol</button></div>
+<section class="atlas-panel" role="tabpanel" id="panel-archive" aria-labelledby="tab-archive"><img src="assets/illustrations/scene-archive-noir.webp" alt="Fictional archive with manuscripts and ancient books" loading="lazy" width="1448" height="1086">
+<div class="atlas-copy"><div class="k">Location 01 / The discovery</div><h3>The archive remembers.</h3><p>A death inside the archives leaves a trail of documents. One of them carries a date that should not exist.</p><p class="atlas-note">Original fictional concept artwork; not an actual Vatican archive interior.</p></div></section>
+<section class="atlas-panel" role="tabpanel" id="panel-wing" aria-labelledby="tab-wing" hidden><img src="assets/illustrations/scene-corridor-noir.webp" alt="Fictional stone corridor and closed door" loading="lazy" width="1448" height="1086">
+<div class="atlas-copy"><div class="k">Location 02 / The threshold</div><h3>Some doors guard more than secrets.</h3><p>A restricted corridor becomes the boundary between what can be documented and what powerful institutions prefer to leave unspoken.</p><p class="atlas-note">Original fictional concept artwork; not an actual Vatican restricted wing.</p></div></section>
+<section class="atlas-panel" role="tabpanel" id="panel-protocol" aria-labelledby="tab-protocol" hidden><img src="assets/illustrations/scene-ai-noir.webp" alt="Imagined church architecture integrated with luminous computational infrastructure" loading="lazy" width="1448" height="1086">
+<div class="atlas-copy"><div class="k">Location 03 / Faith and machine</div><h3>Reconstruction is not consent.</h3><p>A system can reconstruct testimony. But who may decide whether the reconstructed voice has the authority to speak for a human being?</p><p class="atlas-note">Imagined technological and sacred setting; fictional illustration.</p></div></section></section>
+<section class="atlas-section" id="witnesses"><div class="k">02 / Character files</div><h2>People inside the protocol</h2><p class="atlas-intro">Three perspectives on one mystery. Their portraits are fictional character artwork.</p><div class="atlas-people">
+<article class="atlas-person"><img loading="lazy" decoding="async" src="assets/illustrations/portrait-salvatore-realistic.webp" alt="Illustrated portrait of fictional archivist Salvatore Ventresca"><div><div class="k">File 01</div><h3>Salvatore Ventresca</h3><p>The archivist. His discovery sets the investigation in motion.</p></div></article>
+<article class="atlas-person"><img loading="lazy" decoding="async" src="assets/illustrations/portrait-rafael-realistic.webp" alt="Illustrated portrait of fictional theologian Rafael Costa"><div><div class="k">File 02</div><h3>Rafael Costa</h3><p>The theologian and linguist. He confronts questions of evidence and authority.</p></div></article>
+<article class="atlas-person"><img loading="lazy" decoding="async" src="assets/illustrations/portrait-luiza-realistic.webp" alt="Illustrated portrait of fictional metrologist Luiza Barros"><div><div class="k">File 03</div><h3>Luiza Barros</h3><p>The metrologist. She follows the technical evidence behind the anomaly.</p></div></article>
+</div></section>
+<section class="atlas-closing"><div class="k">03 / Continue the investigation</div><h2>Who has the right to the last word?</h2><p class="atlas-intro" style="margin:0 auto">Enter the first chapter, investigate the fictional dossier, or choose your edition.</p>
+<div class="atlas-actions"><a class="atlas-button primary" href="read.html">Read Chapter One ↗</a><a class="atlas-button" href="archive.html">Open the interactive archive ↗</a><a class="atlas-button" href="editions.html">Buy the book ↗</a></div></section></main>
+<footer class="atlas-footer">© 2026 Pavel Velichii · DOMINUS — The Vatican Protocol. Fictional work, not affiliated with or endorsed by the Vatican.<br><a href="./">Main site</a> · <a href="analytics-privacy.html#en">Analytics & privacy</a></footer>
+<script>
+(()=>{const tabs=[...document.querySelectorAll('[role="tab"]')];const activate=(tab,focus=false)=>{tabs.forEach(t=>{let active=t===tab;t.setAttribute('aria-selected',String(active));t.tabIndex=active?0:-1;document.getElementById(t.getAttribute('aria-controls')).hidden=!active});if(focus)tab.focus()};tabs.forEach((tab,i)=>{tab.addEventListener('click',()=>activate(tab));tab.addEventListener('keydown',e=>{let next;if(e.key==='ArrowRight')next=(i+1)%tabs.length;else if(e.key==='ArrowLeft')next=(i+tabs.length-1)%tabs.length;else if(e.key==='Home')next=0;else if(e.key==='End')next=tabs.length-1;else return;e.preventDefault();activate(tabs[next],true)})})})();
+</script></body></html>
