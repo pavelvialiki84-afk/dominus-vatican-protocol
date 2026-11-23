@@ -32,6 +32,10 @@ for (const device of [
       qa((await page.locator('html').getAttribute('lang')) === lang,
         device.name+'/'+lang+' unexpected html language');
       qa((await page.title()).includes('DOMINUS'),device.name+'/'+lang+' missing title');
+      if (device.name==='mobile') {
+        const navHeight = await page.locator('nav.atlas-nav, header.nav').first().evaluate(el=>el.getBoundingClientRect().height);
+        qa(navHeight < 260, device.name+'/'+lang+' mobile header too tall: '+navHeight.toFixed(0)+'px');
+      }
       const tabs = page.locator('[role="tab"]');
       qa((await tabs.count())===3, device.name+'/'+lang+' expected three tabs');
       for (let i=0;i<3;i++) {
