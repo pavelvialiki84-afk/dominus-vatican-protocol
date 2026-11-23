@@ -1,6 +1,12 @@
 name: DOMINUS multilingual website smoke test
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'world-atlas*.html'
+      - 'scripts/check-*.mjs'
+      - '.github/workflows/site-smoke-test.yml'
   schedule:
     - cron: '14 7 * * *'
 permissions:
@@ -16,5 +22,8 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: Validate source, internal links, syntax and translations
+        run: node scripts/check-atlas-source.mjs
       - name: Verify live five-language website
+        if: github.event_name != 'push'
         run: node scripts/check-public-site.mjs
