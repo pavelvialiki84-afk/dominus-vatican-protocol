@@ -50,7 +50,8 @@ for (const device of [
         qa(links.some(href=>href.split(/[?#]/)[0]===alternate),
           device.name+'/'+lang+' language link missing '+alternate);
       }
-      await page.locator('img').first().scrollIntoViewIfNeeded();
+      await tabs.first().click();
+      await page.locator('[role="tabpanel"]:visible img').first().scrollIntoViewIfNeeded({timeout:6000});
       await page.waitForTimeout(350);
       const broken = await page.locator('img').evaluateAll(nodes =>
         nodes.filter(img=>img.complete && img.naturalWidth===0).map(img=>img.src));
