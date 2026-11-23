@@ -34,7 +34,7 @@ async function read(path, retries = 3) {
 for (const [lang, file] of pages) {
   try {
     const { response, body } = await read('/' + file);
-    check(new RegExp('<html\\s+lang=["\\']' + lang + '["\\']', 'i').test(body),
+    check(body.includes('<html lang="' + lang + '"'),
       file + ': wrong or missing lang attribute');
     check(body.includes('<title>'), file + ': missing HTML title');
     check(body.includes('rel="canonical"'), file + ': missing canonical');
