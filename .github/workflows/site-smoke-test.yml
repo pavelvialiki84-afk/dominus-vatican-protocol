@@ -1,0 +1,20 @@
+name: DOMINUS multilingual website smoke test
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '14 7 * * *'
+permissions:
+  contents: read
+jobs:
+  smoke-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify live five-language website
+        run: node scripts/check-public-site.mjs
