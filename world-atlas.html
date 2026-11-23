@@ -4,7 +4,7 @@
 <meta name="description" content="A death in the Vatican archives. An impossible date. Explore the interactive story world, characters and an authentic excerpt of DOMINUS: The Vatican Protocol.">
 <meta name="theme-color" content="#0a0e14"><meta name="author" content="Pavel Velichii">
 <meta name="robots" content="index,follow,max-image-preview:large">
-<link rel="canonical" href="https://dominusbooks.com/world-atlas.html"><link rel="alternate" hreflang="en" href="https://dominusbooks.com/world-atlas.html"><link rel="alternate" hreflang="de" href="https://dominusbooks.com/world-atlas-de.html">
+<link rel="canonical" href="https://dominusbooks.com/world-atlas.html"><link rel="alternate" hreflang="en" href="https://dominusbooks.com/world-atlas.html"><link rel="alternate" hreflang="de" href="https://dominusbooks.com/world-atlas-de.html"><link rel="alternate" hreflang="fr" href="https://dominusbooks.com/world-atlas-fr.html"><link rel="alternate" hreflang="it" href="https://dominusbooks.com/world-atlas-it.html"><link rel="alternate" hreflang="es" href="https://dominusbooks.com/world-atlas-es.html">
 <meta property="og:type" content="website"><meta property="og:site_name" content="DOMINUS — The Vatican Protocol">
 <meta property="og:url" content="https://dominusbooks.com/world-atlas.html">
 <meta property="og:title" content="Enter the World of DOMINUS">
@@ -22,7 +22,7 @@
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--ink);color:var(--paper);font-family:Georgia,serif}
 a{color:inherit}.atlas-skip{position:absolute;left:14px;top:-90px;padding:14px 18px;background:#fff;color:#111;z-index:110;font:700 15px Arial,sans-serif}
 .atlas-skip:focus{top:12px}.atlas-nav{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:20px max(20px,calc((100vw - 1120px)/2));border-bottom:1px solid #b4935840;background:#0a0e14}
-.atlas-nav a{text-decoration:none}.atlas-nav strong{letter-spacing:.18em;color:var(--gold2);font:700 17px Arial,sans-serif}.atlas-nav span{font:12px Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase}
+.atlas-nav .atlas-langs{display:flex;align-items:center;justify-content:center;gap:5px;flex-wrap:wrap}.atlas-nav .atlas-langs a{display:inline-flex;min-width:38px;min-height:38px;align-items:center;justify-content:center;border:1px solid #756b58;padding:6px}.atlas-nav .atlas-langs a[aria-current=page]{background:#d8b878;color:#14100b}.atlas-nav a{text-decoration:none}.atlas-nav strong{letter-spacing:.18em;color:var(--gold2);font:700 17px Arial,sans-serif}.atlas-nav span{font:12px Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase}
 .atlas-nav a:focus-visible,.atlas-actions a:focus-visible,.atlas-share:focus-visible{outline:3px solid #fff;outline-offset:3px}
 .atlas-hero{min-height:75vh;display:flex;align-items:end;position:relative;isolation:isolate;padding:110px max(24px,calc((100vw - 1120px)/2)) 85px;background:#10141c}
 .atlas-hero:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(0deg,#090d14 4%,#090d14b0 47%,#090d1440),url("assets/hero-vatican.webp") center/cover}
@@ -58,13 +58,13 @@ a{color:inherit}.atlas-skip{position:absolute;left:14px;top:-90px;padding:14px 1
 .atlas-quick-buy span{font:700 12px Arial,sans-serif;letter-spacing:.12em;color:#e5d0a8;padding:0 9px}
 .atlas-quick-buy a{padding:13px 18px;background:#c7a36a;color:#14100b;font:700 13px Arial,sans-serif;text-decoration:none}
 @media(max-width:500px){.atlas-quick-buy{left:10px;right:10px;bottom:calc(10px + env(safe-area-inset-bottom));justify-content:space-between}.atlas-quick-buy a{flex:0 0 auto}.atlas-footer{padding-bottom:105px}}
-@media(max-width:760px){.atlas-hero{min-height:590px;padding:90px 24px 55px}.atlas-panel{grid-template-columns:1fr}.atlas-panel img{height:270px;min-height:0}.atlas-people{grid-template-columns:1fr}.atlas-person img{width:125px;height:156px}.atlas-section{padding:65px 20px}}
+@media(max-width:760px){.atlas-nav{justify-content:center}.atlas-nav .atlas-langs{width:100%;order:5}.atlas-hero{min-height:590px;padding:90px 24px 55px}.atlas-panel{grid-template-columns:1fr}.atlas-panel img{height:270px;min-height:0}.atlas-people{grid-template-columns:1fr}.atlas-person img{width:125px;height:156px}.atlas-section{padding:65px 20px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style></head>
 <body>
 <a class="atlas-skip" href="#locations">Skip to story atlas</a>
 <div class="atlas-progress" aria-hidden="true" id="atlas-progress"></div>
-<nav class="atlas-nav" aria-label="Page navigation"><a href="./"><strong>DOMINUS</strong></a><a href="./">← Main website</a><a href="author.html">Author</a><a href="world-atlas-de.html" lang="de" hreflang="de" aria-label="View this page in German">DE</a><a href="editions.html">Editions ↗</a></nav>
+<nav class="atlas-nav" aria-label="Page navigation"><a href="./"><strong>DOMINUS</strong></a><a href="./">← Main website</a><a href="author.html">Author</a><nav class="atlas-langs" aria-label="Choose language"><a href="world-atlas.html" lang="en" hreflang="en" aria-current="page">EN</a> <a href="world-atlas-de.html" lang="de" hreflang="de" >DE</a> <a href="world-atlas-fr.html" lang="fr" hreflang="fr" >FR</a> <a href="world-atlas-it.html" lang="it" hreflang="it" >IT</a> <a href="world-atlas-es.html" lang="es" hreflang="es" >ES</a></nav><a href="editions.html">Editions ↗</a></nav>
 <main><section class="atlas-hero"><div><div class="k">A fictional world • An interactive companion</div>
 <h1>THE TRUTH HAS AN ARCHIVE.</h1><p>A witness is dead. The record is dated in the future. Somewhere between faith and machine, a protocol begins to speak.</p>
 <div class="atlas-actions"><a class="atlas-button primary" href="#locations">Explore the world ↓</a><a class="atlas-button" href="#excerpt">Read a passage ↗</a></div><div class="atlas-breadcrumb"><a href="#locations">Story atlas</a> / <a href="#witnesses">Character files</a> / <a href="#excerpt">The opening</a></div></div></section>
