@@ -7,7 +7,7 @@ from pathlib import Path
 from html.parser import HTMLParser
 from xml.etree import ElementTree as ET
 
-BASE = "https://pavelvialiki84-afk.github.io/dominus-vatican-protocol/"
+BASE = "https://dominusbooks.com/"
 PAGES = ["", "dominus-band1-de.html", "dominus-sample-en.html", "read.html"]
 SITEMAP = BASE + "sitemap.xml"
 
